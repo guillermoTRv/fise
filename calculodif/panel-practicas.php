@@ -51,41 +51,40 @@
                   Numero de listas por Aplicaciones particulares: <span class='amounint'><strong>8 listas</strong></span>
               </div>
               <div class="panel-body fk">
-
-              <div class='row'>
-                                  <div style="margin-top:9px;"></div>
-                <div class="col-md-10">
-                  <div class='panel panel-default pan'>
-                      <div class='panel-body'>
-                              <p class='ptit'>Ejercicios de Ecuaciones diferenciales y campos magneticos</p>
-                              <p>Aplicaciones particulares - 10 ejercicios - Dificultad:Mixta</p>
-                              <p><span class="label label-warning"><span class='glyphicon glyphicon-remove'></span></span> Aun no realizada  -  <a href="#">Realizar</a></p>
+                  <div class='row'>
+                      <div style="margin-top:9px;"></div>
+                      <div class="col-md-10">
+                          <div class='panel panel-default pan'>
+                              <div class='panel-body'>
+                                      <p class='ptit'>Ejercicios de Ecuaciones diferenciales y campos magneticos</p>
+                                      <p>Aplicaciones particulares - 10 ejercicios - Dificultad:Mixta</p>
+                                      <p><span class="label label-warning"><span class='glyphicon glyphicon-remove'></span></span> Aun no realizada  -  <a href="#">Realizar</a></p>
+                              </div>
+                          </div>
+                          <div style="margin-top:34px;"></div>
+                          <div class='panel panel-default pan'>
+                              <div class='panel-body'>
+                                      <p class='ptit'>Ejercicios de Ecuaciones diferenciales y campos magneticos</p>
+                                      <p>Aplicaciones particulares - 10 ejercicios - Dificultad:Mixta</p>
+                                      <p><span class="label label-success"><span class='glyphicon glyphicon-ok'></span></span> Realizada - <a href="#">volver a realizar</a></p>
+                              </div>
+                          </div>
+                          <div style="margin-top:34px;"></div>
+                          <div class='panel panel-default pan'>
+                              <div class='panel-body'>
+                                      <p class='ptit'>Ejercicios de Ecuaciones diferenciales y campos magneticos</p>
+                                      <p>Aplicaciones particulares - 10 ejercicios - Dificultad:Mixta</p>
+                                      <p><span class="label label-success"><span class='glyphicon glyphicon-ok'></span></span> Realizada - <a href="#">volver a realizar</a></p>
+                              </div>
+                          </div>
                       </div>
                   </div>
-                  <div style="margin-top:34px;"></div>
-                  <div class='panel panel-default pan'>
-                      <div class='panel-body'>
-                              <p class='ptit'>Ejercicios de Ecuaciones diferenciales y campos magneticos</p>
-                              <p>Aplicaciones particulares - 10 ejercicios - Dificultad:Mixta</p>
-                              <p><span class="label label-success"><span class='glyphicon glyphicon-ok'></span></span> Realizada - <a href="#">volver a realizar</a></p>
-                      </div>
-                  </div>
-                  <div style="margin-top:34px;"></div>
-                  <div class='panel panel-default pan'>
-                      <div class='panel-body'>
-                              <p class='ptit'>Ejercicios de Ecuaciones diferenciales y campos magneticos</p>
-                              <p>Aplicaciones particulares - 10 ejercicios - Dificultad:Mixta</p>
-                              <p><span class="label label-success"><span class='glyphicon glyphicon-ok'></span></span> Realizada - <a href="#">volver a realizar</a></p>
-                      </div>
-                  </div>
-                </div>
               </div>
-              </div>
-<br>
-<div class="row">
-  <center>
-  <div style="border-bottom:solid #f2f2f2 2px;margin-left:13px;margin-right:13px;margin-bottom:60px;"><p></strong></p><br></div>
-  </center>
+              <br>
+              <div class="row">
+                <center>
+                <div style="border-bottom:solid #f2f2f2 2px;margin-left:13px;margin-right:13px;margin-bottom:60px;"><p></strong></p><br></div>
+                </center>
               </div>
           </div>
         </div>
