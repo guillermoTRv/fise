@@ -1,8 +1,5 @@
 <?php
-
-
 class general{
-
 	protected $table;
 	protected $debug;
 	protected $query;
@@ -24,15 +21,13 @@ class general{
 		$this->order = "";
 	}
 	private function makeConnection(){
-		$ll = @mysql_connect(baseHost,baseUser,basePass)or
+		$ll = @mysqli_connect(baseHost,baseUser,basePass,baseBase)or
 		$this->error("Check your config.php. ");
-		mysql_select_db(baseBase);
-		
 		return $ll;
 	}
 	
 	private function closeConnection($ll){
-		mysql_close($ll);
+		mysqli_close($ll);
 	}
 	protected function error($msg){
 		echo "
@@ -52,18 +47,18 @@ class general{
 		
 		$this->query = $queryString;
 		
-		$temp = mysql_query($queryString);
+		$temp = mysqli_query($con,$queryString);
 		
 		if (!$temp) { // pregunta si la consulta se realizo satisfactoriamente.
-			$this->error  = 'Invalid query: ' . mysql_error() . "\n";
+			$this->error  = 'Invalid query: ' . mysqli_error($con) . "\n";
 			$this->error .= 'Whole query: ' . $query;
 			if($this->debug) $this->error($this->error);
 			return false;
 		}
 		else{
-			if($total) $this->total = mysql_num_rows($temp);
+			if($total) $this->total = mysqli_num_rows($temp);
 			if($total){
-				while( $row = mysql_fetch_assoc( $temp)){
+				while( $row = mysqli_fetch_assoc( $temp)){
 					$results[] = $row;
 				}
 				$this->results = $results;
@@ -84,7 +79,7 @@ class general{
 			$this->error  = 'Uknown clause '.$order." in typeOrder, accepted 'ASC' or 'DESC'";
 			if($this->debug) $this->error($this->error);
 		}
-		else $this->typeOrder  strtoupper($order);
+		else $this->typeOrder;  strtoupper($order);
 	}
 	public function addOrder($condition){
 		if(strlen($this->order)) $this->order .= ", ";
@@ -113,7 +108,5 @@ class general{
 	}
 	
 	
-
 }
-
 ?> 

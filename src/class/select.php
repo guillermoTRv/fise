@@ -1,10 +1,5 @@
 <?php
 
-/*
-	Select class
-*/
-
-
 class select extends general{
 	
 	private $select;
