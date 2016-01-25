@@ -47,7 +47,7 @@
 									Sesiones de practica<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu hoverhead">
-									<li><a href="./calculodif/lista-diferencial">Calculo Diferencial</a></li>
+									<li><a href="<?php echo $ruta.'calculodif/panel-practicas';?>">Calculo Diferencial</a></li>
             						<li><a href="./calculointegral/lista-integral">Calculo Integral</a></li>
 									<li><a href="./c-avanzado/lista-calculo">Calculo Avanzado</a></li>
                                     <li><a href="./lineal/lista-algebralineal">Algebra lineal</a></li>
