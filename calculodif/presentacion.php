@@ -3,6 +3,8 @@
     global $op;      $op      = addslashes(htmlspecialchars(strip_tags(trim($_GET['op']))));
     global $metaria; $materia = "Calculo diferencial"; 
     require("../ruta.php");
+    include("../config.php");
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +28,7 @@
 
 <body>
   <?php 
-        require("../vistas_principales/header.php");
+        include("../header.php");
     ?>
     <div class="container-fluid">
       <div class="row">

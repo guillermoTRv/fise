@@ -47,7 +47,7 @@
 									Sesiones de practica<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu hoverhead">
-									<li><a href="<?php echo $ruta.'calculodif/panel-practicas';?>">Calculo Diferencial</a></li>
+									<li><a href="<?php echo $ruta.'/calculodif/presentacion';?>">Calculo Diferencial</a></li>
             						<li><a href="./calculointegral/lista-integral">Calculo Integral</a></li>
 									<li><a href="./c-avanzado/lista-calculo">Calculo Avanzado</a></li>
                                     <li><a href="./lineal/lista-algebralineal">Algebra lineal</a></li>
@@ -60,33 +60,26 @@
 						</ul>
 
 						<?php 
-
-
+						    session_start();
+				            if (!isset($_SESSION['usuario'])) {
+					                include("header_sin_session.php");
+					        }
+					        else{ 
+					                include("header_con_session.php");
+					        }
 						?>
-						<!--
-						<ul class="nav navbar-nav navbar-right">
-							<li class="dropdown">
-								<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>
-									<?php 
-									echo $_SESSION['name_user'];
-									?>&nbsp;&nbsp;
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu hoverhead">
-									<li><a href="http://fiseaprende.com/usuario/users?ini=inicio">Panel usuario</a></li>
-									<li><a href="http://fiseaprende.com/usuario/users?cs=cs&tb=tb">Contenidos Guardados</a></li>
-									<li><a href="http://fiseaprende.com/usuario/users?pref=pref&tb=tb">Preferencias</a></li>
-									<li class="divider"></li>
-									<li><a href="http://fiseaprende.com/usuario/cerrarfise">Cerrar Sesion</a></li>
-								</ul>
-							</li>
-						</ul>-->
 
 					</div>
 
 				</div>
 
 			</nav>
+			<?php 
+				if (!isset($_SESSION['usuario'])) {
+					include("formulario_login.php"); 
+				}
+				else{      }
+			?>
 	    </header>
 	   
 </div>	

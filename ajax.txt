@@ -1,0 +1,14 @@
+lista de id's
+
+	marcadores 
+		1-> total_ejercicio
+		2-> ejerc_correcto
+		3-> ejerc_error
+
+	panel central 
+		4-> id_ejercicio
+		5-> barra_ejerc
+
+		6->sector_cambio
+
+		

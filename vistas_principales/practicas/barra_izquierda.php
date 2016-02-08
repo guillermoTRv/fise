@@ -44,14 +44,14 @@
                           Presentacion
                         </a>
                         
-                        <a href='?op=disucion-actual' class='list-group-item fenint'>
+                        <a href='?op=discusion-actual' class='list-group-item fenint'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-comment'></span> 
-                          Discucion de la materia
+                          Discusiones  de la materia
                         </a>
                         
                         <a href='?op=discusiones-anteriores' class='list-group-item fenint'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-repeat'></span> 
-                          Discuciones anteriores 
+                          discusiones  anteriores 
                         </a>
                         
                         <a href="<?php echo $ruta.'calculodif/paneldif'?>" class='list-group-item fenint'>

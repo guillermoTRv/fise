@@ -1,75 +1,65 @@
 <?php 
-	/*class despachador {
-		private $titlle;
-		private $contenidol;
+	$ruta_scripts = "scripts/practicas/controlador_fichas.php";
+	$ruta_vistas  = "vistas_principales/practicas/vista_fichas.php";
 
-		function __construct(){
-			$this->titlle= $this->contenidol="";
-		}
-	}*/
 	switch ($op) {
 	case "listado":
-		$title = "";
-		include("../vistas_principales/practicas/encabezado.php");
-		$contenido = "";
-		include("../vistas_principales/practicas/espacio.php");
-		include("../scripts/practicas/controlador_fichas.php");
+		$title          = "Listado de todas las practicas para $materia";
+        $ruta_archivo   = $ruta_scripts;        
+        include("../scripts/practicas/contador_practicas_todos.php");
+        include("../scripts/practicas/includs.php");
 		break;
 
+
 	case "practicas-generales":
-		$title = "";
-		include("../vistas_principales/practicas/encabezado.php");
-		$contenido = "";
-		include("../vistas_principales/practicas/espacio.php");
-		include("../scripts/practicas/controlador_fichas.php");
+		$title          = "Listado de practicas tipo generales";
+        $ruta_archivo   = $ruta_scripts; 
+        $cond_one       = "general";  
+        include("../scripts/practicas/contador_practicas_where.php");     
+        include("../scripts/practicas/includs.php");
 		break;
 
 	case "aplicaciones-particulares":
-		$title = "";
-		include("../vistas_principales/practicas/encabezado.php");
-		$contenido = "";
-		include("../vistas_principales/practicas/espacio.php");
-		include("../scripts/practicas/controlador_fichas.php");
+		$title          = "Listado de practicas tipo aplicaciones particulares";
+        $ruta_archivo   = $ruta_scripts;    
+        $cond_one       = "aplicaciones particulares";      
+        include("../scripts/practicas/contador_practicas_where.php");
+        include("../scripts/practicas/includs.php");
 		break;
 
 	case "batalla":
-		$title = "";
-		include("../vistas_principales/practicas/encabezado.php");
-		$contenido = "";
-		include("../vistas_principales/practicas/espacio.php");
-		include("../scripts/practicas/controlador_fichas.php");
+		$title          = "Bienvenido a batalla de ejercicios";
+        $cont_esp       = "";
+        $ruta_archivo   = $ruta_vistas;        
+        include("../scripts/practicas/includs.php");
 		break;
 
 	case "discusion-actual":
-		$title = "";
-		include("../vistas_principales/practicas/encabezado.php");
-		$contenido = "";
-		include("../vistas_principales/espacio.php");
-		include("../vistas_principales/vista_fichas.php");
+		$title          = "Tema para discutir";
+        $cont_esp       = "";
+        $ruta_archivo   = $ruta_vistas;        
+        include("../scripts/practicas/includs.php");
 		break;
 
 	case "discusiones-anteriores":
-		$title = "";
-		include("../vistas_principales/practicas/encabezado.php");
-		$contenido = "";
-		include("../vistas_principales/espacio.php");
-		include("../vistas_principales/vista_fichas.php");
+		$title          = "Discusiones anteriores";
+        $cont_esp       = "";
+        $ruta_archivo   = $ruta_vistas;        
+        include("../scripts/practicas/includs.php");
 		break;
 
 	case "ayuda":
-		$title = "";
-		include("../vistas_principales/practicas/encabezado.php");
-		$contenido = "";
-		include("../vistas_principales/espacio.php");
-		include("../vistas_principales/vista_fichas.php");
+		$title          = "Ayuda al usuario, dudas comunes y soporte";
+        $cont_esp       = "";
+        $ruta_archivo   = $ruta_vistas;        
+        include("../scripts/practicas/includs.php");
 		break;
 
 	default:
-		$title = "";
-		include("../vistas_principales/practicas/encabezado.php");
-		$contenido = "";
-		include("../vistas_principales/espacio.php");
-		include("../vistas_principales/vista_fichas.php");
+		$title          = "Bienvenido al espacio de practica para la materia de $materia";
+        $cont_esp       = "";
+        $ruta_archivo   = $ruta_vistas;        
+        include("../scripts/practicas/includs.php");
 		break;
 }
 ?>
