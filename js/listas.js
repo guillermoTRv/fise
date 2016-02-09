@@ -144,7 +144,7 @@
 
                 var formData = new FormData($("#form_ej")[0]);
 
-                var ruta = "practicas/process/crearejercicio.php";
+                var ruta = "practicas/ejercicios/process/validar_crear_ejercicio.php";
 
                 $.ajax({
 
@@ -167,7 +167,7 @@
 
         $(function(){
         $(document).on("click","#btn_corr",function(){
-                    var url="practicas/process/corregir.php";
+                    var url="practicas/ejercicios/process/corregir_ejercicio.php";
                     $.ajax({
                         type:"POST",
                         url:url,
@@ -187,7 +187,7 @@
 
         $(function(){
         $(document).on("click","#btntx",function(){
-                    var url="practicas/process/tx.php";
+                    var url="practicas/ejercicios/process/tx.php";
                     $.ajax({
                         type:"POST",
                         url:url,
@@ -209,7 +209,7 @@
 
                 var formData = new FormData($("#formop")[0]);
 
-                var ruta = "practicas/process/op.php";
+                var ruta = "practicas/ejercicios/process/op.php";
 
                 $.ajax({
 
@@ -236,7 +236,7 @@
 
                 var formData = new FormData($("#formop")[0]);
 
-                var ruta = "practicas/process/op_subir.php";
+                var ruta = "practicas/ejercicios/process/op_subir.php";
 
                 $.ajax({
 
@@ -260,7 +260,7 @@
 
         $(function(){
         $(document).on("click","#btn_inciso",function(){
-                    var url="practicas/process/inciso_correcto.php";
+                    var url="practicas/ejercicios/process/mostrar_inciso.php";
                     $.ajax({
                         type:"POST",
                         url:url,
@@ -277,7 +277,7 @@
 
         $(function(){
         $(document).on("click","#btn_ya",function(){
-                    var url="practicas/process/inciso_correcto_ya.php";
+                    var url="practicas/ejercicios/process/inciso_correcto.php";
                     $.ajax({
                         type:"POST",
                         url:url,

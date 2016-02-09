@@ -28,10 +28,10 @@
 			      </div>" ;
 
 
-		$id 	 =$_POST['id'];
-		$materia =$_POST['m'];
-		$unidad  =$_POST['unidad'];
-		$tema=$_POST['tema'];
+		$id 	  =$_POST['id'];
+		$materia  =$_POST['m'];
+		$unidad   =$_POST['unidad'];
+		$tema     =$_POST['tema'];
 		
 			if ($tema=='') {
 				global $ruta;
@@ -53,7 +53,7 @@
 			<p>Ya puedes pasar a crear ejercicios, asegurate de que hayas relacionado todas las unidades o temas para la lista antes de continuar</p>
 			<form id='pasar' method='POST' enctype='multipart/form-data'>
 				<input type='hidden' value='$id' name='fo'>
-				<button type='button' id='btn_pasar' value='enviar' class='btn btn-success btn-sm'>Pasar a crear ejercicio</button>
+				<button type='button' id='btn_pasar' value='enviar' class='btn btn-success btn-sm'>Pasar a crear ejercicios</button>
 			</form>";
 
 			$resp = [

@@ -9,7 +9,7 @@
 			        <label>Materia</label>
 			          <select id='materia_slc' class='form-control' name='m' title='Selecciona una unidad'>
 			              <option>--</option>
-			              <option  value='Calculo-diferencial'>Calculo diferencial</option>
+			              <option  value='Calculo diferencial'>Calculo diferencial</option>
 			              <option  value='Calculo integral'>Calculo integral</option>
 			              <option  value='Calculo avanzado'>Calculo avanzado</option>
 			              <option  value='Algebra lineal'>Algebra lineal</option>
@@ -53,33 +53,6 @@
 			$num=$avv[0];
 			if ($num==0) {
 
-				if ($xy=='true') {
-
-					$insert="INSERT INTO tm_relacion(id_lprc,materia,unidad,tema,ruta) VALUES('$id','$materia','$unidad','$tema','$ruta')";
-					$e_insert=$conexion->query($insert) or die("no quedo");
-						$vista="
-						<p>La relacion fue creada por exito</p>
-						<p>Puedes seguir relacionando temas o puedes pasar ya a la creacion de ejercicios para la lista</p>
-						<button type='button' id='btn-rel' value='enviar' class='btn btn-success btn-sm'>Crear relacion</button><br>
-						<hr style='border:solid 1px #f2f2f2;margin-top:15px;margin-bottom:13px;'>
-						<p>Ya puedes pasar a crear ejercicios, asegurate de que hayas relacionado todas las unidades o temas para la lista antes de continuar</p>
-						<form id='pasar' method='POST' enctype='multipart/form-data'>
-							<input type='hidden' value='$id' name='fo'>
-							<button type='button' id='btn_pasar' value='enviar' class='btn btn-success btn-sm'>Crear ejercicio</button>
-						</form>
-						";
-
-					$resp = [
-					'uno_r'=>'',
-					'dos_r'=>$vista,
-					'tres_r'=>$v_form
-					];
-
-					echo json_encode($resp);
-
-					#E"Un listado de los temas que se llevan ya relacionados"				
-				}
-				else{
 					$v_form_two  ="<div class='form-group'><label>Materia</label>
 					    <input class='form-control' disabled type='text' placeholder='$materia' name='m'>
 					    <input type='hidden' value='$materia' name='m'>
@@ -119,7 +92,7 @@
 
 					echo json_encode($resp);
 					
-				}
+				
 
 			
 			}

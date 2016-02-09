@@ -96,3 +96,5 @@
   			<br>
 	<div style="margin-top:100px;"></div>
 </div>
+<!--Vimos que hay un error de validacion en los incisos ya que no la validacion la hace en gneral y no con el
+respectivo ejercicio lo mismo pasa relacionar un tema con una lista al igual que cuando se crea un eejercicio pinches validaciones me cae -->

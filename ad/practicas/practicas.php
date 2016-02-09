@@ -26,7 +26,7 @@
 		    	<?php include("practicas/vistas/img_uno.php"); ?>
 		    </div>
 		    <div role="tabpanel" class="tab-pane" id="ejercicio">
- 				<?php include("practicas/vistas/cr_ejer.php"); ?>
+ 				<?php include("practicas/ejercicios/vista_crear_ejercicio.php"); ?>
 		    </div>
   		</div>
 	</div>
