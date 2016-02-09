@@ -25,14 +25,15 @@
 	$mens_uno = "
 		¡¡ Listo !! Ha terminado de elaborar una practica<br> si quieres hacer otra lista solo necesitas <a href='?ty=practicas'>recargar esta pagina</a>
 			<br><h4>Datos de la lista</h4>
-			<p>Nombre         -- $nombre</p>
-			<p>Materia        -- $materia</p>
-			<p>Clasificacion  -- $clasf</p>
-			<p>Nivel          -- $nivel</p>
-			<p>#ejercicios    -- $num_ejerc</p>
+			<p>Nombre -- $nombre</p>
+			<p>Materia -- $materia</p>
+			<p>Clasificacion -- $clasf</p>
+			<p>Nivel -- $nivel</p>
+			<p>#ejercicios -- $num_ejerc</p>
 			<p>Fecha creacion -- $frc_creacion</p>
 			
 		" ;
+
 ?>
 	<div class='row'> 
 			<div class='col-md-7'>
