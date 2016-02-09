@@ -53,7 +53,7 @@
     <div id="valor"></div>
     
     <div id="validar_r"></div>
-    
+
     <div id="parte_form">
       <div class="form-group">
         <label>Materia</label>
@@ -87,7 +87,9 @@
   <div id="ir_a_ej">
 
   </div>
+
   <p>&nbsp;</p><p>&nbsp;</p>
   <br><br>
   </div>
 </div>
+<div id="retener"></div>

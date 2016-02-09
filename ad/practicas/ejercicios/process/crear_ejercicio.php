@@ -230,11 +230,11 @@
 										}
 										if ($_FILES[$key]["error"] > 0) {
 											global $now;
-											$now = "No mamesh";
+											$now = "Error al subir la imagen";
 										}
 										else{
 											global $now;
-											$now = "No pues quien sabe karnal";	
+											$now = "";	
 										}
 									include("insertar_imagen.php");
 								 	$vista_a= "

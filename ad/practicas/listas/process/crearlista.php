@@ -2,6 +2,7 @@
 	include("../../../../config.php");
 	$scriph				=	"<script type='text/javascript'>window.onunload = window.onbeforeunload = function(){return 'Ud esta abandonando este sitio y ciertos datos fueron creados, lo que afecta el funcionamiento de la bd';};</script>";
 
+
 	$name				=	$_POST['name'];
 	$clasificacion		=	$_POST['clasificacion'];
 	$nivel				=	$_POST['nivel'];
@@ -9,7 +10,7 @@
 	date_default_timezone_set('America/Mexico_City');
     $fecha 				=	date("Y-m-d H:i:s");
     $prod               =   "no";
-	$mens="$scriph<p style='margin-top:10px;'>Los datos se han subido exitosamente</p>";
+	$mens="<p style='margin-top:10px;'>Los datos se han subido exitosamente</p>";
 	$insertar="INSERT INTO l_prc(name_lprc,materia,prod,clasf,nivel,num_ejerc,frc_creacion) VALUES('$name','$materia','$prod','$clasificacion','$nivel',0,'$fecha')";
 	$e_i=$conexion->query($insertar) or die("Hubo un problema al insertar");
 
@@ -28,8 +29,10 @@
 	$inpt   ="<input type='hidden' value='$id_l' name='id'>";
 
 		$rm=[	
-			'uno' =>$mens,
-			'dos' =>$inpt
+			'uno'  =>$mens,
+			'dos'  =>$inpt,
+			'tres' =>$scriph
+
 		];
 		echo json_encode($rm);
 ?>

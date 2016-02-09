@@ -1,5 +1,7 @@
 <?php 
 	include("../../../../config.php");
+	include("../../../../ruta.php");
+	include("../../../../limpiar.php");
 
 	$v_form   ="<div class='form-group'>
 			        <label>Materia</label>
@@ -33,16 +35,10 @@
 		$unidad   =$_POST['unidad'];
 		$tema     =$_POST['tema'];
 		
-			if ($tema=='') {
-				global $ruta;
-				$ruta="?un=$unidad";
-			}
-			if($tema!=''){
-				global $ruta;
-				$ruta="?un=$unidad&tm=$tema";
-			}
 
-	$insert="INSERT INTO tm_relacion(id_lprc,materia,unidad,tema,ruta) VALUES('$id','$materia','$unidad','$tema','$ruta')";
+	include("rutas_temas_relacion.php");		
+
+	$insert="INSERT INTO tm_relacion(id_lprc,materia,unidad,tema,ruta) VALUES('$id','$materia','$unidad','$tema','$ruta_c')";
 		$e_insert=$conexion->query($insert) or die("no quedo");
 		$vista="
 			<p>La relacion fue creada con exito</p>

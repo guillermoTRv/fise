@@ -14,7 +14,10 @@
 	$rangouno=$_POST['rangouno'];
 	$rangodos=$_POST['rangodos'];
 	$afirmador=$_POST['afirmador'];
-
+	/*$form_terminar="
+				 			<button type='button' id='btn_terminar_lista' value='enviar' class='btn btn-warning btn-sm'>Listo ya termine de agregar ejercicios</button>
+				 		
+	";*/
 	$form_normal="
 					<div class='form-group'>
 						<label class='col-sm-4 control-label'>Placeholder</label>
@@ -82,12 +85,9 @@
 				 <div class='row'>
 				 	<div class='col-sm-5 col-sm-offset-4'>
 						<button type='button' id='btn_pasar' value='enviar' class='btn btn-success btn-sm'>Crear otro ejercicio</button>
+						<button type='button' id='btn_terminar' value='enviar' class='btn btn-warning btn-sm'>Terminar lista</button>
 				 	</div>
-				 	<div>
-				 		<a>
-				 			Listo ya termine de agregar ejercicios
-				 		</a>
-				 	</div>
+				 		
 				 </div>
 			";
 

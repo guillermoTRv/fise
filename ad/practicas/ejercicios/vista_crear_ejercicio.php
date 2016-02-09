@@ -84,7 +84,11 @@
 			<div>
 				<form id='pasar' method='post' enctype="multipart/form-data">
 					<?php echo "<input type='hidden' value='$idlist' name='fo'>"; ?>
-					
+			
+				</form>
+				<form id='terminar' method='post' enctype="multipart/form-data">
+					<?php echo "<input type='hidden' value='$idlist' name='fo'>"; ?>
+			
 				</form>
 			</div>
 			<div id="mens_ejer">

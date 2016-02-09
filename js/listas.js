@@ -69,6 +69,8 @@
                         success:function(data){
                             $("#m_rc").html(data.uno);
                             $("#valor").html(data.dos);
+                            $("#retener").html(data.tres);
+
                         }
 
                     });
@@ -292,6 +294,7 @@
                 });
             });
 
+
     /*  $(function(){
         $(document).on("click","#btn_term",function(){
                     var url="practicas/process/poner_botones.php";
@@ -316,6 +319,23 @@
                         type:"POST",
                         url:url,
                         data:$("#pasar").serialize(),
+                        success:function(data){
+                            $("#pasar_ej").html(data);
+                        }
+
+                    });
+
+                    return false;
+                });
+            });
+
+    $(function(){
+        $(document).on("click","#btn_terminar",function(){
+                    var url="practicas/terminar_lista.php";
+                    $.ajax({
+                        type:"POST",
+                        url:url,
+                        data:$("#terminar").serialize(),
                         success:function(data){
                             $("#pasar_ej").html(data);
                         }
