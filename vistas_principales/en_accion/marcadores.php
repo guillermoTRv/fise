@@ -47,7 +47,7 @@
   <div class='media'>
     <div class='media-body'>
       <center>
-        <a  style="background-color:rgba(57, 146, 131, .95);color:white;width:170px;" class='btn btn-sm btn-ind'>
+        <a  style="background-color:<?php echo $color_batalla; ?>;color:white;width:170px;" class='btn btn-sm btn-ind'>
           <strong>
              
             Nivel: <?php echo $nivel; ?>

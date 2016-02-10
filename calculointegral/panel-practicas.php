@@ -7,7 +7,7 @@
 <?php 
     error_reporting(E_ALL ^ E_NOTICE);
     global $op;      $op      = addslashes(htmlspecialchars(strip_tags(trim($_GET['op']))));
-    global $metaria; $materia = "Calculo diferencial"; 
+    global $metaria; $materia = "Calculo integral"; 
     require("../ruta.php");
     include("../config.php");
 
@@ -33,12 +33,12 @@
         a.fenmat:focus {
           color: white;
           text-decoration: none;
-          background-color:rgba(143, 122, 165, .9);
+          background-color:rgba(57, 146, 131, 1);
         }
     </style>
     <?php 
-          $color_batalla = "rgba(143, 122, 165, .9)"; 
-          $img_mat       = "dif";
+          $color_batalla = "rgba(57, 146, 131, 1)"; 
+          $img_mat       = "int";
     ?>
 </head>
 

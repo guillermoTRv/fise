@@ -10,7 +10,7 @@
 	}
 	if ($materia=="Calculo integral") {
 		global $enlace;
-		$enlace        = $ruta."/calculodif/practica?prc=$url";
+		$enlace        = $ruta."/calculointegral/practica?prc=$url";
 	}
 	if ($materia=="Algebra lineal") {
 		global $enlace;

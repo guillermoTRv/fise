@@ -40,15 +40,16 @@
         a.fenmat:focus {
           color: white;
           text-decoration: none;
-          background-color:rgba(143, 122, 165, 1);
+          background-color:rgba(57, 146, 131, 1);
         }
 
     </style>
     <?php 
-      $color_batalla = "rgba(143, 122, 165, 1)";
-      $img_mat       = "dif";
-      $letbran       = "class='amoundif'";
+      $color_batalla = "rgba(57, 146, 131, .95)";
+      $img_mat       = "int";
+      $letbran       = "class='amounint'";
     ?>
+
 </head>
 <style type="text/css">
   
@@ -106,24 +107,3 @@
     
 </body>
 </html>
-
-
-
-<!--<div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                          No se puede
-                        </label>hhhh
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                          El resultado es una constante
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                          El resultado es una variable
-                        </label>
-                      </div>-->

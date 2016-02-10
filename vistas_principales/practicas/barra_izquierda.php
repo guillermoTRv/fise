@@ -30,7 +30,7 @@
                             <div class='media'>
                               <div class='media-body'>
                                 <center>
-                                  <a style="background-color:rgba(57, 146, 131, .95);color:white;" href='?op=batalla'class='btn btn-sm btn-ind'>
+                                  <a style="background-color:<?php echo $color_batalla; ?>;color:white;" href='?op=batalla'class='btn btn-sm btn-ind'>
                                     <strong>&nbsp;<span class='glyphicon glyphicon-flag'></span>&nbsp;Batalla de ejercicios&nbsp;&nbsp;&nbsp;&nbsp;</strong>
                                   </a>
                                 </center>
@@ -39,41 +39,41 @@
                             <br>
                         </div>
                         
-                        <a href='?op' class='list-group-item fenint active-default'>
+                        <a href='?op' class='list-group-item fenmat active-default'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-leaf'></span> 
                           Presentacion
                         </a>
                         
-                        <a href='?op=discusion-actual' class='list-group-item fenint'>
+                        <a href='?op=discusion-actual' class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-comment'></span> 
                           Discusiones  de la materia
                         </a>
                         
-                        <a href='?op=discusiones-anteriores' class='list-group-item fenint'>
+                        <a href='?op=discusiones-anteriores' class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-repeat'></span> 
                           discusiones  anteriores 
                         </a>
                         
-                        <a href="<?php echo $ruta.'calculodif/paneldif'?>" class='list-group-item fenint'>
+                        <a href="<?php echo $ruta.'calculodif/paneldif'?>" class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-list-alt'></span> 
                           Ir al indice de la materia
                         </a>
                         
-                        <a href='?op=ayuda' class='list-group-item fenint'>
+                        <a href='?op=ayuda' class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-question-sign'></span> 
                           Funcionamiento y dudas
                         </a>
 
-                        <a href="<?php echo $ruta.'calculodif/paneldif'?>" target='_blank' class='list-group-item fenint'>
+                        <a href="<?php echo $ruta.'calculodif/paneldif'?>" target='_blank' class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-pencil'></span> 
                           Recomiendame app
                         </a>
-                        <a class='list-group-item fenint'>
+                        <a class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-education'></span> 
                           Nivel de usuario: Jedi
                         </a>
                         
-                        <a class='list-group-item fenint'>
+                        <a class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-asterisk'></span> 
                           Puntos que tienes: 12
                         </a>

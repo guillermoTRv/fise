@@ -7,10 +7,10 @@
  		$ruta_rel    = $relacionados_a['ruta'];
 		
 		if ($tema_rel=='') {
-		 	echo "<center><a href='$ruta_rel' class='list-group-item fenint'>$unidad_rel</a></center>";
+		 	echo "<center><a href='$ruta_rel' class='list-group-item fenmat'>$unidad_rel</a></center>";
 		}
 		if ($tema_rel!='') {
-		 	echo "<center><a href='$ruta_rel' class='list-group-item fenint'>$tema_rel</a></center>";	
+		 	echo "<center><a href='$ruta_rel' class='list-group-item fenmat'>$tema_rel</a></center>";	
 		} 
 	}
 ?>
