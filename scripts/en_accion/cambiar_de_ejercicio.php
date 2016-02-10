@@ -4,19 +4,18 @@
 	#tambien falta el algoritmo para que se sepa en donde va la barra
 	include("../../config.php");
 	include("../../ruta.php");
+
 	$id_lista     = addslashes(htmlspecialchars(strip_tags(trim($_POST['lista']))));	
 	$id_ejerc     = addslashes(htmlspecialchars(strip_tags(trim($_POST['ejerc']))));
 	$id_ejerc_actual = $id_ejerc+1;
 
-	if ($id_lista=='') {
-		header("Location: $ruta");
-	}
+	$id_ultimo_b    = "SELECT id_ejerc 
+	                   FROM   ejercicios 
+	                   WHERE  id_lprc='$id_lista' order by id_ejerc desc";
+	$id_ultimo_e    = $conexion->query($id_ultimo_b);
+	$id_ultimo_a    = $id_ultimo_e->fetch_array();
+	$id_ultimo      = $id_ultimo_a[0];
 
-	$numtotal_b     = "SELECT * FROM ejercicios WHERE id_lprc='$id_lista'";
-	$numtotal_e     =  $conexion->query($numtotal_b);
-	$numtotal_a     =  mysqli_num_rows($numtotal_e);
-
-	echo $numtotal_a;
 
 	$primer_ejerc_b = "SELECT id_ejerc,lugar,pregunta,clasf,type,mens_err,mens_acert,nivel,puntuaje 
 	                   FROM   ejercicios 

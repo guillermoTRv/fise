@@ -40,5 +40,6 @@
 	}
 	include("imagen_ejercicio.php");
 	include("../../vistas_principales/en_accion/plantilla_primer_ejerc.php");
+	include("mostrar_primera_barra.php");
 
 ?>

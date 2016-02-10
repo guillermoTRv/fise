@@ -1,8 +1,7 @@
-
+  <div id="el_ejercicio">
     <div class="panel-body fk">
     <div class='row'>
     <br>
-      <div id="el_ejercicio">
         <div class="col-md-5 col-md-offset-1">
             <img class="img-thumbnail img-responsive" src='../img_pract/<?php echo $name_img ?>.jpg'>
         </div>
@@ -34,9 +33,9 @@
                 <button type="button" value="enviar" id="btn-enviar" class="btn btn-success btn-sm">Comprobar respuesta</button>
                 <small id="m_s"></small>
             </form>
-        </div>
       </div>
     </div>
+  </div>
   </div>
   <br>
   <br>

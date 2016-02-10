@@ -13,6 +13,9 @@
 
 
 	if ($resp >= $rang_one and $resp <= $rang_two) {
+
+		include("definir_barra.php");
+		
 		$input = "<input type='text' disabled value='$resp' name='respuesta' class='form-control'>";
 		$boton = '';
 		$mens  = "<p style='margin-top:10px;'>tu respuesta es correcta</p>
@@ -29,11 +32,13 @@
 			'uno' => $input,
 			'dos' => $boton,
 			'tres'=> $mens,
+			'cuat'=> $barra,
 		];
 
 		echo json_encode($r);
 	}
 	else{
+		include("barra_pausada.php");
 		$input = "<input type='text' value='$resp' name='respuesta' class='form-control' >";
 		$boton = '<button type="button" value="enviar" id="btn-evaluar-te" class="btn btn-success btn-sm">Comprobar respuesta</button>';
 		$mens  = "<p style='margin-top:10px;'>Estas equivocado</p>";
@@ -42,6 +47,7 @@
 			'uno' => $input,
 			'dos' => $boton,
 			'tres'=> $mens,
+			'cuat'=> $barra,
 		];
 
 		echo json_encode($r);

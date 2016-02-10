@@ -12,17 +12,4 @@
       </center>
   </div>
   
-  <div class="row">
-  <br>
-    <div class="col-md-10 col-md-offset-1">
-      <div style="backgroud-color:red;" class="progress">
-        <div id="barra_ejerc">
-          <?php 
-            include("definir_barra.php");
-          ?>
-          
-        </div>
-      </div>
-      <br>
-    </div>
-  </div>
+  

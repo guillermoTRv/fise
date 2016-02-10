@@ -26,6 +26,7 @@ $(function(){
                             $("#input_te").html(data.uno);
                             $("#boton_te").html(data.dos);
                             $("#resp_te").html(data.tres);
+                            $("#barra_ejerc").html(data.cuat);
                         }
 
                     });
@@ -42,7 +43,7 @@ $(function(){
                         url:url,
                         data:$("#pasar_ejercicio").serialize(),
                         success:function(data){
-                            $("#sector_cambio").html(data);
+                            $("#el_ejercicio").html(data);
                         }
 
                     });
