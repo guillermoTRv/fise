@@ -10,13 +10,12 @@
   $numtotal_e     =  $conexion->query($numtotal_b);
   $numtotal_a     =  mysqli_num_rows($numtotal_e);
 
-  $resta_uno = $id_ultimo-$id_ejerc;
-  $resta_dos = $numtotal_a-$resta_uno;
-  $conteo    = ($resta_dos/$numtotal_a)*100;
-  $barra     = "
+  $resta_uno      = $id_ultimo-$id_ejerc;
+  $resta_dos      = $numtotal_a-$resta_uno;
+  $conteo         = ($resta_dos/$numtotal_a)*100;
+  $barra          = "
                   <div  class='progress-bar' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' style='width: $conteo%;'>
                       bien
-                  </div>          
-        "; 
+                  </div>"; 
 
 ?>

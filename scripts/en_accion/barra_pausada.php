@@ -18,7 +18,7 @@
 
         
                   <div  class='progress-bar' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' style='width: $conteo%;'>
-                      bienss
+                      bien
                   </div>          
         
   "; 

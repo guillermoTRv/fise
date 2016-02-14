@@ -16,6 +16,10 @@
                           <?php 
                             echo "<input type='hidden' name='lista' value='$id_lista'>"; 
                             echo "<input type='hidden' name='ejerc' value='$id_ejerc'>";
+                            echo $puntuaje;
+                            echo "<input type='hidden' name='punt' value='$puntuaje'>";
+                            echo "<input type='hidden' name='error' value='$errores'>";
+                            echo $toquen;
                           ?>
                         </div>
                         <div id="boton_te">

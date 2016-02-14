@@ -8,8 +8,9 @@
     error_reporting(E_ALL ^ E_NOTICE);
     global $op;      $op      = addslashes(htmlspecialchars(strip_tags(trim($_GET['op']))));
     global $metaria; $materia = "Calculo integral"; 
-    require("../ruta.php");
+    include("../ruta.php");
     include("../config.php");
+    include("../input_toquen.php");
 
 ?>
 <!DOCTYPE html>

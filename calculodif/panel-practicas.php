@@ -1,10 +1,4 @@
 <?php 
-   #ECHO  $url="http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
-   #ECHO "<br><a href='$url'>asasasasassasas</a>";
-   #ECHO "<BR>".$url=$_SERVER["PHP_SELF"].$_SERVER["REQUEST_URI"];
-
- ?>
-<?php 
     error_reporting(E_ALL ^ E_NOTICE);
     global $op;      $op      = addslashes(htmlspecialchars(strip_tags(trim($_GET['op']))));
     global $metaria; $materia = "Calculo diferencial"; 

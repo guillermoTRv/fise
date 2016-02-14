@@ -1,4 +1,5 @@
 <?php 
+	include("../../input_toquen.php");
 	include("../../config.php");
 	include("../../ruta.php");
 	$id_lista     = addslashes(htmlspecialchars(strip_tags(trim($_POST['comenzar']))));	
@@ -21,7 +22,9 @@
 	$mens_err		=  $primer_ejerc_a[5];
 	$mens_acert		=  $primer_ejerc_a[6];
 	$nivel			=  $primer_ejerc_a[7];
-	$puntuaje		=  $primer_ejerc_a[8];
+	$puntuaje       =  0;
+	$errores        =  0;
+
 
 	if ($type=='te') {
 		$tipo_b = "SELECT placeh,rang_one,rang_two FROM ejercicios WHERE  id_lprc='$id_lista'";
@@ -40,6 +43,9 @@
 	}
 	include("imagen_ejercicio.php");
 	include("../../vistas_principales/en_accion/plantilla_primer_ejerc.php");
+	echo '<div class="row"><center>
+        	<div style="border-bottom:solid #f2f2f2 2px;margin-left:13px;margin-right:13px;margin-bottom:20px;"><p></strong></p><br></div>
+      	  </center></div>';
 	include("mostrar_primera_barra.php");
 
 ?>

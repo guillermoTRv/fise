@@ -5,7 +5,7 @@
 				$a_l=$e_l->fetch_array();
 				$u_lugar=$a_l[0];
 				if ($u_lugar=='') {
-				 	$i="INSERT INTO ejercicios(id_lprc,lugar,pregunta,clasf,type,mens_err,mens_acert,rang_two,nivel,true_op,f_creacion) values('$lista',1,'$pregunta','$clasf','$type','$mens_false','$mens_true',23,'$nivel','a','$fecha')";
+				 	$i="INSERT INTO ejercicios(id_lprc,lugar,pregunta,clasf,type,mens_err,mens_acert,nivel,f_creacion) values('$lista',1,'$pregunta','$clasf','$type','$mens_false','$mens_true','$nivel','$fecha')";
 				 	$e_i=$conexion->query($i) or die("sfs");
 
 				 	$busqueda_id="SELECT id_ejerc,pregunta FROM ejercicios WHERE pregunta='$pregunta'";
@@ -45,6 +45,7 @@
 												<input class='form-control' type='text' name='rangodos'>
 											</div>
 										</div>
+												<input type='hidden' name='id_ejerc' value='$id_del_ejercicio'>
 									</div>
 									<div id='menstx'>
 										<div class='col-sm-5 col-sm-offset-4'>
@@ -137,7 +138,7 @@
 
 								if ($rang!='' or $true_op!='') {
 									$nl=$ultimo_lugar+1;
-									$i="INSERT INTO ejercicios(id_lprc,lugar,pregunta,clasf,type,mens_err,mens_acert,rang_two,nivel,true_op,f_creacion) values('$lista','$nl','$pregunta','$clasf','$type','$mens_false','$mens_true',23,'$nivel','a','$fecha')";
+									$i="INSERT INTO ejercicios(id_lprc,lugar,pregunta,clasf,type,mens_err,mens_acert,nivel,f_creacion) values('$lista','$nl','$pregunta','$clasf','$type','$mens_false','$mens_true','$nivel','$fecha')";
 								 	$e_i=$conexion->query($i) or die("sfs");
 
 								 	$busqueda_id="SELECT id_ejerc,pregunta FROM ejercicios WHERE pregunta='$pregunta'";
@@ -177,6 +178,7 @@
 																<input class='form-control' type='text' name='rangodos'>
 															</div>
 														</div>
+															<input type='hidden' name='id_ejerc' value='$id_del_ejercicio'>
 													</div>
 													<div id='menstx'>
 														<div class='col-sm-5 col-sm-offset-4'>

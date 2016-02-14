@@ -22,7 +22,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Calculo diferencial</title>
+  <title>Calculo integral</title>
     <meta name="viewport" content="width=device-width,  initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="shortcut icon" href="../image/icono.jpg">

@@ -36,7 +36,7 @@
           <a style='width:170px;' class='btn btn-sm btn-ind'>
             <strong>
               <span class="glyphicon glyphicon-forward"></span> 
-              Errores 3 
+              Errores -- 
             </strong>
           </a>
         </div>

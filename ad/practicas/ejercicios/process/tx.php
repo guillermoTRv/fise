@@ -14,31 +14,33 @@
 	$rangouno=$_POST['rangouno'];
 	$rangodos=$_POST['rangodos'];
 	$afirmador=$_POST['afirmador'];
+	$id_ejerc=$_POST['id_ejerc'];
 	/*$form_terminar="
-				 			<button type='button' id='btn_terminar_lista' value='enviar' class='btn btn-warning btn-sm'>Listo ya termine de agregar ejercicios</button>
+		<button type='button' id='btn_terminar_lista' value='enviar' class='btn btn-warning btn-sm'>Listo ya termine de agregar ejercicios</button>
 				 		
 	";*/
 	$form_normal="
 					<div class='form-group'>
 						<label class='col-sm-4 control-label'>Placeholder</label>
 						<div class='col-sm-8'>
-							<input class='form-control' type='text' value='$placeholder' placeholder='$placeholder' name='placeholder'>
+							<input class='form-control' type='text' value='$placeholder'>
 						</div>
 					</div>
 
 					<div class='form-group'>
 						<label class='col-sm-4 control-label'>Rango 1</label>
 						<div class='col-sm-8'>
-							<input class='form-control' type='text' value='$rangouno' placeholder='$placeholder' name='rangouno'>
+							<input class='form-control' type='text' value='$rangouno' name='rangouno'>
 						</div>
 					</div>
 
 					<div class='form-group'>
 						<label class='col-sm-4 control-label'>Rango 2</label>
 						<div class='col-sm-8'>
-							<input class='form-control' type='text' value='$rangodos' placeholder='$rangodos' name='rangodos'>
+							<input class='form-control' type='text' value='$rangodos' name='rangodos'>
 						</div>
 					</div>
+					<input type='hidden' name='id_ejerc' value='$id_ejerc'>
 	";
 
 	$form_hidden="
@@ -53,7 +55,7 @@
 					<div class='form-group'>
 						<label class='col-sm-4 control-label'>Rango 1</label>
 						<div class='col-sm-8'>
-							<input disabled class='form-control' type='text' name='rangouno'>
+							<input disabled class='form-control' type='text' placeholder='$rangouno'>
 							<input type='hidden' value='$rangouno' name='rangouno'>
 						</div>
 					</div>
@@ -65,17 +67,13 @@
 							<input type='hidden' value='$rangodos' name='rangodos'>
 						</div>
 					</div>
+					<input type='hidden' name='id_ejerc' value='$id_ejerc'>
 	";
 
 	if ($afirmador=='true') {
-			$b_ultima_id='SELECT id_ejerc,id_lprc FROM ejercicios WHERE id_lprc=1 order by id_ejerc desc limit 1';
-			$e_ultima_id=$conexion->query($b_ultima_id) or die("algo paso");
-			$a_ultima_id=$e_ultima_id->fetch_array();
+			
 
-			$ultima_id = $a_ultima_id[0];
-
-
-			$update="UPDATE ejercicios SET placeh='$placeholder',rang_one='$rangouno',rang_two='$rangodos' WHERE id_ejerc='$ultima_id'";
+			$update="UPDATE ejercicios SET placeh='$placeholder',rang_one='$rangouno',rang_two='$rangodos' WHERE id_ejerc='$id_ejerc'";
 			$e_update=$conexion->query($update)or die("a ti");
 
 			$vista ="
