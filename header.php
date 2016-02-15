@@ -9,7 +9,7 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>
       					</button>
-						<a style="font-size:1.45em;" href="http://fiseaprende.com/" class="unodos navbar-brand">Fise</a>
+						<a style="font-size:1.45em;" href="<?php echo $ruta; ?>" class="unodos navbar-brand">Fise</a>
 					</div>
 					<div class="collapse navbar-collapse" id="navbar-1">
 						<ul class="nav navbar-nav">
@@ -19,13 +19,13 @@
 									Materias basicas<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu hoverhead">
-            						<li><a href="./basica/lista-algebrabasica">Algebra basica</a></li>
-            						<li><a href="./algintermedia/lista-algintermedia">Algebra intermedia</a></li>
-            						<li><a href="./trigonometria/lista-trigonometria">Trigonometria</a></li>
-            						<li><a href="./geometrianalitica/lista-geometria">Geometria</a></li>
-            						<li><a href="./estadistica/lista-estadistica">Estadistica</a></li>
-            						<li><a href="./calculodif/lista-diferencial">Calculo Diferencial</a></li>
-            						<li><a href="./calculointegral/lista-integral">Calculo Integral</a></li>
+            						<li><a href="<?php echo $ruta ?>/basica/lista-algebrabasica">Algebra basica</a></li>
+            						<li><a href="<?php echo $ruta ?>/algintermedia/lista-algintermedia">Algebra intermedia</a></li>
+            						<li><a href="<?php echo $ruta ?>/trigonometria/lista-trigonometria">Trigonometria</a></li>
+            						<li><a href="<?php echo $ruta ?>/geometrianalitica/lista-geometria">Geometria</a></li>
+            						<li><a href="<?php echo $ruta ?>/estadistica/lista-estadistica">Estadistica</a></li>
+            						<li><a href="<?php echo $ruta ?>/calculodif/lista-diferencial">Calculo Diferencial</a></li>
+            						<li><a href="<?php echo $ruta ?>/calculointegral/lista-integral">Calculo Integral</a></li>
             					</ul>
 							</li>
 						</ul>
@@ -35,9 +35,9 @@
 									Materias avanzadas<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu hoverhead">
-									<li><a href="./c-avanzado/lista-calculo">Calculo Avanzado</a></li>
-                                    <li><a href="./lineal/lista-algebralineal">Algebra lineal</a></li>
-                                    <li><a href="./diferenciales/lista-diferenciales">Ecuaciones Diferenciales</a></li>
+									<li><a href="<?php echo $ruta ?>/c-avanzado/lista-calculo">Calculo Avanzado</a></li>
+                                    <li><a href="<?php echo $ruta ?>/lineal/lista-algebralineal">Algebra lineal</a></li>
+                                    <li><a href="<?php echo $ruta ?>/diferenciales/lista-diferenciales">Ecuaciones Diferenciales</a></li>
 								</ul>
 							</li>
 						</ul>

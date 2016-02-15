@@ -5,7 +5,7 @@
 
  ?>
 <?php 
-    error_reporting(E_ALL ^ E_NOTICE);
+    error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE);
     global $op;      $op      = addslashes(htmlspecialchars(strip_tags(trim($_GET['op']))));
     global $metaria; $materia = "Calculo integral"; 
     include("../ruta.php");
