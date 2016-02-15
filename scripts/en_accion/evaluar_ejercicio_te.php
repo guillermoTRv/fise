@@ -1,6 +1,6 @@
 <?php
 	include("../../evaluar_toquen.php");
-	include("../../config.php"); 
+	include("../../config.php");
 	$resp       = addslashes(htmlspecialchars(strip_tags(trim($_POST['respuesta']))));
 	$id_lista   = addslashes(htmlspecialchars(strip_tags(trim($_POST['lista']))));
 	$id_ejerc   = addslashes(htmlspecialchars(strip_tags(trim($_POST['ejerc']))));
@@ -8,21 +8,7 @@
 	$error      = addslashes(htmlspecialchars(strip_tags(trim($_POST['error']))));
 
 	if ($resp=='') {
-		include("barra_pausada.php");
-		$input = "<input type='text' ='' name='respuesta' class='form-control'>";
-		$boton = " <button type='button' value='enviar' id='btn-evaluar-te' class='btn btn-success btn-sm'>Comprobar respuesta</button>";
-		$mens = "No has ingresado nada";
-
-		$r=[
-				'uno'   => $input,
-				'dos'   => $boton,
-				'tres'  => $mens,
-				'cuat'  => $barra,
-				'cinco' => $puntos,
-				'seis'  => $error,		
-				];
-
-			echo json_encode($r);
+		
 	}
 	else{
 		$rango_b    = "SELECT * FROM ejercicios WHERE id_ejerc='$id_ejerc' and id_lprc='$id_lista'";
@@ -37,6 +23,21 @@
 			$puntuaje = $puntos+1;
 			include("definir_barra.php");
 			$errores = $error;
+			$marcador_puntuaje = "
+			<a style='width:170px;' class='btn btn-sm btn-ind'>
+              <strong>
+                <span class='glyphicon glyphicon-forward'></span> 
+                Correctos $puntuaje
+              </strong>
+            </a>";
+		    $marcador_errores = "
+		    		<a style='width:170px;' class='btn btn-sm btn-ind'>
+		            <strong>
+		              <span class='glyphicon glyphicon-forward'></span> 
+		              Errores $errores
+		            </strong>
+		          </a>
+		    ";
 			$input = "<input type='text' disabled value='$resp' name='respuesta' class='form-control'>";
 			$boton = '';
 			$mens  = "<p style='margin-top:10px;'>tu respuesta es correcta</p>
@@ -48,7 +49,6 @@
 	                    <input type='hidden' name='ejerc' value='$id_ejerc'>
 	                    <input type='hidden' name='punt'  value='$puntuaje'>
 	                    <input type='hidden' name='error' value='$errores'>
-	                    $puntuaje
 					  </form>
 			";
 			
@@ -57,8 +57,8 @@
 				'dos'   => $boton,
 				'tres'  => $mens,
 				'cuat'  => $barra,
-				'cinco' => $puntuaje,
-				'seis'  => $errores,		
+				'cinco' => $marcador_puntuaje,
+				'seis'  => $marcador_errores,		
 				];
 
 			echo json_encode($r);
@@ -66,6 +66,21 @@
 		else{
 			$puntuaje = $puntos;
 			$errores  = $error + 1;
+			$marcador_puntuaje = "
+			<a style='width:170px;' class='btn btn-sm btn-ind'>
+              <strong>
+                <span class='glyphicon glyphicon-forward'></span> 
+                Correctos $puntuaje
+              </strong>
+            </a>";
+  			  $marcador_errores = "
+    		<a style='width:170px;' class='btn btn-sm btn-ind'>
+	            <strong>
+	              <span class='glyphicon glyphicon-forward'></span> 
+	              Errores $errores
+	            </strong>
+            </a>
+   			 ";
 			include("definir_barra.php");
 			$input = "<input type='text' disabled value='$resp' name='respuesta' class='form-control' >";
 			$boton = '';
@@ -78,7 +93,6 @@
 	                    <input type='hidden' name='ejerc' value='$id_ejerc'>
 	                    <input type='hidden' name='punt'  value='$puntuaje'>
 	                    <input type='hidden' name='error' value='$errores'>
-	                    $puntuaje
 					  </form>
 			";
 			
@@ -87,8 +101,8 @@
 				'dos' => $boton,
 				'tres'=> $mens,
 				'cuat'=> $barra,
-				'cinco' => $puntuaje,
-				'seis'  => $errores,
+				'cinco' => $marcador_puntuaje,
+				'seis'  => $marcador_errores,
 			];
 
 			echo json_encode($r);

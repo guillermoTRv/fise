@@ -175,6 +175,13 @@ body{
             border-color:rgba(170, 57, 57, .3);
         }
         /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+        .amountavn{
+            color:rgba(151, 84, 45, .95);
+        }
+        a.amountavn{
+            color:rgba(151, 84, 45, .95);
+            text-decoration:none;
+        }
         .amountrig{
             color:#AA3939;
         }

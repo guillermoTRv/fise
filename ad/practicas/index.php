@@ -1,4 +1,4 @@
 <?php 
-	require("../ruta.php");
+	require("../../ruta.php");
 	header("Location: $ruta/");
 ?>

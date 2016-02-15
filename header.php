@@ -49,9 +49,9 @@
 								<ul class="dropdown-menu hoverhead">
 									<li><a href="<?php echo $ruta.'/calculodif/panel-practicas';?>">Calculo Diferencial</a></li>
             						<li><a href="<?php echo $ruta.'/calculointegral/panel-practicas';?>">Calculo Integral</a></li>
-									<li><a href="./c-avanzado/lista-calculo">Calculo Avanzado</a></li>
-                                    <li><a href="./lineal/lista-algebralineal">Algebra lineal</a></li>
-                                    <li><a href="./diferenciales/lista-diferenciales">Ecuaciones Diferenciales</a></li>
+									<li><a href="<?php echo $ruta.'/c-avanzado/panel-practicas' ?>">Calculo Avanzado</a></li>
+                                    <li><a href="<?php echo $ruta.'/lineal/panel-practicas' ?>">Algebra lineal</a></li>
+                                    <li><a href="<?php echo $ruta.'/diferenciales/panel-practicas' ?>">Ecuaciones Diferenciales</a></li>
 								</ul>
 							</li>
 						</ul>

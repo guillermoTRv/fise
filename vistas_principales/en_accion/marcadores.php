@@ -20,8 +20,8 @@
           <div id="ejerc_correctos">
             <a style='width:170px;' class='btn btn-sm btn-ind'>
               <strong>
-                <span class="glyphicon glyphicon-forward"></span> 
-                Correctos --
+                <span class='glyphicon glyphicon-forward'></span> 
+                Correctos 
               </strong>
             </a>
           </div>
@@ -35,8 +35,8 @@
         <div id="ejerc_error">
           <a style='width:170px;' class='btn btn-sm btn-ind'>
             <strong>
-              <span class="glyphicon glyphicon-forward"></span> 
-              Errores -- 
+              <span class='glyphicon glyphicon-forward'></span> 
+              Errores  
             </strong>
           </a>
         </div>

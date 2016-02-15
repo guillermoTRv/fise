@@ -20,7 +20,7 @@
 	$id_ultimo      = $id_ultimo_a[0];
 
 	if ($id_ejerc == $id_ultimo) {
-		echo "Felicidades ya acabaste la practica estos son tus resultados";	
+		include("respuesta_final.php");
 	}
 	else{
 

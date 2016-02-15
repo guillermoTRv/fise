@@ -1,5 +1,5 @@
 <?php 
-    global $metaria; $materia   = "Calculo integral"; 
+    global $metaria; $materia   = "Calculo avanzado"; 
     include("../scripts/despachador_principal_enaccion/cabecera_practicas.php");    
  ?>
 <!DOCTYPE html>
@@ -15,14 +15,14 @@
         a.fenmat:focus {
           color: white;
           text-decoration: none;
-          background-color:rgba(57, 146, 131, 1);
+          background-color:rgba(151, 84, 45, .9);
         }
 
     </style>
     <?php 
-      $color_batalla = "rgba(57, 146, 131, .95)";
-      $img_mat       = "int";
-      $letbran       = "class='amounint'";
+      $color_batalla = "rgba(151, 84, 45, .9)";
+      $img_mat       = "cmv";
+      $letbran       = "class='amountavn'";
     ?>
 
 </head>
