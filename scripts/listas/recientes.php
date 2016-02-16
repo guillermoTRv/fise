@@ -10,43 +10,43 @@
 		$id=$array['id_fichamat'];
                 if ($materia=="Algebra basica") {
 			global $url;
-			$url="http://fiseaprende.com/basica/panelalgbas?un=$uni_rl&cont=$id";
+			$url="$fise/basica/panelalgbas?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Algebra intermedia") {
 			global $url;
-			$url="http://fiseaprende.com/algintermedia/panelalg?un=$uni_rl&cont=$id";
+			$url="$fise/algintermedia/panelalg?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Trigonometria") {
 			global $url;
-			$url="http://fiseaprende.com/trigonometria/paneltrig?un=$uni_rl&cont=$id";
+			$url="$fise/trigonometria/paneltrig?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Geometria analitica") {
 			global $url;
-			$url="http://fiseaprende.com/geometrianalitica/panelgeo?un=$uni_rl&cont=$id";
+			$url="$fise/geometrianalitica/panelgeo?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Estadistica") {
 			global $url;
-			$url="http://fiseaprende.com/estadistica/panelest?un=$uni_rl&cont=$id";
+			$url="$fise/estadistica/panelest?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Calculo diferencial") {
 			global $url;
-			$url="http://fiseaprende.com/calculodif/paneldif?un=$uni_rl&cont=$id";
+			$url="$ruta/calculodif/paneldif?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Calculo integral") {
 			global $url;
-			$url="http://fiseaprende.com/calculointegral/panelint?un=$uni_rl&cont=$id";
+			$url="$ruta/calculointegral/panelint?un=$uni_rl&cont=$id";
 		}
                 if ($materia=="Calculo avanzado") {
 			global $url;
-			$url="http://fiseaprende.com/c-avanzado/panelcalculo?un=$uni_rl&cont=$id";
+			$url="$ruta/c-avanzado/panelcalculo?un=$uni_rl&cont=$id";
 		}
                 if ($materia=="Algebra lineal") {
 			global $url;
-			$url="http://fiseaprende.com/lineal/panel-lineal?un=$uni_rl&cont=$id";
+			$url="$ruta/lineal/panel-lineal?un=$uni_rl&cont=$id";
 		}
                 if ($materia=="Ecuaciones diferenciales") {
 			global $url;
-			$url="http://fiseaprende.com/diferenciales/ecuaciones-diferenciales?un=$uni_rl&cont=$id";
+			$url="$ruta/diferenciales/ecuaciones-diferenciales?un=$uni_rl&cont=$id";
 		}
 		echo "
 	    <div class='col-md-3'>
