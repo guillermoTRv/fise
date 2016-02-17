@@ -14,11 +14,15 @@
 	}
 	if ($materia=="Algebra lineal") {
 		global $enlace;
-		$enlace        = $ruta."/calculodif/practica?prc=$url";
+		$enlace        = $ruta."/lineal/practica?prc=$url";
 	}
 	if ($materia=="Calculo avanzado") {
 		global $enlace;
-		$enlace        = $ruta."/calculodif/practica?prc=$url";
+		$enlace        = $ruta."/c-avanzado/practica?prc=$url";
+	}
+	if ($materia=="Ecuaciones diferenciales") {
+		global $enlace;
+		$enlace        = $ruta."/diferenciales/practica?prc=$url";
 	}
 ?>
 

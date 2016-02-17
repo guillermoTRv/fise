@@ -25,9 +25,6 @@
       $letbran       = "class='amoundif'";
     ?>
 </head>
-<style type="text/css">
-  
-</style>
 <body>
       <?php include("../scripts/despachador_principal_enaccion/principal_practicas.php"); ?>
 </body>

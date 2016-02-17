@@ -1,4 +1,21 @@
-
+<?php 
+	error_reporting(E_ALL  ^ E_NOTICE ^ E_WARNING);
+	include("../ruta.php");
+	include("../config.php");
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indice de <?php echo $name_title; ?></title>
+	<meta name="viewport" content="width=device-width,  initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content="<?php echo $name_description; ?>">
+	<link rel="stylesheet" href="../css/bootstrapset.css">
+	<link rel="stylesheet" href="../css/list.css">
+	<link rel="stylesheet" href="../js/bootstrap.js">
+    <link rel="shortcut icon" href="../image/icono.jpg">
+</head>
+<body>
 	<?php 
 		#falta el google analitics
         include("../header.php");
@@ -59,3 +76,5 @@
 	<?php include("../footer_fise.php") ?>
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

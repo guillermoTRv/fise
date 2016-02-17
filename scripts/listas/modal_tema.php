@@ -56,6 +56,9 @@
       </div>
       <div class="modal-footer">
                 <?php
+                    if ($materia=="Algebra basica") {
+                      echo "<center><span class='glyphicon glyphicon-search'></span><a class='todbas' href='$ruta/basica/panelbas?un=$unidad_l'> Ver todos los contenidos de la unidad </a></center>";
+                    }
                     if ($materia=="Algebra intermedia") {
                       echo "<center><span class='glyphicon glyphicon-search'></span><a class='todalg' href='$ruta/algintermedia/panelalg?un=$unidad_l'> Ver todos los contenidos de la unidad </a></center>";
                     }

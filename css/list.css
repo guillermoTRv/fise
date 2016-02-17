@@ -255,7 +255,11 @@
         }
         /*++++++++*/
         /*++++++++*/
-
+        a.todbas{
+            text-decoration:none;
+            color:rgba(54, 134, 164, .9);
+            font-weight:bolder;
+        }
         a.todalg{
             text-decoration:none;
             color:rgba(37, 61, 103, .95);

@@ -231,6 +231,21 @@ body{
             color:rgba(57, 146, 131, .95);
             text-decoration: none;   
         }
+
+        .amounecudif{
+            color:rgba(0, 84, 0, .9);
+        }
+        a.amounecudif:hover{
+            color:rgba(0, 84, 0, .9);
+            text-decoration: none;   
+        }
+        .amounlineal{
+            color:rgba(123, 132, 218, 1);
+        }
+        a.amounlineal:hover{
+            color:rgba(123, 132, 218, 1);
+            text-decoration: none;   
+        }
         /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
         .infotrig{
             color:#AA3939;font-size:90%;font-weight:bolder;
