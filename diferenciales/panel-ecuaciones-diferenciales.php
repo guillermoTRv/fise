@@ -3,7 +3,7 @@
 			.hovermat > li > a:focus {
 			  color: #262626;
 			  text-decoration: none;
-			  background-color:rgba(37, 61, 103, .17 .35);
+			  background-color:rgba(0, 84, 0, .55);
 			}
 		    .fenmat{
 		      margin-bottom:120px;   
@@ -12,26 +12,26 @@
 			a.fenmat:focus {
 			  color: white;
 			  text-decoration: none;
-			  background-color:rgba(37, 61, 103, 1);
+			  background-color:rgba(0, 84, 0, 1);
 			}
 		    .amounmat{
-		            color:rgba(37, 61, 103, .95);
+		            color:rgba(0, 84, 0, .95);
 		    }
 		    a.amounmat:hover{
-		            color:rgba(37, 61, 103, .95);
+		            color:rgba(0, 84, 0, .95);
 		            text-decoration: none;   
 		    }
 			.infomat{
-		            color:rgba(37, 61, 103, .95);font-size:90%;font-weight:bolder;
+		            color:rgba(0, 84, 0, .95);font-size:90%;font-weight:bolder;
 		    }    
 		    a.infomat:hover{
-		            color:rgba(37, 61, 103, .95);
+		            color:rgba(0, 84, 0, .95);
 		            text-decoration:none;
 		    }
  </style>
  <?php
- 		global $metaria; $materia="Algebra intermedia";  
-		$css_b       ="style='max-width:200px;background-color:rgba(37, 61, 103, .95);color:white;'";
-		$imagen_logo ="alg";
+ 		global $metaria; $materia="Ecuaciones diferenciales";  
+		$css_b       ="style='max-width:200px;background-color:rgba(0, 84, 0, .95);color:white;'";
+		$imagen_logo ="ecudif";
 		include("../scripts/panel_contenidos/despachador_cabecera.php");
   ?>

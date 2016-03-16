@@ -1,18 +1,16 @@
 <?php 
 	global $materia; $materia="Estadistica"; 
-	$name_title        = "Estadistica";
+	$name_title        = "Estadística";
 	$name_description  = "";
 
 
 ?>
 <?php 
 	#clases css
-	$imagen_logo        = "int";
-	$materia_encabezado = "Estadistica";
+	$imagen_logo        = "est";
 	$color_boton        = "rgba(0, 177, 64, 1)";
-	$ruta_reco          = "/Estadistica/recoest";
-	$ruta_subir         = "/Estadistica/panelest?un=Subir&sub=true";
-	$ruta_practicas		= "/Estadistica/panel-practicas";
+	$ruta_reco          = "/estadistica/recoest";
+	$ruta_subir         = "/estadistica/panel-estadistica?un=Subir&sub=true";
 	$hr                 = "hrest";
 	$hover              = "hoverest";
 ?>

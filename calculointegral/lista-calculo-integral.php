@@ -11,7 +11,7 @@
 	$materia_encabezado = "Calculo integral";
 	$color_boton        = "rgba(57, 146, 131, .95)";
 	$ruta_reco          = "/calculointegral/recoint";
-	$ruta_subir         = "/calculointegral/panelint?un=Subir&sub=true";
+	$ruta_subir         = "/calculointegral/panel-calculointegral?un=Subir&sub=true";
 	$ruta_practicas		= "/calculointegral/panel-practicas";
 	$hr                 = "hrint";
 	$hover              = "hoverint";

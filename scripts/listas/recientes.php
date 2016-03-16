@@ -10,43 +10,43 @@
 		$id=$array['id_fichamat'];
                 if ($materia=="Algebra basica") {
 			global $url;
-			$url="$fise/basica/panelalgbas?un=$uni_rl&cont=$id";
+			$url="$ruta/basica/panel-algebra-basica?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Algebra intermedia") {
 			global $url;
-			$url="$fise/algintermedia/panelalg?un=$uni_rl&cont=$id";
+			$url="$ruta/algintermedia/panel-algebra-intermedia?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Trigonometria") {
 			global $url;
-			$url="$fise/trigonometria/paneltrig?un=$uni_rl&cont=$id";
+			$url="$ruta/trigonometria/panel-trigonometria?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Geometria analitica") {
 			global $url;
-			$url="$fise/geometrianalitica/panelgeo?un=$uni_rl&cont=$id";
+			$url="$ruta/geometrianalitica/panel-geometria?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Estadistica") {
 			global $url;
-			$url="$fise/estadistica/panelest?un=$uni_rl&cont=$id";
+			$url="$ruta/estadistica/panel-estadistica?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Calculo diferencial") {
 			global $url;
-			$url="$ruta/calculodif/paneldif?un=$uni_rl&cont=$id";
+			$url="$ruta/calculodif/panel-calculodiferencial?un=$uni_rl&cont=$id";
 		}
 		if ($materia=="Calculo integral") {
 			global $url;
-			$url="$ruta/calculointegral/panelint?un=$uni_rl&cont=$id";
+			$url="$ruta/calculointegral/panel-calculointegral?un=$uni_rl&cont=$id";
 		}
                 if ($materia=="Calculo avanzado") {
 			global $url;
-			$url="$ruta/c-avanzado/panelcalculo?un=$uni_rl&cont=$id";
+			$url="$ruta/c-avanzado/panel-calculoavanzado?un=$uni_rl&cont=$id";
 		}
                 if ($materia=="Algebra lineal") {
 			global $url;
-			$url="$ruta/lineal/panel-lineal?un=$uni_rl&cont=$id";
+			$url="$ruta/lineal/panel-algebra-lineal?un=$uni_rl&cont=$id";
 		}
                 if ($materia=="Ecuaciones diferenciales") {
 			global $url;
-			$url="$ruta/diferenciales/ecuaciones-diferenciales?un=$uni_rl&cont=$id";
+			$url="$ruta/diferenciales/panel-ecuaciones-diferenciales?un=$uni_rl&cont=$id";
 		}
 		echo "
 	    <div class='col-md-3'>

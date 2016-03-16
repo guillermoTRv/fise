@@ -16,16 +16,16 @@
 							
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >
-									Materias basicas<span class="caret"></span>
+									Materias básicas<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu hoverhead">
-            						<li><a href="<?php echo $ruta ?>/basica/lista-algebrabasica">Algebra basica</a></li>
-            						<li><a href="<?php echo $ruta ?>/algintermedia/lista-algintermedia">Algebra intermedia</a></li>
-            						<li><a href="<?php echo $ruta ?>/trigonometria/lista-trigonometria">Trigonometria</a></li>
-            						<li><a href="<?php echo $ruta ?>/geometrianalitica/lista-geometria">Geometria</a></li>
-            						<li><a href="<?php echo $ruta ?>/estadistica/lista-estadistica">Estadistica</a></li>
-            						<li><a href="<?php echo $ruta ?>/calculodif/lista-diferencial">Calculo Diferencial</a></li>
-            						<li><a href="<?php echo $ruta ?>/calculointegral/lista-integral">Calculo Integral</a></li>
+            						<li><a href="<?php echo $ruta ?>/basica/lista-algebra-basica">Álgebra básica</a></li>
+            						<li><a href="<?php echo $ruta ?>/algintermedia/lista-algebra-intermedia">Álgebra intermedia</a></li>
+            						<li><a href="<?php echo $ruta ?>/trigonometria/lista-trigonometria">Trígonometria</a></li>
+            						<li><a href="<?php echo $ruta ?>/geometrianalitica/lista-geometria-analitica">Geometría analítica</a></li>
+            						<li><a href="<?php echo $ruta ?>/estadistica/lista-estadistica">Estadística </a></li>
+            						<li><a href="<?php echo $ruta ?>/calculodif/lista-calculo-diferencial">Calculo Diferencial</a></li>
+            						<li><a href="<?php echo $ruta ?>/calculointegral/lista-calculo-integral">Calculo Integral</a></li>
             					</ul>
 							</li>
 						</ul>
@@ -35,16 +35,16 @@
 									Materias avanzadas<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu hoverhead">
-									<li><a href="<?php echo $ruta ?>/c-avanzado/lista-calculo">Calculo Avanzado</a></li>
-                                    <li><a href="<?php echo $ruta ?>/lineal/lista-algebralineal">Algebra lineal</a></li>
-                                    <li><a href="<?php echo $ruta ?>/diferenciales/lista-diferenciales">Ecuaciones Diferenciales</a></li>
+									<li><a href="<?php echo $ruta ?>/c-avanzado/lista-calculo-multivariable-vectorial">Calculo Avanzado</a></li>
+                                    <li><a href="<?php echo $ruta ?>/lineal/lista-algebra-lineal">Álgebra lineal</a></li>
+                                    <li><a href="<?php echo $ruta ?>/diferenciales/lista-ecuaciones-diferenciales">Ecuaciones Diferenciales</a></li>
 								</ul>
 							</li>
 						</ul>
 						<ul class="nav navbar-nav">
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >
-									Sesiones de practica<span class="caret"></span>
+									Espacios de practica<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu hoverhead">
 									<li><a href="<?php echo $ruta.'/calculodif/panel-practicas';?>">Calculo Diferencial</a></li>

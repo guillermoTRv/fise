@@ -42,6 +42,7 @@
         </div>
       </div>
     </div>
+    <?php include("../footer_fise.php") ?>
 
     <script src="http://code.jquery.com/jquery.js"></script>
   <script src="../js/bootstrap.min.js"></script>    

@@ -1,0 +1,10 @@
+<option value='videos'>Vídeos</option>
+<option value='presentaciones'>Presentaciones</option>
+<option value='apuntes-usuarios'>Apuntes de usuarios</option>
+<option value='pdf'>PDF</option>
+<option value='examenes-o-series'>Exámenes o series</option>
+<option value='aplicaciones-digitales'>Aplicationes digitales</option>
+<option value='retos'>Retos</option>
+<option value='sitios'>Sitios web</option>
+<option value='formularios'>Formularios y temarios</option>
+<option value='otros'>Otros</option>

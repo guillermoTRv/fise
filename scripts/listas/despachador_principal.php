@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Indice de <?php echo $name_title; ?></title>
+	<title>Índice de <?php echo $name_title; ?></title>
 	<meta name="viewport" content="width=device-width,  initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="description" content="<?php echo $name_description; ?>">
@@ -32,18 +32,23 @@
                                    <img class="img-circle" src="../image/<?php echo $imagen_logo ?>.jpg" alt="Generic placeholder image" width="80" height="80" border:"2px solid">
                             </div>
 							<div class="col-md-5 col-sm-6">
-								<h1>Indice de <?php echo $materia_encabezado; ?></h1>
+								<h1>Índice de <?php echo $name_title; ?></h1>
 							</div>
 							<div class="col-md-3 col-sm-2">
 								<div class="dropdown" style="margin-top:24px;float:rigth;">
 									 <button style="max-width:200px;background-color:<?php echo $color_boton; ?>;color:white;" class="btn dropdown-toggle " type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-									 	Mas de la materia
+									 	Más de la materia
 									    <span class="caret"></span>
 									 </button>
 								 		<ul class='dropdown-menu <?php echo $hover ?>' aria-labelledby='dropdownMenu1'>
                                             <li><a href="<?php echo $ruta.$ruta_reco; ?>">Recomendaciones</a></li>
 								 			<li><a href="<?php echo $ruta.$ruta_subir; ?>">Subir contenido</a></li>
-								 			<li><a href="<?php echo $ruta.$ruta_practicas;?>">Practicas</a></li>	
+								 			<?php 
+								 				if ($materia=='Calculo diferencial' or $materia=='Calculo integral') {
+								 					echo "<li><a href='$ruta"."$ruta_practicas'>Practicas</a></li>";
+								 				}
+								 				
+								 			?>
 								 		</ul>
 								</div>
 							</div>

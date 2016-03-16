@@ -3,7 +3,7 @@
 				$ini=$_GET['pos'];
 			}
 			else{$ini=1;}
-			$limit_end=6;
+			$limit_end=5;
 			$init=($ini-1)*$limit_end;
 
 			$count_unidad="SELECT COUNT(*) FROM ficha_contenido_materia WHERE materia='$materia' and unidad='$un'";

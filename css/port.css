@@ -32,9 +32,8 @@ body{
             margin-bottom:15px;
         }
 		.recp{
-            font-family:cursive;
+            font-family:arial;
             font-size:1.1em;
-            font-weight:bolder;
         }
 		 .columleft{
 		    padding-left:89px; 
@@ -153,7 +152,6 @@ body{
             color:white;
         }
         .fen{
-            font-family:cursive;
             margin-bottom:120px;
         }
         .fenalg{

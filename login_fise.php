@@ -3,7 +3,7 @@
 
 	$correo_fise  =   addslashes(htmlspecialchars(strip_tags(trim($_POST['correof_txt']))));
 	$pass_fise    =   addslashes(htmlspecialchars(strip_tags(trim($_POST['passf_txt']))));
-	$url          =   addslashes(htmlspecialchars(strip_tags(trim($_POST['url_txt']))));
+	$url          =   addslashes(strip_tags(trim($_POST['url_txt'])));
 
 
 	$login_b  =   "SELECT COUNT(*) FROM usuariosfise WHERE correo_user='$correo_fise' and pass_user='$pass_fise'";
@@ -25,11 +25,14 @@
 		$us         =  $_SESSION['id_usuario'];
 		#$insertar   =  "INSERT INTO logins(id_user,fecha) VALUES('$us','$fecha')";
 		#$eje_inst   =  $conexion->query($insertar) or die("que paso");
-	
 		header("Location: $url");
 		return true;
 
 
+	}
+	else{
+		echo $url;
+		#header("Location: $url?todonochido");
 	}
 
 ?>

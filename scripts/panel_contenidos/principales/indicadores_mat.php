@@ -26,7 +26,7 @@ echo "
 <center><a href='?un=$u&sub=true' class='aind'>Compartir un material</a></center><br>"; ?>
 <center><a href="http://localhost/pruebas/foroconstruc" class="aind">Ir al foro de la materia</a></center><br>
 
-<center><span class="glyphicon glyphicon-plus"></span><a href="#ventsec" class="aind" style="text-decoration: none;" data-toggle="modal";> Agregar esta seccion a intereses</a></center>
+<center><span class="glyphicon glyphicon-plus"></span><a href="#ventsec" class="aind" style="text-decoration: none;" data-toggle="modal";> Agregar esta sección a intereses</a></center>
 <hr class="hrbas">
 
 <?php 

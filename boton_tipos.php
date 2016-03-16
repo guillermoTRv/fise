@@ -3,7 +3,7 @@
 	$series="examenes-o-series";
 	$api="aplicaciones-digitales"; 
 	echo"
- 	<li><a href='?un=$u&by=videos'>Videos</a></li>
+ 	<li><a href='?un=$u&by=videos'>Vídeos</a></li>
  	<li><a href='?un=$u&by=presentaciones'>Presentaciones</a></li>
  	<li><a href='?un=$u&by=$apuntes'>Apuntes usuarios</a></li>
  	<li><a href='?un=$u&by=pdf'>PDF</a></li>

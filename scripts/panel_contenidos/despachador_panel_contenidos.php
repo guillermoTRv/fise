@@ -48,7 +48,7 @@
 
                     </div>
     			    
-    			    <div class="panel-body fk">
+    			    <div class="panel-body fk" style="margin:13px 40px 13px 13px;">
 
                     <?php include("../scripts/panel_contenidos/controladores_mat.php") ?>
                     <p></p>

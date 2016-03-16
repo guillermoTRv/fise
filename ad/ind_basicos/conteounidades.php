@@ -19,7 +19,7 @@
 						$n=$cont[0];
 						echo "
 							<tr>
-					          <td>$un</td>
+					          <td><div class='module line-clamp'>$un</div></td>
 					          <td><strong>$n</strong></td>
 					        </tr>
 						";

@@ -8,10 +8,9 @@
 <?php 
 	#clases css
 	$imagen_logo        = "dif";
-	$materia_encabezado = "Calculo diferencial";
 	$color_boton        = "rgba(143, 122, 165, 1)";
 	$ruta_reco          = "/calculodif/recodif";
-	$ruta_subir         = "/calculodif/paneldif?un=Subir&sub=true";
+	$ruta_subir         = "/calculodif/panel-calculodiferencial?un=Subir&sub=true";
 	$ruta_practicas		= "/calculodif/panel-practicas";
 	$hr                 = "hrdif";
 	$hover              = "hoverdif";

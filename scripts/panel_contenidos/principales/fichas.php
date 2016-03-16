@@ -1,13 +1,14 @@
 <?php 
-	$id_ficha=$registro['id_fichamat'];
-	$titulo_ficha=$registro['titulo'];
-	$texto_ficha=$registro['descripcion_texto'];
-	$link_ficha=$registro['link'];
-	$tipo_ficha=$registro['tipo_material'];
+	$id_ficha      =$registro['id_fichamat'];
+	$titulo_ficha  =$registro['titulo'];
+	$texto_ficha   =$registro['descripcion_texto'];
+	$link_ficha    =$registro['link'];
+	$tipo_ficha    =$registro['tipo_material'];
 	$condideracion_ficha=$registro['consideracion'];
-	$id_usuario=$registro['id_user'];
-	$fecha_ficha=$registro['fecha_registro_fichamat'];
-	$votos_ficha=$registro['voto'];
+	$id_usuario    =$registro['id_user'];
+	$fecha_c       =$registro['fecha_registro_fichamat'];
+    $fecha         = substr($fecha_c, 0, 10);
+	$votos_ficha   =$registro['voto'];
 	
 	$consulta_usuario="SELECT id_user,name_user FROM usuariosfise WHERE id_user='$id_usuario'";
 	$ejecutarc=$conexion->query($consulta_usuario);
@@ -33,7 +34,7 @@
         <div class='col-md-8'>";
             if ($un!='' && $tm=='' && $by=='' && $cons=='' && $prf=='' && $sub=='')  {
             	echo "
-            		<a class='infomat' href='?un=$u&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha_ficha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
+            		<a class='infomat' href='?un=$u&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
             		</a>
             	";
             }
