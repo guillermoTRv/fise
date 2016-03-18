@@ -86,8 +86,12 @@
 					$texto = $corte."...";
 				}
 				 	echo"<tr>
-				 			<td style='font-size:.9em;'> $texto</td>
-				 			<td style='font-size:.9em;'> detalles <span class='glyphicon glyphicon-tags'></span></td>
+				 			<td style='font-size:.9em;'>
+				 				<a class='aind'>$texto</a>
+				 			</td>
+				 			<td style='font-size:.9em;'>
+				 				<a class='aind'><span class='glyphicon glyphicon-th-large'></span> detalles </a>
+				 			</td>
 				 		</tr>";
 			}
 			?>

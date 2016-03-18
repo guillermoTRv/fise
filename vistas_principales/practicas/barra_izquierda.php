@@ -7,6 +7,14 @@
             <div class='media'>
               <div class='media-body'>
                 <center>
+                  <a style='width:170px;' href='?op=modulos'class='btn btn-sm btn-ind'><strong> Por modulos </strong></a>
+                </center>
+              </div>
+            </div>
+
+            <div class='media'>
+              <div class='media-body'>
+                <center>
                   <a style='width:170px;' href='?op=listado'class='btn btn-sm btn-ind'><strong> Todas las practicas </strong></a>
                 </center>
               </div>
@@ -37,7 +45,7 @@
                 </center>
               </div>
             </div>
-
+            <!--
             <div class='media'>
               <div class='media-body'>
                 <center>
@@ -46,7 +54,7 @@
                   </a>
                 </center>
               </div>
-            </div>
+            </div>-->
 
                   
             <br>
@@ -66,11 +74,10 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-repeat'></span> 
                           discusiones  anteriores 
                         </a>-->
-                        
-                        <a href="<?php echo $ruta.'calculodif/paneldif'?>" class='list-group-item fenmat'>
-                          &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-list-alt'></span> 
-                          Ir al indice de la materia
-                        </a>
+                        <?php 
+                            include("../scripts/practicas/redireccion_listas.php");
+                        ?>
+                       
                         
                         <a href='?op=ayuda' class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-question-sign'></span> 

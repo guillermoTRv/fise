@@ -3,6 +3,13 @@
 	$ruta_vistas  = "vistas_principales/practicas/vista_fichas.php";
 
 	switch ($op) {
+	
+	case "modulos":
+		$title          = "Listado de todas las practicas para $materia";
+        $ruta_archivo   = $ruta_scripts;        
+        include("../scripts/practicas/modulos.php");
+		break;
+
 	case "listado":
 		$title          = "Listado de todas las practicas para $materia";
         $ruta_archivo   = $ruta_scripts;        
