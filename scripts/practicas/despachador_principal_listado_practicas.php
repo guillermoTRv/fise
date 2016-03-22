@@ -1,6 +1,8 @@
 <?php 
     error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE);
-    global $op;      $op      = addslashes(htmlspecialchars(strip_tags(trim($_GET['op']))));
+    global $op;      $op        = addslashes(htmlspecialchars(strip_tags(trim($_GET['op']))));
+    global $mod;      $mod      = addslashes(htmlspecialchars(strip_tags(trim($_GET['mod']))));
+
     include("../ruta.php");
     include("../config.php");
     include("../input_toquen.php");
@@ -17,7 +19,10 @@
     <link rel="stylesheet" href="../css/port.css">
     <link rel="stylesheet" href="../js/bootstrap.js">
 </head>
-
+<style type="text/css">
+  a.ir{text-decoration: none;}
+  a.ir:hover{text-decoration:none;}
+</style>
 <body>
   <?php 
         include("../header.php");

@@ -47,11 +47,11 @@
 									Espacios de practica<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu hoverhead">
-									<li><a href="<?php echo $ruta.'/calculodif/panel-practicas';?>">Calculo Diferencial</a></li>
-            						<li><a href="<?php echo $ruta.'/calculointegral/panel-practicas';?>">Calculo Integral</a></li>
-									<li><a href="<?php echo $ruta.'/c-avanzado/panel-practicas' ?>">Calculo Avanzado</a></li>
-                                    <li><a href="<?php echo $ruta.'/lineal/panel-practicas' ?>">Algebra lineal</a></li>
-                                    <li><a href="<?php echo $ruta.'/diferenciales/panel-practicas' ?>">Ecuaciones Diferenciales</a></li>
+									<li><a href="<?php echo $ruta.'/calculodif/panel-practicas?op=modulos';?>">Calculo Diferencial</a></li>
+            						<li><a href="<?php echo $ruta.'/calculointegral/panel-practicas?op=modulos';?>">Calculo Integral</a></li>
+									<li><a href="<?php echo $ruta.'/c-avanzado/panel-practicas?op=modulos' ?>">Calculo Avanzado</a></li>
+                                    <li><a href="<?php echo $ruta.'/lineal/panel-practicas?op=modulos' ?>">Álgebra lineal</a></li>
+                                    <li><a href="<?php echo $ruta.'/diferenciales/panel-practicas?op=modulos' ?>">Ecuaciones Diferenciales</a></li>
 								</ul>
 							</li>
 						</ul>

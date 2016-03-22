@@ -84,7 +84,7 @@
                           Funcionamiento y dudas
                         </a>
 
-                        <a href="<?php echo $ruta.'calculodif/paneldif'?>" target='_blank' class='list-group-item fenmat'>
+                        <a target='_blank' class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-pencil'></span> 
                           Recomiendame app
                         </a>

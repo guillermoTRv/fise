@@ -8,11 +8,20 @@
            })
         });
 
-        $(document).on("change","#unidades",function(){
+    $(document).on("change","#unidades",function(){
                    $("#unidades option:selected").each(function () {
                     elegido=$(this).val();
                     $.post("practicas/listas/ajax/temas.php", { elegido: elegido }, function(data){
                     $("#temas").html(data);       
+                });
+           })
+        });
+
+    $(document).on("change","#materia_uno",function(){
+                   $("#materia_uno option:selected").each(function () {
+                    elegido_mod=$(this).val();
+                    $.post("practicas/listas/ajax/modulos_materia.php", { elegido_mod: elegido_mod }, function(data){
+                    $("#modulos_materia").html(data);       
                 });
            })
         });

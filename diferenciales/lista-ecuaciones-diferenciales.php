@@ -5,7 +5,7 @@
 	$title_enc  = "Ecuaciones diferenciales";
 	$ruta_reco  = "/diferenciales/recodiferenciales";
 	$ruta_sub   = "/diferenciales/ecuaciones-diferenciales?un=Subir&sub=true";
-	$ruta_pract = "/diferenciales/panel-practicas";
+	$ruta_pract = "/diferenciales/panel-practicas?op=modulos";
 	$color_btn  = "rgba(0, 84, 0, .97)";
 
 ?>

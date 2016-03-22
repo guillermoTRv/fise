@@ -5,7 +5,7 @@
 	$title_enc  = "Calculo avanzado";
 	$ruta_reco  = "/c-avanzado/recocalculo";
 	$ruta_sub   = "/c-avanzado/panel-calculoavanzado?un=Subir&sub=true";
-	$ruta_pract = "/c-avanzado/panel-practicas";
+	$ruta_pract = "/c-avanzado/panel-practicas?op=modulos";
 	$color_btn  = "rgba(151, 84, 45, 1)";
 
 ?>

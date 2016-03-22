@@ -1,13 +1,10 @@
 <?php 
 	$ruta_scripts = "scripts/practicas/controlador_fichas.php";
-	$ruta_vistas  = "vistas_principales/practicas/vista_fichas.php";
 
 	switch ($op) {
 	
 	case "modulos":
-		$title          = "Listado de todas las practicas para $materia";
-        $ruta_archivo   = $ruta_scripts;        
-        include("../scripts/practicas/modulos.php");
+        include("../scripts/practicas/modulos_script.php");
 		break;
 
 	case "listado":
@@ -37,14 +34,14 @@
 	case "batalla":
 		$title          = "Bienvenido a batalla de ejercicios";
         $cont_esp       = "";
-        $ruta_archivo   = $ruta_vistas;        
+        $ruta_archivo   = "vistas_principales/practicas/batalla_ejercicios.php";        
         include("../scripts/practicas/includs.php");
 		break;
 
 	case "discusion-actual":
 		$title          = "Tema para discutir";
         $cont_esp       = "";
-        $ruta_archivo   = $ruta_vistas;        
+        $ruta_archivo   = "/vistas_principales/practicas/discusion_materia.php";        
         include("../scripts/practicas/includs.php");
 		break;
 
@@ -58,15 +55,23 @@
 	case "ayuda":
 		$title          = "Ayuda al usuario, dudas comunes y soporte";
         $cont_esp       = "";
-        $ruta_archivo   = $ruta_vistas;        
+        $ruta_archivo   = "/vistas_principales/practicas/vista_soporte.php";        
         include("../scripts/practicas/includs.php");
 		break;
 
 	default:
-		$title          = "Bienvenido al espacio de practica para la materia de $materia";
-        $cont_esp       = "";
-        $ruta_archivo   = $ruta_vistas;        
-        include("../scripts/practicas/includs.php");
+		if ($mod=='') {
+			$title          = "Bienvenido al espacio de practica para la materia de $materia";
+	        $cont_esp       = "";
+	        $ruta_archivo   = "/vistas_principales/practicas/vista_presentacion.php";        
+	        include("../scripts/practicas/includs.php");
+		}
+		
 		break;
-}
+	}
+
+	if ($mod!='') {
+		include("../scripts/practicas/listado_por_modulos.php");
+	}
+
 ?>

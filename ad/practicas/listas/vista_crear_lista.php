@@ -27,10 +27,9 @@
       <option value="mixta">Mixta</option>
     </select>
   </div>
-  
   <div class="form-group">
       <label>Materia</label>
-        <select class="form-control" name="materia" title="Selecciona una unidad" >
+        <select id="materia_uno" class="form-control" name="materia" title="Selecciona una unidad" >
             <option value="">--</option>
             <option  value="Calculo diferencial">Calculo diferencial</option>
             <option  value="Calculo integral">Calculo integral</option>
@@ -39,6 +38,13 @@
             <option  value="Ecuaciones diferenciales">Ecuaciones diferenciales</option>
         </select>   
   </div>
+  <div class="form-group">
+      <label>Modulo</label>
+      <select id="modulos_materia" class="form-control" name="modulo_m">
+          <option value="">--</option>
+      </select>
+  </div>
+  
 </form>
   <div id="m_rc">
       <button type='button' id='btn-rc' value='enviar' class='btn btn-success btn-sm'>Enviar datos</button>

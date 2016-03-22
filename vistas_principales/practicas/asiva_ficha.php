@@ -1,4 +1,4 @@
-<div style="margin-left:5px;" class='panel panel-default pan'>
+<div style="margin-left:15px;" class='panel panel-default pan'>
     <div class='panel-body'>
         <p class='ptit'>
         	<?php echo $row['name_lprc']; ?>

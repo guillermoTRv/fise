@@ -5,7 +5,7 @@
 	$title_enc  = "Álgebra lineal";
 	$ruta_reco  = "/lineal/recolineal";
 	$ruta_sub   = "/lineal/panel-algebra-lineal?un=Subir&sub=true";
-	$ruta_pract = "/lineal/panel-practicas";
+	$ruta_pract = "/lineal/panel-practicas?op=modulos";
 	$color_btn  = "rgba(123, 132, 218, 1)";
 
 ?>

@@ -49,7 +49,7 @@
 			echo "</div>";
 			}
 			else{
-				echo "<br><p class='fen'>Aun no hay contenidos en esta zona, si gusssssstas puedes recomendarnos alguno </p>";
+				echo "<br><p class='fen'>Aun no hay listas en esta parte pero muy pronto veras una por aqui </p>";
 			}
 
 			

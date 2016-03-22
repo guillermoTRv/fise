@@ -7,11 +7,16 @@
 	$clasificacion		=	$_POST['clasificacion'];
 	$nivel				=	$_POST['nivel'];
 	$materia			=	$_POST['materia'];
+	$mod_sin            =   $_POST['modulo_m'];
+	$modulo             =   utf8_decode($mod_sin);
 	date_default_timezone_set('America/Mexico_City');
     $fecha 				=	date("Y-m-d H:i:s");
     $prod               =   "no";
 	$mens="<p style='margin-top:10px;'>Los datos se han subido exitosamente</p>";
-	$insertar="INSERT INTO l_prc(name_lprc,materia,prod,clasf,nivel,num_ejerc,frc_creacion) VALUES('$name','$materia','$prod','$clasificacion','$nivel',0,'$fecha')";
+	
+
+
+	$insertar="INSERT INTO l_prc(name_lprc,materia,prod,clasf,nivel,num_ejerc,frc_creacion,modulo) VALUES('$name','$materia','$prod','$clasificacion','$nivel',0,'$fecha','$modulo')";
 	$e_i=$conexion->query($insertar) or die("Hubo un problema al insertar");
 
 
@@ -25,7 +30,6 @@
 	$insertar_url    = "INSERT INTO practicas_url(name_lprc,name_limpio) VALUES('$name','$name_lista_limpio')";
 	$insertar_url_e  = $conexion->query($insertar_url) or die("sss");
 
-
 	$inpt   ="<input type='hidden' value='$id_l' name='id'>";
 
 		$rm=[	
@@ -35,4 +39,9 @@
 
 		];
 		echo json_encode($rm);
+
 ?>
+
+
+
+
