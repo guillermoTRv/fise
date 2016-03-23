@@ -15,9 +15,9 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-md-1 hidden-sm hidden-xs">
-                <img class="img-circle" src="../image/lineal.jpg" alt="Generic placeholder image" width="60" height="60" border:"2px solid">
+                <img class="img-circle" src="../image/<?php echo $modulos_a[2];  ?>.jpg" alt="Generic placeholder image" width="60" height="60" border:"2px solid">
             </div>
-            <div class="col-md-8 col-sm-9 ">
+            <div class="col-md-9 col-sm-10 ">
               <h3>
                 <?php echo $modulos_a[0]; ?>                     
               </h3>

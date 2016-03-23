@@ -1,8 +1,15 @@
 <?php
 	
-	if ($u!='' && $t=='' && $by=='' && $cons=='' && $prf=='' && $cont=='' && $sub=='') {
+	if ($u!='' && $t=='' && $by=='' && $cons=='' && $prf=='' && $cont=='' && $sub=='' && $tab=='') {
 		include("../scripts/panel_contenidos/paginacion/page_unmat.php");
 	}
+	if ($u!='' && $t=='' && $by=='' && $cons=='' && $prf=='' && $cont=='' && $sub=='' && $tab!='') {
+		echo "ha";
+	}
+
+
+
+
 	if ($u!='' && $t!='' && $by=='' && $cons=='' && $prf=='' && $cont=='' && $sub=='') {
 		include("../scripts/panel_contenidos/paginacion/page_tmmat.php");
 	}

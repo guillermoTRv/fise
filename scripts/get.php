@@ -6,4 +6,6 @@
     global $cont; $cont=addslashes(htmlspecialchars(strip_tags($_GET['cont'])));
     global $prf; $prf=addslashes(htmlspecialchars(strip_tags(trim($_GET['prf']))));
     global $sub; $sub=addslashes(htmlspecialchars(strip_tags(trim($_GET['sub']))));
+    global $tab; $tab=addslashes(htmlspecialchars(strip_tags(trim($_GET['tab']))));
+
  ?>
