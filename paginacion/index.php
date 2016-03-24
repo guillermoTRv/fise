@@ -18,17 +18,7 @@
 	  <div class="row">
 		<div class="col-xs-12">
 		<h3> Listado de Países </h3>
-		<div id="loader" class="text-center"> <img src="loader.gif"></div>
-		<a href="?h=s">jhgfjhg</a>
-		<?php  
-			$m=$_GET['h'];
-			if ($m=='s') {
-				echo "sory";
-			}
-			else{
-				echo '<div class="outer_div"></div>';
-			}
-		?>
+		<div class="outer_div"></div>
 		<!-- Datos ajax Final -->
 		</div>
 	  </div>
@@ -47,14 +37,12 @@
  
 	function load(page){
 		var parametros = {"action":"ajax","page":page,"materia":"<?php echo $mon; ?>","unidad":"dospuntocero"};
-		$("#loader").fadeIn('slow');
 		$.ajax({
 			url:'http://localhost/cambio/paginacion/paises_ajax.php',
 			data: parametros,
 			 
 			success:function(data){
 				$(".outer_div").html(data).fadeIn('slow');
-				$("#loader").html("");
 			}
 		})
 	}

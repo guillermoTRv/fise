@@ -32,31 +32,31 @@
     <div class='panel-footer'>
     <div class='row'>
         <div class='col-md-8'>";
-            if ($un!='' && $tm=='' && $by=='' && $cons=='' && $prf=='' && $sub=='')  {
+            if ($un!='' && $tm=='' && $by=='' && $cons=='' && $prf=='')  {
             	echo "
-            		<a class='infomat' href='?un=$u&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
+            		<a class='infomat' href='?un=$un&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
             		</a>
             	";
             }
-            if ($un!='' && $tm!='' && $by=='' && $cons=='' && $prf=='' && $sub=='')  {
+            if ($un!='' && $tm!='' && $by=='' && $cons=='' && $prf=='')  {
                 echo "
                         <a class='infomat' href='?un=$u&tm=$t&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha_ficha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
                     </a>
                 ";
             }
-            if ($un!='' && $tm==''  && $by!='' && $cons=='' && $prf=='' && $sub=='') {
+            if ($un!='' && $tm==''  && $by!='' && $cons=='' && $prf=='') {
             	echo "
             		<a class='infomat' href='?un=$u&by=$by&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha_ficha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
             		</a>
             	";
             }
-            if ($un!='' && $tm=='' && $by=='' && $cons!='' && $prf=='' && $sub=='') {
+            if ($un!='' && $tm=='' && $by=='' && $cons!='' && $prf=='') {
             	echo "
             		<a class='infomat' href='?un=$u&cons=$cons&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha_ficha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
             		</a>
             	";
             }
-            if ($un!='' && $tm=='' && $by=='' && $cons=='' && $prf!='' && $sub=='') {
+            if ($un!='' && $tm=='' && $by=='' && $cons=='' && $prf!='') {
             	echo "
             		<a class='infomat' href='?un=$u&prf=$prf&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha_ficha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
             		</a>

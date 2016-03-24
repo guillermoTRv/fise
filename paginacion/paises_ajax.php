@@ -15,22 +15,25 @@
 		include 'pagination.php'; //incluir el archivo de paginación
 		//las variables de paginación
 		$page = (isset($_REQUEST['page']) && !empty($_REQUEST['page']))?$_REQUEST['page']:1;
-		$per_page = 10; //la cantidad de registros que desea mostrar
+		$per_page = 1; //la cantidad de registros que desea mostrar
 		$adjacents  = 4; //brecha entre páginas después de varios adyacentes
 		$offset = ($page - 1) * $per_page;
 		//Cuenta el número total de filas de la tabla*/
 		
-		$listas_b = "SELECT * FROM ficha_contenido_materia WHERE materia='Trigonometria' ";
+		$listas_b = "SELECT * FROM ficha_contenido_materia  ";
 	    $listas_e = mysqli_query($con,$listas_b);
 	    $numrows = mysqli_num_rows($listas_e);
 
 		$total_pages = ceil($numrows/$per_page);
 		$reload = 'index.php';
 		//consulta principal para recuperar los datos
-		$query = mysqli_query($con,"SELECT * FROM ficha_contenido_materia WHERE materia='Trigonometria'  order by id_fichamat LIMIT $offset,$per_page");
+		$query = mysqli_query($con,"SELECT * FROM ficha_contenido_materia  order by id_fichamat LIMIT $offset,$per_page");
 		
 		if ($numrows>0){
 			?>
+			<div class="table-pagination pull-right">
+			<?php echo paginate($reload, $page, $total_pages, $adjacents);?>
+		</div>
 		<table class="table table-bordered">
 			  <thead>
 				<tr>
@@ -57,9 +60,7 @@
 			?>
 			</tbody>
 		</table>
-		<div class="table-pagination pull-right">
-			<?php echo paginate($reload, $page, $total_pages, $adjacents);?>
-		</div>
+		
 		
 			<?php
 			

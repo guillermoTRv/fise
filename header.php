@@ -60,13 +60,14 @@
 						</ul>
 
 						<?php 
-						    session_start();
+						/*    session_start();
 				            if (!isset($_SESSION['usuario'])) {
 					                include("header_sin_session.php");
 					        }
 					        else{ 
 					                include("header_con_session.php");
 					        }
+						*/
 						?>
 
 					</div>

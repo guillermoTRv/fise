@@ -60,5 +60,33 @@
     </div>
     <?php include('../footer_fise.php'); ?>
 
-    <script src="http://code.jquery.com/jquery.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        load(1);
+    });
+ 
+    function load(page){
+        var parametros = {
+            "action":"ajax",
+            "page":page,
+            "materia":"<?php echo $materia; ?>",
+            "unidad":"<?php echo $un; ?>",
+            "tema":"<?php echo $tm; ?>",
+            "by":"<?php echo $by; ?>",
+            "cons":"<?php echo $cons; ?>",
+            "prf":"<?php echo $prf; ?>",
+            "tab":"<?php echo $tab; ?>"
+            };
+        $.ajax({
+            url:'../paginacion_contenidos.php',
+            data: parametros,
+             
+            success:function(data){
+                $(".outer_div").html(data).fadeIn('slow');
+            }
+        })
+    }
+    </script>
