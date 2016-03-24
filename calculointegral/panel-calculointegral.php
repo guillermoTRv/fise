@@ -16,6 +16,7 @@
 			}
 		    .amounmat{
 		            color:rgba(57, 146, 131, .95);
+		            text-decoration: none;
 		    }
 		    a.amounmat:hover{
 		            color:rgba(57, 146, 131, .95);

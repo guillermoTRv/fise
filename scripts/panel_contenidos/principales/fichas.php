@@ -1,4 +1,8 @@
-<?php 
+<?php
+    $u=urls_amigables($unidad);
+    $t=urls_amigables($tema);
+
+    while($registro = mysqli_fetch_array($query)){
 	$id_ficha      =$registro['id_fichamat'];
 	$titulo_ficha  =$registro['titulo'];
 	$texto_ficha   =$registro['descripcion_texto'];
@@ -20,7 +24,7 @@
 	
     <div class='panel panel-default pan'>
          <div class='panel-body'>
-            <p class='ptit'>$titulo_ficha</p>
+            <p>$titulo_ficha</p>
                             
             <div class='module line-clamp'><p>$texto_ficha</p></div>";
                                 
@@ -32,33 +36,33 @@
     <div class='panel-footer'>
     <div class='row'>
         <div class='col-md-8'>";
-            if ($un!='' && $tm=='' && $by=='' && $cons=='' && $prf=='')  {
+            if ($unidad!='' && $tema=='' && $by=='' && $cons=='' && $prf=='')  {
             	echo "
-            		<a class='infomat' href='?un=$un&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
+            		<a class='infomat' href='?un=$u&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
             		</a>
             	";
             }
-            if ($un!='' && $tm!='' && $by=='' && $cons=='' && $prf=='')  {
+            if ($unidad!='' && $tema!='' && $by=='' && $cons=='' && $prf=='')  {
                 echo "
-                        <a class='infomat' href='?un=$u&tm=$t&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha_ficha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
+                        <a class='infomat' href='?un=$u&tm=$t&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
                     </a>
                 ";
             }
-            if ($un!='' && $tm==''  && $by!='' && $cons=='' && $prf=='') {
+            if ($unidad!='' && $tema==''  && $by!='' && $cons=='' && $prf=='') {
             	echo "
-            		<a class='infomat' href='?un=$u&by=$by&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha_ficha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
+            		<a class='infomat' href='?un=$u&by=$by&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
             		</a>
             	";
             }
-            if ($un!='' && $tm=='' && $by=='' && $cons!='' && $prf=='') {
+            if ($unidad!='' && $tema=='' && $by=='' && $cons!='' && $prf=='') {
             	echo "
-            		<a class='infomat' href='?un=$u&cons=$cons&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha_ficha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
+            		<a class='infomat' href='?un=$u&cons=$cons&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
             		</a>
             	";
             }
-            if ($un!='' && $tm=='' && $by=='' && $cons=='' && $prf!='') {
+            if ($unidad!='' && $tema=='' && $by=='' && $cons=='' && $prf!='') {
             	echo "
-            		<a class='infomat' href='?un=$u&prf=$prf&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha_ficha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
+            		<a class='infomat' href='?un=$u&prf=$prf&cont=$id_ficha'><span class='glyphicon glyphicon-play'></span> Ver | $tipo_ficha - $condideracion_ficha $nombre $fecha &nbsp;&nbsp;&nbsp; Votos:$votos_ficha
             		</a>
             	";
             }
@@ -68,5 +72,5 @@
     </div>
 
 	";
-
+    }
  ?>

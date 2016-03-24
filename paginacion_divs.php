@@ -1,3 +1,7 @@
+<style type="text/css">
+	.pagi{text-decoration: none; color}
+	.pagi:hover{text-decoration: none;}
+</style>
 <?php
 
 
@@ -9,11 +13,11 @@ function paginate($page, $tpages, $adjacents) {
 	// previous label
 
 	if($page==1) {
-		$out.= "<li class='disabled'><span><a>$prevlabel</a></span></li>";
+		$out.= "<li class='disabled'><span><a class='pagi'>$prevlabel</a></span></li>";
 	} else if($page==2) {
-		$out.= "<li><span><a href='javascript:void(0);' onclick='load(1)'>$prevlabel</a></span></li>";
+		$out.= "<li><span><a class='pagi' href='javascript:void(0);' onclick='load(1)'>$prevlabel</a></span></li>";
 	}else {
-		$out.= "<li><span><a href='javascript:void(0);' onclick='load(".($page-1).")'>$prevlabel</a></span></li>";
+		$out.= "<li><span><a class='pagi' href='javascript:void(0);' onclick='load(".($page-1).")'>$prevlabel</a></span></li>";
 
 	}
 	
@@ -55,9 +59,9 @@ function paginate($page, $tpages, $adjacents) {
 	// next
 
 	if($page<$tpages) {
-		$out.= "<li><span><a href='javascript:void(0);' onclick='load(".($page+1).")'>$nextlabel</a></span></li>";
+		$out.= "<li><span><a class='pagi' href='javascript:void(0);' onclick='load(".($page+1).")'>$nextlabel</a></span></li>";
 	}else {
-		$out.= "<li class='disabled'><span><a>$nextlabel</a></span></li>";
+		$out.= "<li class='disabled'><span><a class='pagi'>$nextlabel</a></span></li>";
 	}
 	
 	$out.= "</ul>";

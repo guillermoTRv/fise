@@ -7,8 +7,7 @@
    	$prf      =$_REQUEST['prf'];
    	$tab      =$_REQUEST['tab'];
 
-   	$un =$_REQUEST['unidad'];
-   	$tm     =$_REQUEST['tema'];
+   
    	/*if () {
    		Aqui se haran las variables de conexion
    	}*/
@@ -17,6 +16,7 @@
    	# conectare la base de datos
    	include("paginacion_config.php");
    	include("config.php");
+   	include("scripts/clean/funcion_limpiar.php");
     if(!$con){
         die("imposible conectarse: ".mysqli_error($con));
     }
@@ -28,7 +28,14 @@
 		include 'paginacion_divs.php'; //incluir el archivo de paginación
 		//las variables de paginación
 		$page      = (isset($_REQUEST['page']) && !empty($_REQUEST['page']))?$_REQUEST['page']:1;
-		$per_page  = 10; //la cantidad de registros que desea mostrar
+		if ($tab=='') {
+			$per_page  = 4; 	
+		}
+		if ($tab!='') {
+			$per_page = 12;
+		}
+
+		
 		$adjacents = 4; //brecha entre páginas después de varios adyacentes
 		$offset    = ($page - 1) * $per_page;
 		//Cuenta el número total de filas de la tabla*/
@@ -42,24 +49,26 @@
 		
 		if ($numrows>0){
 			?>
-		<div class="row">
-			<div class="table-pagination pull-right">
-			<?php echo paginate( $page, $total_pages, $adjacents);?>
-		</div>
-		</div>
 		
+		
+		<div class="row">
+			
+			<div style='margin-right:20px;color:black' class="table-pagination pull-right">
+			<?php echo paginate( $page, $total_pages, $adjacents);?>
+			</div>	
+			
+		</div>
 
 			<?php
-			while($registro = mysqli_fetch_array($query)){
-				
-				if ($tab == '') {
-					include("scripts/panel_contenidos/principales/fichas.php");	
-					}	
-				else{
-					echo "string";
-				}
-			
+
+			if ($tab == '') {
+				include("scripts/panel_contenidos/principales/fichas.php");	
+			}	
+			else{
+				include("scripts/panel_contenidos/principales/tabla.php");
 			}
+			
+
 			?>
 			
 		
@@ -67,9 +76,9 @@
 			
 		} else {
 			?>
-			<div class="alert alert-warning alert-dismissable">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              <h4>Aviso!!!</h4> No hay datos para mostrar
+			<div class="alert alert-success alert-dismissable">
+              <button type="button" class="close" data-dismiss="success" aria-hidden="true">&times;</button>
+              <h4>Hola</h4> Aun no hay contenidos por aqui, puedes compartirnos alguno
             </div>
 			<?php
 		}
