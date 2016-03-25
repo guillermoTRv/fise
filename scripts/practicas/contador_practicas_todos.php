@@ -5,5 +5,5 @@
 	$contador_n = $contador_a[0];
 	global $x;    
 	       $x=$contador_n; 
-	$contenido = "Número total de practicas encontradas <strong>$x</strong>"
+      echo $contenido = "Número total de practicas encontradas <strong>$x</strong>";
 ?>

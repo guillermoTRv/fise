@@ -1,6 +1,5 @@
 
-<?php 
-	$id_usuario = $_SESSION['id_usuario'];
+<?php
 	$estado_b   =  "SELECT * FROM usuarios_practicas WHERE id_usuario='$id_usuario' and id_practica='$id_practica'";
 	$estado_e   =  $conexion->query($estado_b);
 	$estado_n   =  mysqli_num_rows($estado_e);

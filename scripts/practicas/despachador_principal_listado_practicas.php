@@ -2,7 +2,8 @@
     error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE);
     global $op;      $op        = addslashes(htmlspecialchars(strip_tags(trim($_GET['op']))));
     global $mod;      $mod      = addslashes(htmlspecialchars(strip_tags(trim($_GET['mod']))));
-
+    session_start();
+    $id_usuario = $_SESSION['id_usuario'];
     include("../ruta.php");
     include("../config.php");
     include("../input_toquen.php");
@@ -22,6 +23,14 @@
 <style type="text/css">
   a.ir{text-decoration: none;}
   a.ir:hover{text-decoration:none;}
+  a.avn{
+    text-decoration: none;
+    color: black;
+  }
+  a.avn:hover{
+    text-decoration: none;
+    color: black;
+  }
 </style>
 <body>
   <?php 
@@ -49,7 +58,32 @@
     </div>
     <?php include("../footer_fise.php") ?>
 
-    <script src="http://code.jquery.com/jquery.js"></script>
-  <script src="../js/bootstrap.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        load(1);
+    });
+ 
+    function load(page){
+        var parametros = {
+            "action":"ajax",
+            "page":page,
+            "materia":"<?php echo $materia ?>",
+            "op":"<?php echo $op; ?>",
+            "mod":"<?php echo $mod; ?>",
+            "fg":"<?php echo $id_usuario; ?>"
+            };
+        $.ajax({
+            url:'../paginacion_practicas.php',
+            data: parametros,
+             
+            success:function(data){
+                $(".outer_div").html(data).fadeIn('slow');
+            }
+        })
+    }
+    </script>
 </body>
 </html>
