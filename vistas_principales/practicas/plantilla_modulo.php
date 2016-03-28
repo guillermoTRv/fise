@@ -1,5 +1,5 @@
 <?php 
-    $listas_mod_b = "SELECT id_lprc FROM l_prc WHERE materia='$materia' and modulo='$modulos_a[0]'";
+    $listas_mod_b = "SELECT id_lprc FROM l_prc WHERE materia='$materia' and modulo='$modulos_a[0]' and prod='si'";
     $listas_mod_e = $conexion->query($listas_mod_b);
     $listas_mod_a = mysqli_num_rows($listas_mod_e);
 

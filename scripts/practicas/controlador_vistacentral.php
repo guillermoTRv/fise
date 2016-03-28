@@ -1,28 +1,27 @@
 <?php 
 	$ruta_scripts = "../scripts/practicas/controlador_fichas.php";
-
 	if ($op == 'modulos') {
-		$title        = "Modulos de ejercicios de $materia";
+		$title        = "Módulos de ejercicios de $name_title";
 		$title_esp    = "";
 		$ruta_archivo = "modulos_materia.php";
 		include("../scripts/practicas/includs.php");
 	}
 
 	if ($op == 'listado') {
-		$title          = "Listado de todas las practicas para $materia";
+		$title          = "Listado de todas las practicas para $name_title";
 		$archivo_esp = "../scripts/practicas/contador_practicas_todos.php";
 		$cont_centro = "";
 		include("../scripts/practicas/includs.php");
 	}
 	if ($op == 'practicas-generales') {
-		$title          = "Listado por practicas generales para $materia";
+		$title          = "Listado por practicas generales para $name_title";
 		$cond_one    = "general";
 		$archivo_esp = "../scripts/practicas/contador_practicas_where.php";
 		$cont_centro = "";
 		include("../scripts/practicas/includs.php");
 	}	
 	if ($op == 'aplicaciones-particulares') {
-		$title          = "Listado por aplicaciones particulares para $materia";
+		$title          = "Listado por aplicaciones particulares para $name_title";
 		$cond_one    = "aplicaciones particulares";
 		$archivo_esp = "../scripts/practicas/contador_practicas_where.php";
 		$cont_centro = "";
@@ -37,7 +36,7 @@
 	}
 
 	if ($op == 'discusion-actual') {
-		$title          = "Tema para discutir";
+		$title          = "Temas para discutir";
         $title_esp      = "";
         $ruta_archivo   = "/vistas_principales/practicas/discusion_materia.php";        
         include("../scripts/practicas/includs.php");
@@ -51,15 +50,20 @@
 	}
 
 	if (empty($op) && empty($mod)) {
-		$title          = "Bienvenido al espacio de practica para la materia de $materia";
+		$title          = "Bienvenido al espacio de practica para la materia de $name_title";
 	    $title_esp      = "";
 	    $ruta_archivo   = "../vistas_principales/practicas/vista_presentacion.php";        
 	    include("../scripts/practicas/includs.php");
 	}
 
 	if ($mod != '') {
-		$title       = "Listado por aplicaciones particulares para $mod";
-		$archivo_esp = "../scripts/practicas/contador_modulo.php";
+		$url_b = "SELECT rel_modulo FROM modulos_url WHERE url_limpia='$mod'";
+	    $url_e = $conexion->query($url_b);
+	    $url_a = $url_e->fetch_array();
+	    $rel_modulo = $url_a[0];
+
+		$title       = "Listado de practicas para $rel_modulo";
+		$archivo_esp = "../scripts/practicas/contador_modulos.php";
 		$cont_centro = "";
 		include("../scripts/practicas/includs.php");
 	}

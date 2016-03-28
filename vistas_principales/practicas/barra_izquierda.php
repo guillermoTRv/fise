@@ -7,7 +7,7 @@
             <div class='media'>
               <div class='media-body'>
                 <center>
-                  <a style='width:170px;' href='?op=modulos'class='btn btn-sm btn-ind'><strong> Por modulos </strong></a>
+                  <a style='width:170px;' href='?op=modulos'class='btn btn-sm btn-ind'><strong> Por módulos </strong></a>
                 </center>
               </div>
             </div>
@@ -62,7 +62,7 @@
                         
                         <a href='?op' class='list-group-item fenmat active-default'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-leaf'></span> 
-                          Presentacion
+                          Presentación
                         </a>
                         
                         <a href='?op=discusion-actual' class='list-group-item fenmat'>

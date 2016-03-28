@@ -33,7 +33,7 @@
 									<a class='colqa' href='#$id_unidad' data-toggle='modal'>
 											<div class='panel panel-success' style='border-color:rgba(255, 255, 255,.1);'>
 												<div class='temesize panel-body'>
-													<h4><span class='glyphicon glyphicon-plus'></span> $unidad</h4>
+													<h4><span class='masmat glyphicon glyphicon-plus'></span> $unidad</h4>
 													
 												</div>
 											</div>

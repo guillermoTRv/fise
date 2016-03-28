@@ -73,7 +73,8 @@
             "materia":"<?php echo $materia ?>",
             "op":"<?php echo $op; ?>",
             "mod":"<?php echo $mod; ?>",
-            "fg":"<?php echo $id_usuario; ?>"
+            "fg":"<?php echo $id_usuario; ?>",
+            "fjg":"<?php echo $rel_modulo; ?>"
             };
         $.ajax({
             url:'../paginacion_practicas.php',

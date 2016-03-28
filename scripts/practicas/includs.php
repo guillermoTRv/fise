@@ -27,17 +27,15 @@
 	if (isset($cont_centro)) {
 		  ?>
 		    <div class="panel-body fk">
-			    
-							<div class="container-fluid">
-							    <div class="row" style='margin-right:18px;'>
-								    <div class="col-xs-12">
-									     <div class="outer_div">
-										   <!-- Datos ajax Final -->
-									     </div>
-								    </div>
-							    </div>
+				<div class="container-fluid">
+				    <div class="row" style='margin-right:18px;'>
+					    <div class="col-xs-12">
+							<div class="outer_div">
+							<!-- Datos ajax Final -->
 							</div>
-						
+						</div>
+					</div>
+				</div>		
 			</div><?php
 	}
 	if (isset($ruta_archivo)) {

@@ -1,9 +1,9 @@
 <?php
-	$materia =  $_REQUEST['materia'];
-    $op      =  $_REQUEST['op'];
-	$mod     =  $_REQUEST['mod'];
+	$materia    =  $_REQUEST['materia'];
+    $op         =  $_REQUEST['op'];
+	$mod        =  $_REQUEST['mod'];
 	$id_usuario = $_REQUEST['fg'];
-   
+	$rel_modulo = $_REQUEST['fjg'];   
    
    	include("paginacion_config.php");
    	include("config.php");
