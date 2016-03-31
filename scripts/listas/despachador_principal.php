@@ -59,9 +59,7 @@
     	                	<?php include("../scripts/listas/principal_listado.php"); ?>	
 						</div>	
                         <hr class="<?php echo $hr ?>">
-						<?php include("../scripts/recomend/reco_vista_listas.php"); ?>
-						<hr class="<?php echo $hr ?>">
-
+						
                         <div class="row">
                           <div class='col-md-10 col-md-offset-1'>
                             <h3>Contenidos compartidos recientemente</h3>

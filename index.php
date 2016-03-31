@@ -28,7 +28,7 @@
         margin-left:-50px;
       }
       .bonito{font-family: 'Raleway', sans-serif; font-size: 1.5em;color:black;}
-      .bon{font-family: 'Raleway', sans-serif; font-size: 1.7em;color:black;font-weight: 10px;}
+      .bon{font-family: 'Raleway'}
   </style>
 </head>
 <body>
@@ -36,10 +36,12 @@
 
   <div class="momet">
     <div class="contmomet">
-      <h1 class="bon" ALIGN=center>Explora, comparte y aprende</h1>
-      <p class='bonito'>Unete, somos un sitio en donde se recomiendan y se comparten contenidos tales como ejercicios resueltos, de prÃ¡ctica, videos, apuntes de cuadernos, aplicaciones digitales, textos en linea, formularios, presentaciones y sitios web relacionados con las matematicas y las ciencias, poseemos un sistema de organizacion de la informacion que te permitira encontrar algun material mas sencillamente ademas de que los contenidos son calificados por la comunidad para que tu puedas decidir en cual confiar mas a la hora de estudiar, accede y encuentra mas de 671 temas organizados en 9 materias
-      <br></p>
-      <p ALIGN=center><a target='_blank' href="https://www.facebook.com/ejerciciosmatematicasymas?fref=ts" class='btn btn-primary btn-lg'>Ver facebook</a></p>
+      <h1 class="aches" ALIGN=center>Explora, practica, comparte y aprende</h1>
+      <p class='textmomet'>Se parte de un gran espacio para el estudio de las matematicas y </p>
+      <p class='textmomet'>Consulta en nuestros repositorios contenidos como videos, apuntes, diapositivas, fomrularios y mas, distribuidos en 10 materia <br></p>
+      <p class='textmomet'>Practica ejercicios teoricos y de aplicacion para materias como calculo o algebra <br></p>
+      <p class='textmomet'>Se parte de nuestras discusiones semanales que tenemos para hablar de diferentes temas matermaticos <br></p>
+
     </div>
   </div>
 
@@ -77,7 +79,7 @@
           <p><a class="btn btn-success" href='http://fiseaprende.com/diferenciales/lista-diferenciales' role="button">Ver indice &raquo;</a></p>
         </div> 
       </div>
-      <br><hr>     <br>
+      <br>     <br>
       
       <br>
       
@@ -109,7 +111,7 @@
       <div class="row">
         <div class="col-md-7 col-md-push-5">
           <h2>Aqui entraras un increible espacio para poner en practica tus conocimientos</h2>
-          <p class="lead"></p>
+          <p class="bonito">Unete, somos un sitio en donde se recomiendan y se comparten contenidos tales como ejercicios resueltos, de practica, videos, apuntes de cuadernos, aplicaciones digitales, textos en linea, formularios, presentaciones y sitios web relacionados con las matematicas y las ciencias, poseemos un sistema de organizacion de la informacion que te permitira encontrar algun material mas sencillamente ademas de que los contenidos son calificados por la comunidad para que tu puedas decidir en cual confiar mas a la hora de estudiar, accede y encuentra mas de 671 temas organizados en 9 materias</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
           <img class="featurette-image img-responsive center-block img-thumbnail" src="image/mathematics-101264_1280.jpg" alt="Generic placeholder image">
@@ -122,10 +124,11 @@
 
 
       <!-- FOOTER -->
-      <?php include('footerset.php'); ?>
+      <?php include('footer_fise.php'); ?>
     </div><!-- /.container -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://code.jquery.com/jquery.js"></script>
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery.js"></script>-->
+  <script src="js/jqueryv.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>
 </html>                 

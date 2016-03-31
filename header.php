@@ -56,11 +56,10 @@
 							</li>
 						</ul>
 						<ul class="nav navbar-nav">
-							<li><a href="#">Mapa del sitio</a></li>
+							<li><a href="#"><span class='glyphicon glyphicon-search'></span> Buscador</a></li>
 						</ul>
 
 						<?php 
-						    session_start();
 				            if (!isset($_SESSION['usuario'])) {
 					                include("header_sin_session.php");
 					        }

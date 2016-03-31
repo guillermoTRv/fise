@@ -6,21 +6,25 @@
         padding-right:80px;
         padding-bottom:70px;
         padding-left: 70px;
-        background-image: url("../image/math-notebook-492351_1280.jpg");        
+
+        background-image: url("../image/math-notebook-492351_1280.jpg");
+        background-attachment: fixed;
       }
       .contmomet{
-        margin-top: 25px;
       }
       .aches{
+        padding-bottom:8px;
         color:white;
-        text-shadow: 0.02em 0.02em #333;
+        text-shadow: 0.03em 0.03em #333;
+        font-family: 'Raleway';
       }
       .textmomet{
           margin-top: 20px;
           line-height: 34px;
-          font-size: 1.45em;
+          font-size: 1.55em;
           color:white;
-          text-shadow: 0.05em 0.05em #333;
+          text-shadow: 0.04em 0.04em #333;font-family: 'Raleway';
+          text-align: center;
       }
       .btn-bas{
           background-color:rgba(4, 159, 195, .95);color:white;border:none;

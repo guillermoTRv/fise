@@ -1,12 +1,22 @@
 <?php 
+	#cuando se suba un contenido indicarle al usuario que puede corregir cualquier cosa en su panel de usuario
+	#de la misma forma se podrian mostrar los datos que el usuario ingreso antes de ser subidos
 	include("../ruta.php");
 	include("urls_materias.php");
 	error_reporting(E_ALL ^ E_NOTICE);		
-	$materia	    =	addslashes(htmlspecialchars(strip_tags(trim($_POST["jq"]))));
-	$titulo_ficha	=	addslashes(htmlspecialchars(strip_tags(trim($_POST["titulo_txt"]))));
-	$id_unidad   	=	addslashes(htmlspecialchars(strip_tags(trim($_POST["unidad_slc"]))));
-	$tema_ficha		=	addslashes(htmlspecialchars(strip_tags(trim($_POST["tema_slc"]))));
-	$tipo_ficha		=	addslashes(htmlspecialchars(strip_tags(trim($_POST["tipo_slc"]))));
+	$materia	    	  =	 addslashes(htmlspecialchars(strip_tags(trim($_POST["jq"]))));
+	$titulo_ficha		  =	 addslashes(htmlspecialchars(strip_tags(trim($_POST["titulo_txt"]))));
+	$id_unidad   		  =	 addslashes(htmlspecialchars(strip_tags(trim($_POST["unidad_slc"]))));
+	$tema_ficha			  =	 addslashes(htmlspecialchars(strip_tags(trim($_POST["tema_slc"]))));
+	$tipo_ficha		      =	 addslashes(htmlspecialchars(strip_tags(trim($_POST["tipo_slc"]))));
+	$descripcion_ficha	  =	 addslashes(htmlspecialchars(strip_tags(trim($_POST["descripcion_txt"]))));
+	$link_ficha			  =  addslashes(htmlspecialchars(strip_tags(trim($_POST["link_txt"]))));
+	$consideracion_ficha  =  addslashes(htmlspecialchars(strip_tags(trim($_POST["consideracion_rdo"]))));
+	
+	if ($materia!='' and $titulo_ficha!='' and $id_unidad!='' and $tipo_ficha!='' and $descripcion_ficha!='') {
+		
+	date_default_timezone_set('America/Mexico_City');
+    $fecha                =  date("Y-m-d H:i:s");
 	include("../config.php");
 	
 	$buscar_unidad="SELECT id_unidades,unidad FROM unidades_materias WHERE id_unidades='$id_unidad'";
@@ -19,7 +29,7 @@
 	$unidad_fichal=urls_amigables($xy);
 
 	$consulta_val=
-		"SELECT COUNT(titulo) 
+		"SELECT COUNT(*) 
 		 FROM   ficha_contenido_materia 
 		 WHERE  materia  	 = '$materia' 
 		 AND    titulo   	 = '$titulo_ficha' 
@@ -28,16 +38,18 @@
 		 AND    tipo_material= '$tipo_ficha'";
 	$go_cv =    $conexion->query($consulta_val);
 	$x     =    $go_cv->fetch_array();
+
+	if ($link_ficha!='') {
+		$validacion_link   = "SELECT link FROM ficha_contenido_materia WHERE link='$link_ficha'";
+		$validacion_link_e = $conexion->query($validacion_link);
+		$validacion_link_n = mysqli_num_rows($validacion_link_e); 
+	}
 	
 	if ($x[0]==0) {
+	  if ($validacion_link_n==0) {
+			
 		global $unidad;
 		
-		$descripcion_ficha	  =	 addslashes(htmlspecialchars(strip_tags(trim($_POST["descripcion_txt"]))));
-		$link_ficha			  =  addslashes(htmlspecialchars(strip_tags(trim($_POST["link_txt"]))));
-		$consideracion_ficha  =  addslashes(htmlspecialchars(strip_tags(trim($_POST["consideracion_rdo"]))));
-		
-		date_default_timezone_set('America/Mexico_City');
-    	$fecha                =  date("Y-m-d H:i:s");
 
     	session_start();
 		$myid                 =  $_SESSION['id_usuario'];
@@ -93,6 +105,7 @@
 
 				if (in_array($_FILES[$key]['type'], $permitidos) && $_FILES[$key]['size'] <= $limite_kb*1024){
 					global $yes;
+					global $tipo_img; $tipo_img=$_FILES[$key]['type'];
 					$yes="true";
 					
 					
@@ -121,7 +134,8 @@
         	foreach ($_FILES as $key => $value) {
         		$aleatorio=rand(100,999);
         		$rutasubir="../imagenes/" . $id.$aleatorio;
-                $resultado = @move_uploaded_file($_FILES[$key]["tmp_name"], $rutasubir.".jpg");
+        		echo "<br>".$tipo_img_m         = substr($tipo_img, 6, 4);
+                $resultado = @move_uploaded_file($_FILES[$key]["tmp_name"], $rutasubir.".".$tipo_img_m);
 					if ($resultado){
 						$nombre_imagen=$id.$aleatorio;
 			
@@ -156,8 +170,20 @@
  	include("reditrue.php");
  	$conexion->close();
 	}
+	else{
+		$mensaje=5;
+		include("redi.php");
+	  }
+	}	
 
 	else{
 		$mensaje=4;
  		include("redi.php");
+	}
+
+	}
+
+	else{
+		$mensaje="no";
+		include("redi.php");
 	}

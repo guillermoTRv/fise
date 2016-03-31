@@ -79,14 +79,7 @@
 
 
 
-						<div class="row">
-							<div class="col-md-8 col-md-offset-1">
-								<?php include("../scripts/recomend/reco_vista_listas.php"); ?>                          
-							</div>
-						</div>
 						
-					        	
-						<hr class="hrma">
                         <div class="row">
                         	<div class="col-md-8 col-md-offset-1">
 	                            <h3>Recientes</h3>

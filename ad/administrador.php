@@ -3,7 +3,7 @@
     include("../config.php"); 
     #nsession_start();
     #if ($_SESSION['panal']!='memo') {
-    #	header('Location:http://fiseaprende.com');
+    # header('Location:http://fiseaprende.com');
     #}
    
 ?>
@@ -31,7 +31,7 @@
   </head>
 
   <body>
-  	<?php include("/headerad.php"); ?>
+    <?php include("/headerad.php"); ?>
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
@@ -47,11 +47,10 @@
           </ul>
         </div>
         <div class="col-sm-9 col-md-10  col-md-offset-2 col-sm-offset-3">
-        	<br>
-        	<?php 
+          <br>
+          <?php 
           error_reporting(E_ALL ^ E_NOTICE);
           $ty      =$_GET['ty'];
-
           if (empty($ty)      ) {include("ind_basicos/ind_basicos.php");}
           if ($ty=='retos'    ) {include("reto_momento/reto_momento.php");}
           if ($ty=='practicas') {include("practicas/practicas.php");}

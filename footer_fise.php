@@ -9,7 +9,7 @@
                     &nbsp; 2015 &nbsp; 
                     <a class='etiqa' href='http://www.fiseaprende.com/dinamicas/cafe'>
                     	<span class='glyphicon glyphicon-piggy-bank'></span> 
-                    	Invitar un <?php $cafe="café"; echo utf8_encode($cafe); ?>
+                    	Invitar un café
                     </a> 
                 </div>
             </div>

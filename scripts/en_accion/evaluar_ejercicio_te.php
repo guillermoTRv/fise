@@ -11,13 +11,17 @@
 		
 	}
 	else{
-		$rango_b    = "SELECT * FROM ejercicios WHERE id_ejerc='$id_ejerc' and id_lprc='$id_lista'";
+		$rango_b    = "SELECT * FROM ejercicios WHERE id_ejerc='$id_ejerc'";
 		$rango_e    =  $conexion->query($rango_b);
 		$rango_a    =  $rango_e->fetch_array();
 
 		$rang_one   =  $rango_a['rang_one'];
 		$rang_two   =  $rango_a['rang_two'];
 
+
+		$total_b    = "SELECT * FROM ejercicios WHERE id_lprc='$id_lista'";
+		$total_r    = $conexion->query($total_b);
+		$total      =  mysqli_num_rows($total_r);
 
 		if ($resp >= $rang_one and $resp <= $rang_two) {
 			$puntuaje = $puntos+1;
@@ -51,14 +55,27 @@
 	                    <input type='hidden' name='error' value='$errores'>
 					  </form>
 			";
-			
+			$quedado    =  $puntuaje + $errores;
+			$guardar = "
+		   		<h4>Ejercicio en el que te quedaste $quedado</h4>
+		   		  <form id='guardar_partida' method='post'>
+			   		<input type='hidden' value='$quedado' name='quedado'>
+				   	<input type='hidden' value='$puntuaje' name='acertados'>
+				   	<input type='hidden' value='$total' name='ultimo'>
+				  	<button type='button' value='enviar' id='btn-guardar' class='btn btn-default'>Cerrar</button>
+				    <button type='button' class='btn btn-primary'>Guardar</button>
+				  </form>
+				  
+		   	";
+
 			$r=[
 				'uno'   => $input,
 				'dos'   => $boton,
 				'tres'  => $mens,
 				'cuat'  => $barra,
 				'cinco' => $marcador_puntuaje,
-				'seis'  => $marcador_errores,		
+				'seis'  => $marcador_errores,
+				'guar'  => $guardar		
 				];
 
 			echo json_encode($r);
@@ -95,6 +112,19 @@
 	                    <input type='hidden' name='error' value='$errores'>
 					  </form>
 			";
+
+			$quedado    =  $puntuaje + $errores;
+			$guardar = "
+		   		<h4>Ejercicio en el que te quedaste $quedado</h4>
+		   		  <form id='guardar_partida' method='post'>
+			   		<input type='hidden' value='$quedado' name='quedado'>
+				   	<input type='hidden' value='$puntuaje' name='acertados'>
+				   	<input type='hidden' value='$total' name='ultimo'>
+				  	<button type='button' value='enviar' id='btn-guardar' class='btn btn-default'>Cerrar</button>
+				    <button type='button' class='btn btn-primary'>Guardar</button>
+				  </form>
+
+		   	";
 			
 			$r=[
 				'uno' => $input,
@@ -103,6 +133,7 @@
 				'cuat'=> $barra,
 				'cinco' => $marcador_puntuaje,
 				'seis'  => $marcador_errores,
+				'guar'  => $guardar
 			];
 
 			echo json_encode($r);

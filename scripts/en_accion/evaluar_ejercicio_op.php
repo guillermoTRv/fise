@@ -14,6 +14,7 @@
 
 	$op_resp    =  $opresp_a['true_op'];
 	
+
 	if ($resp == $op_resp) {
 		$puntuaje = $puntos+1;
 		include("definir_barra.php");
@@ -46,12 +47,22 @@
 				  </form>
 		";
 		
+		$quedado    =  $puntuaje + $errores;
+		$guardar = "
+	   		<br><br>
+		   	$quedado <br> $puntuaje
+		  	<button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
+		    <button type='button' class='btn btn-primary' disabled>Guardar</button>
+	   	";
+
+
 		$r=[
 			'uno'   => $boton,
 			'dos'   => $mens,
 			'tres'  => $barra,
 			'cinco' => $marcador_puntuaje,
 			'seis'  => $marcador_errores,
+			'guar'  => $guardar,
 		];
 
 		echo json_encode($r);
@@ -88,12 +99,22 @@
 				  </form>
 		";
 		
+		$quedado    =  $puntuaje + $errores;
+		$guardar = "
+	   		<br><br>
+		   	$quedado <br> $puntuaje
+		  	<button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
+		    <button type='button' class='btn btn-primary' disabled>Guardar</button>
+	   	";
+
+
 		$r=[
 			'uno'   => $boton,
 			'dos'   => $mens,
 			'tres'  => $barra,
 			'cinco' => $marcador_puntuaje,
 			'seis'  => $marcador_errores,
+			'guar'  => $guardar,
 		];
 
 		echo json_encode($r);

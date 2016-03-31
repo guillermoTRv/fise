@@ -14,6 +14,48 @@ $(function(){
                     return false;
                 });
             });
+
+
+$(function(){
+    $(document).on("click","#btn-comenzar-susp",function(){
+                    var url="../scripts/en_accion/mostrar_ejercicio_susp.php";
+                    $.ajax({
+                        type:"POST",
+                        url:url,
+                        data:$("#form_comenzar_susp").serialize(),
+                        success:function(data){
+                            $("#sector_cambio").html(data);
+                        }
+
+                    });
+
+                    return false;
+                });
+            });
+
+
+$(function(){
+    $(document).on("click","#btn-comenzar-susp",function(){
+                    var url="../scripts/en_accion/gatos.php";
+                    $.ajax({
+                        type:"POST",
+                        url:url,
+                        data:$("#form_comenzar_susp").serialize(),
+                        dataType:"json",
+                        success:function(data){
+                            $("#ejerc_correctos").html(data.uno);
+                            $("#ejerc_error").html(data.dos);
+                        }
+
+                    });
+
+                    return false;
+                });
+            });
+
+
+
+
 $(function(){
           $(document).on("click","#btn-evaluar-te",function(){
                     var url="../scripts/en_accion/evaluar_ejercicio_te.php";
@@ -29,6 +71,7 @@ $(function(){
                             $("#barra_ejerc").html(data.cuat);
                             $("#ejerc_correctos").html(data.cinco);
                             $("#ejerc_error").html(data.seis);
+                            $("#guardar_p").html(data.guar);
                         }
 
                     });
@@ -51,6 +94,7 @@ $(function(){
                             $("#barra_ejerc").html(data.tres);
                             $("#ejerc_correctos").html(data.cinco);
                             $("#ejerc_error").html(data.seis);
+                            $("#guardar_p").html(data.guar);
                         }
 
                     });
@@ -68,6 +112,23 @@ $(function(){
                         data:$("#pasar_ejercicio").serialize(),
                         success:function(data){
                             $("#el_ejercicio").html(data);
+                        }
+
+                    });
+
+                    return false;
+                });
+            });
+
+$(function(){
+          $(document).on("click","#btn-guardar",function(){
+                    var url="../scripts/en_accion/guardar_partida.php";
+                    $.ajax({
+                        type:"POST",
+                        url:url,
+                        data:$("#guardar_partida").serialize(),
+                        success:function(data){
+                            $("#mensaje_guardar").html(data);
                         }
 
                     });

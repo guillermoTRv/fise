@@ -8,7 +8,7 @@
 </style>
 <div class="row">
    <div class='col-md-10 col-md-offset-1'>
-    <h3 style="margin-bottom:14px;"><?php  $seccion="Sección "; echo utf8_encode($seccion) ?>de recomendaciones</h3>
+    <h3 style="margin-bottom:14px;">Sección de recomendaciones</h3>
     <?php  #
         $b="SELECT id_reco,texto_reco FROM recomendaciones_mat WHERE materia='$materia' ORDER BY id_reco desc limit 8";
         $ej=$conexion->query($b);

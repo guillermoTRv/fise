@@ -5,6 +5,7 @@
 		#include("../mensajesbas.php");
 	?>
     <div class="container-fluid">
+        <?php include("../mensajes.php") ?>
     	<div class="row">	
             <div class="col-md-3 columleft">
     			<div class="panel panel-default fk">
@@ -59,10 +60,11 @@
     	</div>
     </div>
     <?php include('../footer_fise.php'); ?>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../js/jqueryv.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
     <script>
     $(document).ready(function(){
         load(1);
