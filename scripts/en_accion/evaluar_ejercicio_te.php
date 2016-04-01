@@ -62,8 +62,9 @@
 			   		<input type='hidden' value='$quedado' name='quedado'>
 				   	<input type='hidden' value='$puntuaje' name='acertados'>
 				   	<input type='hidden' value='$total' name='ultimo'>
-				  	<button type='button' value='enviar' id='btn-guardar' class='btn btn-default'>Cerrar</button>
-				    <button type='button' class='btn btn-primary'>Guardar</button>
+				   	<input type='hidden' value='$id_lista' name='li'>
+				  	<button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
+				    <button type='button' id='btn-guardar' class='btn btn-primary'>Guardar</button>
 				  </form>
 				  
 		   	";
@@ -120,10 +121,10 @@
 			   		<input type='hidden' value='$quedado' name='quedado'>
 				   	<input type='hidden' value='$puntuaje' name='acertados'>
 				   	<input type='hidden' value='$total' name='ultimo'>
-				  	<button type='button' value='enviar' id='btn-guardar' class='btn btn-default'>Cerrar</button>
-				    <button type='button' class='btn btn-primary'>Guardar</button>
+				   	<input type='hidden' value='$id_lista' name='li'>
+				  	<button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
+				    <button type='button' id='btn-guardar' class='btn btn-primary'>Guardar</button>
 				  </form>
-
 		   	";
 			
 			$r=[

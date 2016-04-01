@@ -19,7 +19,7 @@
 	        <button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
 	        <button type='button' class='btn btn-primary' disabled>Guardar</button>
 	        </div>
-	        <div id='mensaje_guardar'></div>
+	        <div id="mensaje_guardar"></div>
 	      </div>
 	      
 	    </div>

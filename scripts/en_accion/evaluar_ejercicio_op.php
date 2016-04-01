@@ -49,11 +49,17 @@
 		
 		$quedado    =  $puntuaje + $errores;
 		$guardar = "
-	   		<br><br>
-		   	$quedado <br> $puntuaje
-		  	<button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
-		    <button type='button' class='btn btn-primary' disabled>Guardar</button>
-	   	";
+		   		<h4>Ejercicio en el que te quedaste $quedado</h4>
+		   		  <form id='guardar_partida' method='post'>
+			   		<input type='hidden' value='$quedado' name='quedado'>
+				   	<input type='hidden' value='$puntuaje' name='acertados'>
+				   	<input type='hidden' value='$total' name='ultimo'>
+				   	<input type='hidden' value='$id_lista' name='li'>
+				  	<button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
+				    <button type='button' id='btn-guardar' class='btn btn-primary'>Guardar</button>
+				  </form>
+				  
+		   	";
 
 
 		$r=[
@@ -101,11 +107,17 @@
 		
 		$quedado    =  $puntuaje + $errores;
 		$guardar = "
-	   		<br><br>
-		   	$quedado <br> $puntuaje
-		  	<button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
-		    <button type='button' class='btn btn-primary' disabled>Guardar</button>
-	   	";
+		   		<h4>Ejercicio en el que te quedaste $quedado</h4>
+		   		  <form id='guardar_partida' method='post'>
+			   		<input type='hidden' value='$quedado' name='quedado'>
+				   	<input type='hidden' value='$puntuaje' name='acertados'>
+				   	<input type='hidden' value='$total' name='ultimo'>
+				   	<input type='hidden' value='$id_lista' name='li'>
+				  	<button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
+				    <button type='button' id='btn-guardar' class='btn btn-primary'>Guardar</button>
+				  </form>
+				  
+		   	";
 
 
 		$r=[
