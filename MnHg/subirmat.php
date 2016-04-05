@@ -25,7 +25,7 @@
 	$unidad_ficha=$array_unidad[1];
         $xy=utf8_decode($unidad_ficha);
 
-        include("../scripts/clean/funcion_limpiar.php");
+    include("../scripts/clean/funcion_limpiar.php");
 	$unidad_fichal=urls_amigables($xy);
 
 	$consulta_val=
@@ -40,7 +40,7 @@
 	$x     =    $go_cv->fetch_array();
 
 	if ($link_ficha!='') {
-		$validacion_link   = "SELECT link FROM ficha_contenido_materia WHERE link='$link_ficha'";
+		$validacion_link   = "SELECT link FROM ficha_contenido_materia WHERE materia='$materia' and unidad='$unidad_ficha' and tema='$tema_ficha' and link='$link_ficha'";
 		$validacion_link_e = $conexion->query($validacion_link);
 		$validacion_link_n = mysqli_num_rows($validacion_link_e); 
 	}

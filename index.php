@@ -2,8 +2,8 @@
     error_reporting(E_ALL ^ E_WARNING);
     include("ruta.php");
     include("config.php");
+    session_start();
  ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -11,12 +11,13 @@
   <title>Matematicas y más</title>
   <meta name="viewport" content="width=device-width,  initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="Solo tienes que registrarte y tendrás acceso a practicas para las materias de Calculo diferencial e integral, Calculo vectorial multivariable, Álgebra lineal y Ecuaciones diferenciales. Las practicas van desde teóricas hasta de divertidas e interesantes aplicaciones, ademas de que al finalizar se te realizara un diagnostico para informarte de tus fortalezas y debilidades respecto a los temas con los que estaba relacionada la practica">
   <link rel="stylesheet" href="css/bootstrapset.css">
   <link rel="stylesheet" href="css/inx.css">
   <link rel="shortcut icon" href="image/icono.jpg">
   <link rel="stylesheet" href="js/bootstrap.js">
   <link href="css/carousel.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>  <script src="http://code.jquery.com/jquery.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>  <script src="http://code.jquery.com/jquery.js"></script>
   <style>
       .img-circle-adv {
           border-radius: 25px;
@@ -37,10 +38,10 @@
   <div class="momet">
     <div class="contmomet">
       <h1 class="aches" ALIGN=center>Explora, practica, comparte y aprende</h1>
-      <p class='textmomet'>Se parte de un gran espacio para el estudio de las matematicas y </p>
-      <p class='textmomet'>Consulta en nuestros repositorios contenidos como videos, apuntes, diapositivas, fomrularios y mas, distribuidos en 10 materia <br></p>
-      <p class='textmomet'>Practica ejercicios teoricos y de aplicacion para materias como calculo o algebra <br></p>
-      <p class='textmomet'>Se parte de nuestras discusiones semanales que tenemos para hablar de diferentes temas matermaticos <br></p>
+      <p class='textmomet'>Se parte de un gran espacio para el estudio de las matemáticas y las ciencias</p>
+      <p class='textmomet'>Consulta en nuestros repositorios contenidos como vídeos, apuntes, diapositivas, formularios y más distribuidos en 10 materia <br></p>
+      <p class='textmomet'>Practica ejercicios teoricos y de aplicacion para materias como Calculo y Álgebra lineal<br></p>
+      <p class='textmomet'>Únete a nuestras discusiones semanales que tenemos para hablar de diferentes temas matemáticos <br></p>
 
     </div>
   </div>
@@ -50,7 +51,7 @@
         <?php include("vistas_principales/inx/retos.php"); ?>
       
         <div class="gjh">
-        <h2 style="font-size:2.5em;text-align:center;"><?php $jk='Catalogo de materias de Matematicas basicas'; echo utf8_encode($jk); ?></h2>
+        <h2 style="font-size:2.5em;text-align:center;">Catalogo de materias de Matemáticas básicas</h2>
         <br>
         <br>
       </div>
@@ -66,17 +67,17 @@
         <div class="col-lg-4">
           <img class="img-circle-adv" src="image/cmv.jpg" alt="Generic placeholder image" width="140" height="140">
           <h2>Calculo avanzado</h2>
-          <p><a class="btn btn-default" href="http://fiseaprende.com/c-avanzado/lista-calculo" role="button">Ver indice &raquo;</a></p>
+          <p><a class="btn btn-default" href="<?php echo $ruta ?>/c-avanzado/lista-calculo-multivariable-vectorial" role="button">Ver índice &raquo;</a></p>
         </div>
         <div class="col-lg-4">
           <img class="img-circle-adv" src="image/lineal.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h2>Algebra lineal</h2>          
-          <p><a class="btn btn-default" href="http://www.fiseaprende.com/lineal/lista-algebralineal" role="button">Ver indice &raquo;</a></p>
+          <h2>Álgebra lineal</h2>          
+          <p><a class="btn btn-default" href="<?php echo $ruta ?>/lineal/lista-algebra-lineal" role="button">Ver índice &raquo;</a></p>
         </div>
         <div class="col-lg-4">
           <img class="img-circle-adv" src="image/ecudif.jpg" alt="Generic placeholder image" width="140" height="140">
           <h2>Ecuaciones diferenciales</h2>          
-          <p><a class="btn btn-success" href='http://fiseaprende.com/diferenciales/lista-diferenciales' role="button">Ver indice &raquo;</a></p>
+          <p><a class="btn btn-success" href='<?php echo $ruta ?>/diferenciales/lista-ecuaciones-diferenciales' role="button">Ver índice &raquo;</a></p>
         </div> 
       </div>
       <br>     <br>
@@ -84,13 +85,16 @@
       <br>
       
       <hr class="featurette-divider">
+      
       <div class="row">
         <div class="col-md-7 col-md-push-5">
-          <h2>Algo que ayudara mucho a mejorar la comunidad<span class="text-muted"> tomale foto a un apunte</span></h2>
-          <p class="bonito">Un lema en fise es compartir y aprender, una dinamica que queremos tener aqui es que si tienes un ejercicio resuelto, diagrama, mapa conceptual, texto, etc, en tu cuaderno le tomes una foto y la subas, sera tu buena obra del dia compartir un poco de conocimiento, de seguro a alguien le servira mucho y te lo agradecera, ademas muy pronto podras obtener un beneficio economico por ello</p>
+          <h2>Aquí encontraras un increíble espacio para poner en practica tus conocimientos </h2>
+          <p class="bonito">
+            Solo tienes que registrarte y tendrás acceso a practicas para las materias de Calculo diferencial e integral, Calculo vectorial multivariable, Álgebra lineal y Ecuaciones diferenciales. Las practicas van desde teóricas hasta de divertidas e interesantes aplicaciones, ademas de que al finalizar se te realizara un diagnostico para informarte de tus fortalezas y debilidades respecto a los temas con los que estaba relacionada la practica
+          </p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block img-thumbnail" src="image/library-488691_1280.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block img-thumbnail" src="image/mathematics-101264_1280.jpg" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -98,11 +102,11 @@
       
       <div class="row">
         <div class="col-md-7">
-          <h2>Nuestro objetivo - Ser una grandiosa biblioteca digital  </h2>
-          <p class='bonito'>Queremos contribuir a organizar de una mejor manera la informacion sobre matematicas y ciencias que hay en el internet, de tal que forma que el acceso a esta sea de una forma mas comoda, amena y confiable</p> 
+          <h2>Un gran objetivo - Ser una grandiosa biblioteca digital</h2>
+          <p class='bonito'>Queremos contribuir a organizar de una mejor manera la información sobre matemáticas y ciencias que hay en el Internet, de tal que forma que el acceso a esta sea de una forma mas cómoda, amena y confiable</p> 
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block img-thumbnail" src="image/student-732012_1280.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block img-thumbnail" src="image/library-488691_1280.jpg" alt="Generic placeholder image">
         </div>
       </div>
       
@@ -110,11 +114,11 @@
       
       <div class="row">
         <div class="col-md-7 col-md-push-5">
-          <h2>Aqui entraras un increible espacio para poner en practica tus conocimientos</h2>
-          <p class="bonito">Unete, somos un sitio en donde se recomiendan y se comparten contenidos tales como ejercicios resueltos, de practica, videos, apuntes de cuadernos, aplicaciones digitales, textos en linea, formularios, presentaciones y sitios web relacionados con las matematicas y las ciencias, poseemos un sistema de organizacion de la informacion que te permitira encontrar algun material mas sencillamente ademas de que los contenidos son calificados por la comunidad para que tu puedas decidir en cual confiar mas a la hora de estudiar, accede y encuentra mas de 671 temas organizados en 9 materias</p>
+          <h2>Algo que ayudara mucho a mejorar la comunidad<span class="text-muted"> tomale foto a un apunte</span></h2>
+          <p class="bonito">Un lema aquí es "Compartir y aprender". Una dinámica que queremos tener es que si tienes un buen ejercicio resuelto, diagrama, mapa conceptual o texto en tu cuaderno le tomes una foto y la subas. Esto lo hacemos ya que así todos aprenderemos juntos</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block img-thumbnail" src="image/mathematics-101264_1280.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block img-thumbnail" src="image/student-732012_1280.jpg" alt="Generic placeholder image">
         </div>
       </div>
 

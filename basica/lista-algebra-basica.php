@@ -11,7 +11,8 @@
 	$color_boton        = "rgba(54, 134, 164, .9)";
 	$ruta_reco          = "/basica/recobas";
 	$ruta_subir         = "/basica/panel-algebra-basica?un=Subir&sub=true";
-	$ruta_practicas		= "/basica/panel-practicas";
+	#$ruta_practicas		= "/basica/panel-practicas";
+	$bord_rec           = "borderdefbas";
 	$hr                 = "hrbas";
 	$hover              = "hoverbas";
 ?>

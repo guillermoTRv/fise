@@ -51,7 +51,6 @@
 								     <span class="caret"></span>
 								 </button>
 								 		<ul class='dropdown-menu hoverma' aria-labelledby='dropdownMenu1'>
-								 			<li><a href="<?php echo $ruta.$ruta_reco; ?>">Recomendaciones</a></li>
 								 			<li><a href="<?php echo $ruta.$ruta_sub; ?>">Subir contenido</a></li>
 								 			<li><a href="<?php echo $ruta.$ruta_pract; ?>">Practicas</a></li>
 								 		</ul>

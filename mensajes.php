@@ -6,7 +6,7 @@
                         <div class='col-md-8 col-md-offset-2'>
                             <div class='alert alert-warning'>
                                 <button class='close' data-dismiss='alert'><span>&times;</span></button>
-                                <strong>$mensaje - <a class='etiqa' href='#ventana2' data-toggle='modal'>Intentar de nuevo</a></strong>
+                                <strong>$mensaje - <a class='etiqa alimpia' href='#ventana2' data-toggle='modal'>Intentar de nuevo</a></strong>
                             </div>
                         </div>
                     </div>
@@ -57,6 +57,18 @@
                             <div class='alert alert-warning'>
                                 <button class='close' data-dismiss='alert'><span>&times;</span></button>
                                 <strong>Intenta con un nuevo titulo para poder registrar el contenido</a></strong>
+                            </div>
+                        </div>
+                    </div>
+                ";
+            }
+    if ($mensaje==5) {
+                echo "
+                    <div class='row'>
+                        <div class='col-md-8 col-md-offset-2'>
+                            <div class='alert alert-warning'>
+                                <button class='close' data-dismiss='alert'><span>&times;</span></button>
+                                <strong>Intenta con un link diferente para poder registrar el contenido</a></strong>
                             </div>
                         </div>
                     </div>

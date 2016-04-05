@@ -13,6 +13,12 @@ html {
 body {
   margin: 0;
 }
+a.alimpia{
+  text-decoration: none;
+}
+a.alimpia:hover{
+  text-decoration: none;
+}
 article,
 aside,
 details,

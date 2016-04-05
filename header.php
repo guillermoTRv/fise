@@ -9,7 +9,7 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>
       					</button>
-						<a style="font-size:1.45em;" href="<?php echo $ruta; ?>" class="unodos navbar-brand">Fise</a>
+						<a style="font-size:1.45em;" href="<?php echo $ruta; ?>" class="unodos navbar-brand">M&m</a>
 					</div>
 					<div class="collapse navbar-collapse" id="navbar-1">
 						<ul class="nav navbar-nav">

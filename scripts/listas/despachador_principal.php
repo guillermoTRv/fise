@@ -2,6 +2,7 @@
 	error_reporting(E_ALL  ^ E_NOTICE ^ E_WARNING);
 	include("../ruta.php");
 	include("../config.php");
+	session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,7 +42,6 @@
 									    <span class="caret"></span>
 									 </button>
 								 		<ul class='dropdown-menu <?php echo $hover ?>' aria-labelledby='dropdownMenu1'>
-                                            <li><a href="<?php echo $ruta.$ruta_reco; ?>">Recomendaciones</a></li>
 								 			<li><a href="<?php echo $ruta.$ruta_subir; ?>">Subir contenido</a></li>
 								 			<?php 
 								 				if ($materia=='Calculo diferencial' or $materia=='Calculo integral') {

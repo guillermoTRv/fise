@@ -3,10 +3,11 @@
 	$title_title = "Lista de contenidos de Álgebra lineal";
 	$img_enc    = "lineal"; 
 	$title_enc  = "Álgebra lineal";
-	$ruta_reco  = "/lineal/recolineal";
+	#$ruta_reco  = "/lineal/recolineal";
 	$ruta_sub   = "/lineal/panel-algebra-lineal?un=Subir&sub=true";
 	$ruta_pract = "/lineal/panel-practicas?op=modulos";
 	$color_btn  = "rgba(123, 132, 218, 1)";
+	$bord_rec   = "borderdeflineal";
 
 ?>
 <style type="text/css">

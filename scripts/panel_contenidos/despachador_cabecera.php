@@ -15,6 +15,8 @@
     include("../input_toquen.php");
 
     if ($cont!=''){include('../scripts/seo/seo_contador.php');}
+
+    session_start();
    
  ?>
 <!DOCTYPE html>

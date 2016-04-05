@@ -11,8 +11,9 @@
 	$color_boton        = "rgba(143, 122, 165, 1)";
 	$ruta_reco          = "/calculodif/recodif";
 	$ruta_subir         = "/calculodif/panel-calculodiferencial?un=Subir&sub=true";
-	$ruta_practicas		= "/calculodif/panel-practicas?op=modulos";
+	#$ruta_practicas		= "/calculodif/panel-practicas?op=modulos";
 	$hr                 = "hrdif";
+	$bord_rec			= "borderdefdif";
 	$hover              = "hoverdif";
 ?>
 

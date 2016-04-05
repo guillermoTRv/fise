@@ -4,19 +4,19 @@
         $ruta_v= "?un=$u";
     }
 
-    if ($tema!='' && $by=='' && $cons=='' && $prf=='') {
+    if ($t!='' && $by=='' && $cons=='' && $prf=='') {
      	$ruta_v= "?un=$u&tm=$t";    
     }
 
-    if ($tema=='' && $by!='' && $cons=='' && $prf=='') {
+    if ($t=='' && $by!='' && $cons=='' && $prf=='') {
         $ruta_v= "?un=$u&by=$by";
     }
 
-    if ($tema=='' && $by=='' && $cons!='' && $prf=='') {
+    if ($t=='' && $by=='' && $cons!='' && $prf=='') {
         $ruta_v= "?un=$u&cons=ejercicio-problema";
     }
 
-    if ($tema=='' && $by=='' && $cons=='' && $prf!='') {
+    if ($t=='' && $by=='' && $cons=='' && $prf!='') {
         $ruta_v= "?un=$u&prf=prf";
     }
 	

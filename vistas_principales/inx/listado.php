@@ -15,40 +15,38 @@
 </style>
 <?php include("vistas_principales/inx/consulta_num_ejercicios.php"); ?>
 <div class="row">
-          <a href="http://www.fiseaprende.com/basica/lista-algebrabasica" class='nm'>
+          <a href="<?php echo $ruta; ?>/basica/lista-algebra-basica" class='nm'>
             <div class="col-md-4 ">
               <div class="media">
                   <div class="media-left media-middle">
                       <img class="img-circle" src="image/bas.jpg" alt="Generic placeholder image" width="50" height="50" style="margin-left:15px;">
                   </div>
                   <div class="media-body">
-                      <?php $m='Algebra básica'; $mm=utf8_encode($m);?>
-                      <?php echo "<h4 class='fun'>$mm ($uno ejercicios)</h4>"; ?>
+                      <?php echo "<h4 class='fun'>Álgebra básica ($uno ejercicios)</h4>"; ?>
                   </div>
               </div>
             </div>
           </a>
-          <a href="http://www.fiseaprende.com/algintermedia/lista-algintermedia" class='nm'>
+          <a href="<?php echo $ruta; ?>/algintermedia/lista-algebra-intermedia" class='nm'>
             <div class="col-md-4 ">
               <div class="media">
                   <div class="media-left media-middle">
                       <img class="img-circle" src="image/alg.jpg" alt="Generic placeholder image" width="50" height="50" style="margin-left:15px;">
                   </div>
                   <div class="media-body">
-                      <?php echo "<h4 class='fun'>Algebra intermedia($dos ejercicios)</h4>"; ?>
+                      <?php echo "<h4 class='fun'>Álgebra intermedia($dos ejercicios)</h4>"; ?>
                   </div>
               </div>
             </div>
           </a>
-          <a href="http://www.fiseaprende.com/trigonometria/lista-trigonometria" class='nm'>
+          <a href="<?php echo $ruta; ?>/trigonometria/lista-trigonometria" class='nm'>
             <div class="col-md-4">
               <div class="media">
                   <div class="media-left media-middle">
                       <img class="img-circle" src="image/trig.jpg" alt="Generic placeholder image" width="70" height="70" style="margin-left:15px;">
                   </div>
                   <div class="media-body">
-                      <?php $n='Trigonometría'; $nn=utf8_encode($n); ?>
-                      <?php echo "<h2 class='fun'>$nn($tres ejercicios)</h2>"; ?>
+                      <?php echo "<h2 class='fun'>Trigonometría ($tres ejercicios)</h2>"; ?>
                   </div>
               </div>
             </div>
@@ -56,20 +54,19 @@
 </div>
 <hr>
 <div class="row">
-          <a href="http://www.fiseaprende.com/geometrianalitica/lista-geometria" class='nm'>
+          <a href="<?php echo $ruta ?>/geometrianalitica/lista-geometria-analitica" class='nm'>
             <div class="col-md-4">
               <div class="media">
                   <div class="media-left media-middle">
                       <img class="img-circle " src="image/geo.jpg" alt="Generic placeholder image" width="70" height="70" style="margin-left:15px;">
                   </div>
                   <div class="media-body">
-                      <?php $l='Geometría analítica'; $ll=utf8_encode($l) ?>
-                      <?php echo "<h2 class='fun'>$ll ($cuatro ejercicios)</h2>"; ?>
+                      <?php echo "<h2 class='fun'>Geometría analítica ($cuatro ejercicios)</h2>"; ?>
                   </div>
               </div>
             </div>
           </a>
-          <a href="http://www.fiseaprende.com/calculodif/lista-diferencial" class='nm'>
+          <a href="<?php echo $ruta ?>/calculodif/lista-calculo-diferencial" class='nm'>
             <div class="col-md-4">
               <div class="media">
                   <div class="media-left media-middle">
@@ -81,7 +78,7 @@
               </div>
             </div>
           </a>
-          <a href="http://www.fiseaprende.com/calculointegral/lista-integral" class='nm'>
+          <a href="<?php echo $ruta ?>/calculointegral/lista-calculo-integral" class='nm'>
             <div class="col-md-4">
               <div class="media">
                   <div class="media-left media-middle">
@@ -96,20 +93,19 @@
 </div>
 <hr>
 <div class="row">
-          <a href="http://www.fiseaprende.com/estadistica/lista-estadistica" class='nm'>
+          <a href="<?php echo $ruta; ?>/estadistica/lista-estadistica" class='nm'>
             <div class="col-md-4">
               <div class="media">
                   <div class="media-left media-middle">
                       <img class="img-circle" src="image/est.jpg" alt="Generic placeholder image" width="70" height="70" style="margin-left:15px;">
                   </div>
                   <div class="media-body">
-                      <?php $j='Estadística'; $jj=utf8_encode($j) ?>
-                      <?php echo "<h2 class='fun'>$jj descriptiva($siete Ejercicios)</h2>"; ?>
+                      <?php echo "<h2 class='fun'>Estadística descriptiva($siete Ejercicios)</h2>"; ?>
                   </div>
               </div>
             </div>
           </a>
-          <a href="http://www.fiseaprende.com/estadistica/lista-estadistica" class='nm'>
+          <a href="<?php echo $ruta; ?>/estadistica/lista-estadistica" class='nm'>
             <div class="col-md-4">
               <div class="media">
                   <div class="media-left media-middle">

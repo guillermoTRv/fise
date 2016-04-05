@@ -29,7 +29,8 @@
 				"INSERT INTO usuarios_practicas(id_usuario,id_practica,estado,ejercicio,correctos,materia, modulo) 
 				      VALUES ('$id_usuario','$id_lista','suspendida','$quedado','$acertados','$materia','$modulo')"; 
 				$ejecutar_cambio = $conexion->query($cambio_estado) or die("die");
-				echo "Se ha guardado exitosamente te quedaste en el ejercicio $quedado de $totales puedes salir de la practica";
+				include("redi_listas_guardar.php");
+				echo "Se ha guardado exitosamente te quedaste en el ejercicio $quedado de $totales puedes salir de la practica $redi_guardar";
 			}
 	}
 	else{
@@ -45,12 +46,18 @@
 				echo "No puedesjj guardar porque ya terminaste la practica";
 			}
 			else{
+				$busqueda_materia = "SELECT materia FROM l_prc WHERE id_lprc='$id_lista'";
+				$busqueda_materia_e = $conexion->query($busqueda_materia);
+				$busqueda_materia_a = $busqueda_materia_e ->fetch_array();
+				$materia = $busqueda_materia_a['materia'];
 				$cambio_estado=
 				"UPDATE usuarios_practicas 
 				 SET    estado='suspendida',ejercicio='$quedado',correctos='$acertados' 
 				 where  id_usuario='$id_usuario' and id_practica='$id_lista'";
 				$ejecutar_update = $conexion->query($cambio_estado) or die("die");
-				echo "Se ha guardado exitosamente te quedaste en el ejercicio $quedado de $totales puedes salir de la practica";
+				
+				include("redi_listas_guardar.php");
+				echo "Se ha guardado exitosamente te quedaste en el ejercicio $quedado de $totales puedes salir de la practica $redi_guardar";
 			}
 		}
 	

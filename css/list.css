@@ -179,6 +179,16 @@
          .borderdef{
             border-color:#ddd;  
         }
+
+        .borderdefavn{
+            border-color:white;
+        }
+        .borderdeflineal{
+            border-color:white;
+        }
+        .borderdefecu{
+            border-color:white;
+        }
         /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
@@ -369,6 +379,15 @@
             }
             .borderdefdif{
             border-color:rgba(143, 122, 165, .36);
+            }
+            .borderdefavn{
+            border-color:rgba(151, 84, 45, .46);
+            }
+            .borderdeflineal{
+            border-color:rgba(123, 132, 218, .36);
+            }
+            .borderdefecu{
+            border-color:rgba(0, 84, 0, .36);
             }
         } 
         @media screen and (max-width:400px){

@@ -68,10 +68,9 @@
 			
 		} else {
 			?>
-			<div class="alert alert-success alert-dismissable">
-              <button type="button" class="close" data-dismiss="success" aria-hidden="true">&times;</button>
-              <h4>Hola</h4> Aun no hay contenidos por aqui, puedes compartirnos alguno
-            </div>
+			<br><br>
+              Hola aun no tenemos practicas por aqui pero muy pronto subiremos. 
+            <br><br>
 			<?php
 		}
 	}

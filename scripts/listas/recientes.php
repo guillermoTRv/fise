@@ -50,7 +50,7 @@
 		}
 		echo "
 	    <div class='col-md-3'>
-                <div style='height:180px;' class='panel panel-info fk borderdefalg'>
+                <div style='height:180px;' class='panel panel-info fk $bord_rec'>
                   <div style='height:100px;'>
                   	<div class='modulep line-clamp'><strong>$nombre</strong></div>
                   	<div class='reci'>

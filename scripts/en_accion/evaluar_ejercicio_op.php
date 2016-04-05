@@ -15,6 +15,11 @@
 	$op_resp    =  $opresp_a['true_op'];
 	
 
+
+	$total_b    = "SELECT * FROM ejercicios WHERE id_lprc='$id_lista'";
+		$total_r    = $conexion->query($total_b);
+		$total      =  mysqli_num_rows($total_r);
+
 	if ($resp == $op_resp) {
 		$puntuaje = $puntos+1;
 		include("definir_barra.php");
@@ -68,7 +73,7 @@
 			'tres'  => $barra,
 			'cinco' => $marcador_puntuaje,
 			'seis'  => $marcador_errores,
-			'guar'  => $guardar,
+			'guar'  => $guardar
 		];
 
 		echo json_encode($r);
@@ -126,7 +131,7 @@
 			'tres'  => $barra,
 			'cinco' => $marcador_puntuaje,
 			'seis'  => $marcador_errores,
-			'guar'  => $guardar,
+			'guar'  => $guardar
 		];
 
 		echo json_encode($r);

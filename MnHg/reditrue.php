@@ -6,7 +6,7 @@
 		header("Location:$algi"."?un=".$unidad_fichal."&cont=".$id."&mens=".$mensaje."");
 	}
 	if ($materia=="Trigonometria") {
-		header("Location:"."?un=".$unidad_fichal."&sub=true&mens=".$mensaje."");
+		header("Location:$trig"."?un=".$unidad_fichal."&sub=true&mens=".$mensaje."");
 	}
 	if ($materia=="Geometria analitica") {
 		header("Location:$geo"."?un=".$unidad_fichal."&cont=".$id."&mens=".$mensaje."");

@@ -20,7 +20,7 @@
 	$nombre=$nm[1];
 
 	echo "
-	
+
 	
     <div class='panel panel-default pan'>
          <div class='panel-body'>

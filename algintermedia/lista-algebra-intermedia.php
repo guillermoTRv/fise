@@ -9,9 +9,10 @@
 	#clases css
 	$imagen_logo        = "alg";
 	$color_boton        = "rgba(37, 61, 103, .97)";
-	$ruta_reco          = "/algintermedia/recoalg";
+	#$ruta_reco          = "/algintermedia/recoalg";
 	$ruta_subir         = "/algintermedia/panel-algebra-intermedia?un=Subir&sub=true";
 	$hr                 = "hralgi";
+	$bord_rec           = "borderdefalg";
 	$hover              = "hoveralg";
 ?>
 

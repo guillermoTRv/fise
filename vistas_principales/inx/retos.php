@@ -28,7 +28,7 @@
   </div>
   <div class='col-md-4'>
     <form id="form_seccion" method='POST'>
-      <legend>Reto del dia</legend>
+      <legend>Reto del día</legend>
       <div class="form-group">
         <label for="exampleInputEmail1"><?php echo $pregunta ?></label>
         <input type="text" name='rt' class="form-control" <?php echo $place; ?>>
