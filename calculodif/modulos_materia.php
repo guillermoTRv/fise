@@ -2,9 +2,9 @@
 <?php 
   $modulos_a = array
   (
-  array("Limites","matrices","lineal"),
-  array("Derivadas de funciones algebraicas trascendentes","determinantes","lineal"),
-  array("Aplicaciones de las derivadas y uso de teoremas", "",""),
+  array("Limites","",""),
+  array("Derivadas de funciones algebraicas y trascendentes","","lineal"),
+  array("Aplicaciones de las derivadas y teoremas importantes", "",""),
   array("Listas combinadas","","")
   );
 

@@ -2,13 +2,13 @@
 <?php 
   $modulos_a = array
   (
-  array("Introduccion a las EDO","matrices",""),
+  array("Introducción a las EDO","",""),
   array("Ecuaciones diferenciales de primer orden","",""),
   array("Ecuaciones diferenciales de orden superior","",""),
   array("Series, laplace y ecuaciones diferenciales","",""),
   array("Sistemas de EDO y Metodos Númericos","",""),
-  array("Introduccion EDP","",""),
-  array("Listas convinadas","","")
+  array("Introducción EDP","",""),
+  array("Listas combinadas","","")
   );
 
 

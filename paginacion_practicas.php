@@ -2,8 +2,8 @@
 	$materia    =  $_REQUEST['materia'];
     $op         =  $_REQUEST['op'];
 	$mod        =  $_REQUEST['mod'];
-	$id_usuario = $_REQUEST['fg'];
-	$rel_modulo = $_REQUEST['fjg'];   
+	$id_usuario =  $_REQUEST['fg'];
+	$rel_modulo =  $_REQUEST['fjg'];   
    
    	include("paginacion_config.php");
    	include("config.php");
@@ -69,7 +69,7 @@
 		} else {
 			?>
 			<br><br>
-              Hola aun no tenemos practicas por aqui pero muy pronto subiremos. 
+              Hola aun no tenemos practicas por aquí pero muy pronto subiremos una 
             <br><br>
 			<?php
 		}

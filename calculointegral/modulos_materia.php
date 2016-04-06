@@ -2,13 +2,13 @@
 <?php 
   $modulos_a = array
   (
-  array("Integracion basica de funciones algebraicas y trascendetes","",""),
-  array("Metodos de integracion por partes","",""),
-  array("Metodos de integracion sustitucion trigonometrica","",""),
-  array("Metodos de integracion por fracciones parciales","",""),
-  array("Metodos de integracion por racionalizacion","",""),
-  array("Integracion basica definida y calculo de areas","",""),
-  array("Uso diverso de la integracion definida","",""),
+  array("Integración básica de funciones algebraicas y trascendentes ","",""),
+  array("Uso de métodos de integración por partes ","",""),
+  #array("Métodos de integración por sustitución trigonométrica","",""),
+  #array("Métodos de integración por fracciones parciales ","",""),
+  #array("Métodos de integración por racionalización","",""),
+  array("Integración básica definida y calculo de áreas","",""),
+  array("Uso diverso de la integración definida","",""),
   array("Listas combinadas","lista-combinada","")
   );
 

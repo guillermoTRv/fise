@@ -19,7 +19,16 @@
 		$archivo_esp = "../scripts/practicas/contador_practicas_where.php";
 		$cont_centro = "";
 		include("../scripts/practicas/includs.php");
-	}	
+	}
+
+	if ($op == 'teoricas') {
+		$title          = "Listado por practicas teoricas para $name_title";
+		$cond_one    = "teoricas";
+		$archivo_esp = "../scripts/practicas/contador_practicas_where.php";
+		$cont_centro = "";
+		include("../scripts/practicas/includs.php");
+	}
+
 	if ($op == 'aplicaciones-particulares') {
 		$title          = "Listado por aplicaciones particulares para $name_title";
 		$cond_one    = "aplicaciones particulares";
@@ -38,7 +47,7 @@
 	if ($op == 'discusion-actual') {
 		$title          = "Temas para discutir";
         $title_esp      = "";
-        $ruta_archivo   = "/vistas_principales/practicas/discusion_materia.php";        
+        $ruta_archivo   = "../vistas_principales/practicas/discusion_materia.php";        
         include("../scripts/practicas/includs.php");
 	}
 

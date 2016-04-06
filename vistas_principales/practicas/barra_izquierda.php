@@ -3,15 +3,7 @@
     <div class="panel-body">
         <div class="panel panel-default forde">
           <center><p class="sisbus"><strong>Opciones de practicas</strong></p></center>
-            
-            <div class='media'>
-              <div class='media-body'>
-                <center>
-                  <a style='width:170px;' href='?op=modulos'class='btn btn-sm btn-ind'><strong> Por módulos </strong></a>
-                </center>
-              </div>
-            </div>
-
+          
             <div class='media'>
               <div class='media-body'>
                 <center>
@@ -28,6 +20,15 @@
               </div>
             </div>
 
+            <!--
+            <div class='media'>
+              <div class='media-body'>
+                <center>
+                  <a style='width:170px;' href='?op=teoricas'class='btn btn-sm btn-ind'><strong>Practicas teoricas</strong></a>
+                </center>
+              </div>
+            </div>-->
+
             <div class='media'>
               <div class='media-body'>
                 <center>
@@ -39,8 +40,8 @@
             <div class='media'>
               <div class='media-body'>
                 <center>
-                  <a style="width:170px;background-color:<?php echo $color_batalla; ?>;color:white;" href='?op=batalla'class='btn btn-sm btn-ind'>
-                    <strong>&nbsp;<span class='glyphicon glyphicon-flag'></span> Batalla de ejercicios </strong>
+                  <a style="width:170px;background-color:<?php echo $color_batalla; ?>;color:white;" href='?op=modulos'class='btn btn-sm btn-ind'>
+                    <strong>&nbsp;<span class='glyphicon glyphicon-tasks'></span>&nbsp; Ver por modulos </strong>
                   </a>
                 </center>
               </div>
@@ -67,9 +68,18 @@
                         
                         <a href='?op=discusion-actual' class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-comment'></span> 
-                          Discusiones  de la materia
+                          Discusiones de la materia
                         </a>
                         
+                        <a href='?op=batalla' class='list-group-item fenmat'>
+                          &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-flag'></span> 
+                          Batalla de ejercicios
+                        </a>
+                        <a href='?op=ayuda' class='list-group-item fenmat'>
+                          &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-question-sign'></span> 
+                          Funcionamiento y dudas
+                        </a>
+
                         <!--<a href='?op=discusiones-anteriores' class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-repeat'></span> 
                           discusiones  anteriores 
@@ -79,15 +89,12 @@
                         ?>
                        
                         
-                        <a href='?op=ayuda' class='list-group-item fenmat'>
-                          &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-question-sign'></span> 
-                          Funcionamiento y dudas
-                        </a>
-
+                        
+                        <!--
                         <a target='_blank' class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-pencil'></span> 
                           Recomiendame app
-                        </a>
+                        </a>-->
                         <a class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-education'></span> 
                           Nivel de usuario: Jedi
