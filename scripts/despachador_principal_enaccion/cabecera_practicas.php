@@ -1,7 +1,7 @@
 <?php   
     error_reporting(E_ALL ^ E_WARNING);
     session_start();
-    echo  $id_usuario = $_SESSION['id_usuario'];
+    $id_usuario = $_SESSION['id_usuario'];
     global $prc;      $prc      = addslashes(htmlspecialchars(strip_tags(trim($_GET['prc']))));
     require("../ruta.php");
     include("../config.php");

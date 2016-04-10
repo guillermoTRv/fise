@@ -33,9 +33,9 @@
 
       if ($tema=='' && $by=='' && $cons!='' && $prf=='') {
          global $rows_b;
-         $rows_b = "SELECT * FROM ficha_contenido_materia WHERE materia='$materia' and unidad='$unidad' and consideracion='Ejericio-problema'";
+         $rows_b = "SELECT * FROM ficha_contenido_materia WHERE materia='$materia' and unidad='$unidad' and consideracion='Ejercicio-problema'";
          global $cons_w;
-         $cons_w = "SELECT * FROM ficha_contenido_materia WHERE materia='$materia' and unidad='$unidad' and consideracion='Ejericio-problema' order by id_fichamat LIMIT $offset,$per_page";
+         $cons_w = "SELECT * FROM ficha_contenido_materia WHERE materia='$materia' and unidad='$unidad' and consideracion='Ejercicio-problema' order by id_fichamat LIMIT $offset,$per_page";
           
       }
 

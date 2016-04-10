@@ -1,37 +1,63 @@
 <div class="panel-body fk">
 	<div class="row">
-		<div class="col-md-10">
+		<div class="col-md-9">
 			<br>
-			<h4>De las mejoras formas en que podemos reforzar nuestros conocimientos es poniendolos en practica</h4>
-			<p>Numero de ejercicios:&nbsp;<?php echo $num_ejerc ?></p>
-			<p>Nivel de lista:&nbsp;<?php echo $nivel ?></p>
-
+				<small><em>De las mejoras formas en que podemos reforzar nuestros conocimientos es poniendolos en practica</em></small>
+      			<p></p>
+				
 			<?php 
 				if ($estado_us_n!=0) {
                  global $estado_us;
                  $estado_us   = $estado_us_a['estado'];  
  					if ($estado_us=='realizada') {
- 						echo "<p>Estado de la lista: $estado_us </p>";
+ 						
  					}
  					if ($estado_us=='suspendida') {
  						global $ejercicio;  $ejercicio = $estado_us_a['ejercicio'];
  						global $correctos;  $correctos = $estado_us_a['correctos'];
- 						echo "<p>Estado de la lista: $estado_us ademas numero del ejercicio en donde se quedo y puntuaje</p>";
+ 						
 
  					}
             					     	
                   
             	}
             	else{
-                 	    echo "Exito en la lista";
+                 	    
                  }   
 
 			?>
 
 
+
+			<table class="table table-bordered">
+  				
+  				<tbody>
+  					<tr>
+  						<td>Estado de la lista</td>
+  						<td><?php echo $estado_us; ?></td>
+  					</tr>
+  					<tr>
+  						<td>Número de ejercicios</td>
+  						<td><?php echo $num_ejerc ?></td>
+  					</tr>
+  					<tr>
+  						<td>Nivel de la lista</td>
+  						<td><?php echo $nivel ?></td>
+  					</tr>
+  					<tr>
+  						<td>Puntuacion total</td>
+  						<td>--</td>
+  					</tr>
+  				</tbody>
+			</table>
+
+
 			
-			<p>Cuando se presenten ejercicios en donde tengas que ingresar un numero ocupa la aproximacion mas cercana</p>
-			<p>Recuerda que puedes guardar tu partida para continuarla en donde te quedaste en caso de que tengas que retirarte</p>
+			
+
+			
+			<p>-<em>Cuando se presenten ejercicios en donde tengas que ingresar un numero ocupa la aproximacion mas cercana</em></p>
+			<p>-<em>Recuerda que puedes guardar tu partida para continuarla en donde te quedaste en caso de que tengas que retirarte</em></p>
 			<?php 
 					if ($estado_us=="suspendida") {
 						?> 

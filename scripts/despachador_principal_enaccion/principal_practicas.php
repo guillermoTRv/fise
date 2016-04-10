@@ -34,7 +34,7 @@
                   <div class="panel-heading">
                     <span <?php echo $letbran; ?>><strong>Tipo de lista: </strong></span> Ejercicios de practica especifica
                   </div>
-                  <div id="sector_cambio">
+                  <div id="sector_cambio" style='margin-left:20px;'>
   <!--..............................................................................................................................-->         
                   <?php include("../vistas_principales/en_accion/presentacion_lista.php"); ?>             
                       <br><br>
