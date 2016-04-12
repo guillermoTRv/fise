@@ -34,7 +34,11 @@
   				<tbody>
   					<tr>
   						<td>Estado de la lista</td>
-  						<td><?php echo $estado_us; ?></td>
+  						<td>
+  							<?php if (empty($estado_us)) {
+  								echo "Lista no realizada";
+  							}else{echo $estado_us;}  ?>
+  						</td>
   					</tr>
   					<tr>
   						<td>Número de ejercicios</td>

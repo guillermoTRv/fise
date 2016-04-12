@@ -1,4 +1,6 @@
-<?php #como le haria para imprimir todos los datos que hay en el array de mysqli_fetch_array sin tener que estar a cada rato sacando una por una las variables ?>
+<?php #como le haria para imprimir todos los datos que hay en el array de mysqli_fetch_array sin tener que estar a cada rato sacando una por una las variables 
+#tambien falta algo para que se puedan ver las imagenes
+?>
 <div class="row" style='margin-top:45px;'>
 	<div class="col-md-10">
 		<h4>Listas que no han sido dadas de alta</h4>
@@ -11,7 +13,7 @@
 			</thead>
 			<tbody>
 				<?php 
-					$listas = "SELECT * FROM l_prc";
+					$listas = "SELECT * FROM l_prc WHERE prod='no' order by id_lprc desc";
 					$listas_e =$conexion->query($listas);
 					while ($listas_a = mysqli_fetch_array($listas_e)) {
 						$id_lprc        = $listas_a['id_lprc'];

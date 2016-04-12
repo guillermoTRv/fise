@@ -24,8 +24,8 @@
 		    <div role="tabpanel" class="tab-pane" id="crear_disc">
 		    	<?php include("disc/crear/form_creardiscusion.php"); ?>
 		    </div>
-		    <div role="tabpanel" class="tab-pane" id="ejercicio">
- 				<?php #include("practicas/ejercicios/vista_crear_ejercicio.php"); ?>
+		    <div role="tabpanel" class="tab-pane" id="alta_list">
+ 				<?php include("disc/alta/alta_discusion.php"); ?>
 		    </div>
 		    <div role="tabpanel" class="tab-pane" id="alta_list">
 		    	<?php #include("practicas/alta_listas/despachador.php"); ?>

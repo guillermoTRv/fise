@@ -61,8 +61,13 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar ventana</button>
-        <button type="button" class="btn btn-primary">Dar de alta</button>
+        <form method='post' action='practicas/alta_listas/procesar_alta.php' enctype='multipart/form-data'>
+          <?php echo "<input type='hidden' name='lista' value='$id_lprc'>" ?>
+          <?php echo "<input type='hidden' name='materia' value='$materia'>" ?>
+          <?php echo "<input type='hidden' name='name' value='$name_lprc'>" ?>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar ventana</button>
+            <button type="submit" class="btn btn-primary">Dar de alta</button>
+        </form>
       </div>
     </div>
   </div>
