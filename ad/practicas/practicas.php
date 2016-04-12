@@ -1,5 +1,5 @@
 <script type="text/javascript" src="../js/listas.js"></script>
-<h2>Panel de administracion de listas</h2>
+<h2>Panel de administración de listas</h2>
 <br>
 <div class="row">
 	<div class="col-md-12">

@@ -95,14 +95,43 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-pencil'></span> 
                           Recomiendame app
                         </a>-->
+                        <?php 
+                          $nivel_n    =  "SELECT nivel,puntos FROM nivel_usuario WHERE materia='$materia' and id_usuario";
+                          $nivel_n_e  =   $conexion->query($nivel_n);
+                          $nivel_a    =   $nivel_n_e->fetch_array();
+
+                          $nivel_usuario   = $nivel_a['nivel'];
+                          $puntos_usuario  = $nivel_a['puntos'];
+
+
+                        ?>
+
                         <a class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-education'></span> 
-                          Nivel de usuario: Jedi
+                          Nivel de usuario: 
+                          <?php 
+                           
+                             if ($nivel_usuario=='') {
+                                echo "Sin iniciar";  
+                             }
+                             else{
+                                echo $nivel_usuario;
+                             }
+                          ?>
                         </a>
                         
                         <a class='list-group-item fenmat'>
                           &nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-asterisk'></span> 
-                          Puntos que tienes: 12
+                          Puntos que tienes: 
+                          <?php 
+                           
+                             if ($nivel_usuario=='') {
+                                echo 0;  
+                             }
+                             else{
+                                echo $puntos_usuario;
+                             }
+                          ?>
                         </a>
                         <!--<a href='?un=$un&tm=$nom_tema' class='list-group-item fenint'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-list-alt'></span> Motivacion para estudiar o mensaje de bienvenida presentacion algo sobre dudas o funcionamiento</a> tambien podriamos poner otro como 
                         un sistema que muestra como va el usuario con respecto a esa materia-->

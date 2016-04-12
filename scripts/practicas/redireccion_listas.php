@@ -1,18 +1,18 @@
  <?php 
  	if ($materia=='Calculo diferencial') {
- 		$indice_mat="/calculodif/lista-calculo-diferencial.php";
+ 		$indice_mat="/calculodif/lista-calculo-diferencial";
  	}
  	if ($materia=='Calculo integral') {
- 		$indice_mat="/calculointegral/lista-calculo-integral.php";
+ 		$indice_mat="/calculointegral/lista-calculo-integral";
  	}
  	if ($materia=='Calculo avanzado') {
- 		$indice_mat="/c-avanzado/lista-calculo-multivariable-vectorial.php";
+ 		$indice_mat="/c-avanzado/lista-calculo-multivariable-vectorial";
  	}
  	if ($materia=='Algebra lineal') {
- 		$indice_mat="/lineal/lista-algebra-lineal.php";
+ 		$indice_mat="/lineal/lista-algebra-lineal";
  	}
  	if ($materia=='Ecuaciones diferenciales') {
- 		$indice_mat="/diferenciales/lista-ecuaciones-diferenciales.php";
+ 		$indice_mat="/diferenciales/lista-ecuaciones-diferenciales";
  	}
  ?>
  <a href="<?php echo $ruta.$indice_mat?>" class='list-group-item fenmat'>

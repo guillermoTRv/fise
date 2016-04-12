@@ -1,5 +1,25 @@
+	<?php 
+          $nivel_n    =  "SELECT nivel FROM nivel_usuario WHERE materia='$materia' and id_usuario";
+          $nivel_n_e  =   $conexion->query($nivel_n);
+          $nivel_a    =   $nivel_n_e->fetch_array();
+
+          $nivel_usuario   = $nivel_a['nivel'];
+
+
+    ?>
+
 	<a class='list-group-item fenmat'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-education'></span> 
-		Nivel de usuario: Jedi</a>
+		Nivel de usuario: 
+		<?php 
+                           
+             if ($nivel_usuario=='') {
+                echo "Sin iniciar";  
+             }
+             else{
+                echo $nivel_usuario;
+             }
+        ?>
+	</a>
     <?php include("../scripts/en_accion/redi_listas.php"); ?>
     <a href="#guardar" data-toggle="modal"class='list-group-item fenmat'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-floppy-disk'></span> 
     	Guardar partida</a>

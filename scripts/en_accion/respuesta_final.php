@@ -36,7 +36,7 @@
                     </table>
                    
                   <p>Puedes repetir esta practica en cualquier otro momento</p>
-                  <p>Tus resultados seran almacenados y posteriormente podras verlos desde tu panel de usuario</p>
+                  <p>Tus resultados serán almacenados y posteriormente podrás verlos desde tu panel de usuario</p>
 
                   <a class='alimpia' href="<?php echo $redi_listas; ?>">Salir al panel principal</a>
                 </div>

@@ -40,6 +40,7 @@
             <li><a href="?">Indicadores basicos</a></li>
             <li><a href="?ty=retos">Subir reto</a></li>
             <li><a href="?ty=practicas">Practicas</a></li>
+            <li><a href="?ty=discusiones">Discusiones</a></li>
             <li><a href="?ty=scr">Registro suscripciones</a></li>
             
             <br>
@@ -55,6 +56,7 @@
           if ($ty=='retos'    ) {include("reto_momento/reto_momento.php");}
           if ($ty=='practicas') {include("practicas/practicas.php");}
           if ($ty=='scr'      ) {include("src/src_principal.php");}
+          if ($ty=='discusiones') {include("disc/discusiones.php");}
            ?>
         </div>
       </div>
