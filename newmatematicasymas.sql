@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-04-2016 a las 00:50:24
+-- Tiempo de generación: 13-04-2016 a las 04:02:18
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -72,6 +72,34 @@ INSERT INTO `comentarios_mat` (`id_comentmat`, `id_fichamat`, `id_user`, `texto_
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `coment_disc`
+--
+
+CREATE TABLE IF NOT EXISTS `coment_disc` (
+  `id_comentdisc` int(11) NOT NULL,
+  `id_disc` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `comentario` varchar(250) NOT NULL,
+  `materia` varchar(25) NOT NULL,
+  `link` varchar(150) NOT NULL,
+  `name_img` varchar(40) NOT NULL,
+  `type` varchar(5) NOT NULL,
+  `fecha` datetime NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `coment_disc`
+--
+
+INSERT INTO `coment_disc` (`id_comentdisc`, `id_disc`, `id_usuario`, `comentario`, `materia`, `link`, `name_img`, `type`, `fecha`) VALUES
+(1, 8, 1, 'que no sea como yos', 'Algebra lineal', 'http://localhost/cambio/lineal/panel-practicas?op=discusion-actual', '', 'jpeg', '2016-04-12 16:05:28'),
+(2, 8, 1, 'que no sea como yoss', 'Algebra lineal', '', '1701', 'jpeg', '2016-04-12 16:07:32'),
+(3, 8, 0, 'Mis aplicaciones favoritas son las que se hacen en ciencias de la computacion', 'Algebra lineal', '', '914', 'jpeg', '2016-04-12 20:41:54'),
+(4, 8, 0, 'No mames porque no funciona', 'Algebra lineal', '', '881', 'jpeg', '2016-04-12 20:58:30');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `coment_reco`
 --
 
@@ -133,6 +161,35 @@ INSERT INTO `coment_reco` (`id_comentreco`, `id_reco`, `id_user`, `texto_creco`,
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `discusiones`
+--
+
+CREATE TABLE IF NOT EXISTS `discusiones` (
+  `id_disc` int(11) NOT NULL,
+  `materia` varchar(25) NOT NULL,
+  `texto_disc` varchar(250) NOT NULL,
+  `alta` char(2) NOT NULL,
+  `name_img` varchar(30) NOT NULL,
+  `fecha` datetime NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `discusiones`
+--
+
+INSERT INTO `discusiones` (`id_disc`, `materia`, `texto_disc`, `alta`, `name_img`, `fecha`) VALUES
+(1, 'Algebra lineal', 'No te quieras pasar de verga bob esponja', '', '1250', '2016-04-12 11:50:12'),
+(2, 'Calculo integral', 'No te quieras pasar de verga bob esponja', '', '813', '2016-04-12 11:54:41'),
+(3, 'Calculo integral', 'No te quieras pasar de verga bob esponja', '', '380', '2016-04-12 11:55:47'),
+(4, 'Calculo integral', 'No te quieras pasar de verga bob esponja', '', '1878', '2016-04-12 11:55:58'),
+(5, 'Calculo avanzado', 'No te quieras pasar de verga bob esponjaj si jajaj', '', '1381', '2016-04-12 11:57:27'),
+(6, 'Calculo avanzado', 'No ', 'no', '33794', '2016-04-12 12:03:46'),
+(7, 'Calculo diferencial', 'Vamos a crear una segunda discusion para ver que pasa', 'si', '56971', '2016-04-12 13:41:04'),
+(8, 'Algebra lineal', 'Menciona la aplicaciÃ³n que mas te guste de los valores y vectores caracteristicos', 'si', '47821', '2016-04-12 13:52:57');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `ejercicios`
 --
 
@@ -160,10 +217,10 @@ CREATE TABLE IF NOT EXISTS `ejercicios` (
 
 INSERT INTO `ejercicios` (`id_ejerc`, `id_lprc`, `lugar`, `pregunta`, `clasf`, `type`, `placeh`, `mens_err`, `mens_acert`, `rang_one`, `rang_two`, `nivel`, `puntuaje`, `true_op`, `f_creacion`) VALUES
 (13, 1, 5, 'Cuanto es 2 + 2 ', 'conceptual', 'te', 'Escribe solo nÃºmeros enteros', 'no', 'muy bien', 4, 4, 'uno', NULL, '', '2016-04-02 20:59:51'),
-(14, 10, 6, 'Cuanto es 43 x 331', 'conceptual', 'te', 'solo nÃºmeros enteros', 'bien', 'algo anda mal', 14233, 14233, 'intermedio', NULL, '', '2016-04-02 21:02:19'),
-(15, 10, 7, 'Cuantas decimales tiene la siguiente expresion ', 'conceptual', 'op', NULL, 'algo anda mal', 'Muy bien', 0, NULL, 'intermedio', NULL, 'c', '2016-04-02 21:04:32'),
-(16, 10, 8, 'Cual es el nombre correcto del siguiente simbolo', 'teorico', 'op', NULL, 'no', 'correcto', 0, NULL, 'intermedio', NULL, 'd', '2016-04-02 21:06:14'),
-(17, 10, 9, 'Cuanto es 5 + 5 ', 'teorico', 'te', 'solo nÃºmeros enteros', '--', '--', 10, 10, 'intermedio', NULL, '', '2016-04-02 21:08:18');
+(14, 1, 6, 'Cuanto es 43 x 331', 'conceptual', 'te', 'solo nÃºmeros enteros', 'bien', 'algo anda mal', 14233, 14233, 'intermedio', NULL, '', '2016-04-02 21:02:19'),
+(15, 1, 7, 'Cuantas decimales tiene la siguiente expresion ', 'conceptual', 'op', NULL, 'algo anda mal', 'Muy bien', 0, NULL, 'intermedio', NULL, 'c', '2016-04-02 21:04:32'),
+(16, 1, 8, 'Cual es el nombre correcto del siguiente simbolo', 'teorico', 'op', NULL, 'no', 'correcto', 0, NULL, 'intermedio', NULL, 'd', '2016-04-02 21:06:14'),
+(17, 1, 9, 'Cuanto es 5 + 5 ', 'teorico', 'te', 'solo nÃºmeros enteros', '--', '--', 10, 10, 'intermedio', NULL, '', '2016-04-02 21:08:18');
 
 -- --------------------------------------------------------
 
@@ -236,7 +293,7 @@ INSERT INTO `ficha_contenido_materia` (`id_fichamat`, `materia`, `unidad`, `tema
 (59, 'Geometria analitica', 'La recta', 'Pendiente de la recta', 'cccc', 'c', '', 'videos', 'Ejercicio-Problema', '1', '2015-11-26 18:09:51', '0', '2'),
 (60, 'Estadistica', 'Presentación de datos', 'Que es la estadística', 'asasas', 'a', '', 'videos', 'Ejercicio-Problema', '0', '2015-11-24 22:10:42', '0', '2'),
 (61, 'Calculo avanzado', 'Funciones de dos o mas variables', 'Graficas de funciones de 2 variables', 'Se podra', 'as', '', '', 'Ejercicio-Problema', '1', '2015-11-06 23:22:33', '0', '2'),
-(62, 'Algebra intermedia', 'Funciones polinomiales', 'Teorema del residuo', 'asas', 'pondremos mucho texto aqui de prueba para saber como se veria el cuadro de recientes', '', '', 'Ejercicio-Problema', '0', '2015-12-18 01:02:04', '0', '2'),
+(62, 'Algebra intermedia', 'Funciones polinomiales', 'Teorema del residuo', 'asas', 'pondremos mucho texto aqui de prueba para saber como se veria el cuadro de recientes', '', '', 'Ejercicio-Problema', '1', '2016-04-12 09:58:34', '0', '2'),
 (63, 'Ecuaciones diferenciales', 'Conceptos básicos sobre Ecuaciones Diferenciales', 'Definiciï¿½n de ED, orden y grado de esta', 'asas', 'asfasfasfasf', '', 'presentaciones', 'Ejercicio-Problema', '0', '0000-00-00 00:00:00', '0', '1'),
 (64, 'Ecuaciones diferenciales', 'Conceptos básicos sobre Ecuaciones Diferenciales', '', 'asas', 'asfasfasfasf', '', 'presentaciones', 'Ejercicio-Problema', '0', '0000-00-00 00:00:00', '0', '1'),
 (65, 'Ecuaciones diferenciales', 'Conceptos básicos sobre Ecuaciones Diferenciales', '', 'asaslllllllllllllllllllllllll', 'asfasfasfasf', '', 'presentaciones', 'Ejercicio-Problema', '0', '0000-00-00 00:00:00', '0', '1'),
@@ -579,14 +636,15 @@ CREATE TABLE IF NOT EXISTS `l_prc` (
   `frc_creacion` datetime NOT NULL,
   `frc_mod` datetime NOT NULL,
   `modulo` varchar(140) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `l_prc`
 --
 
 INSERT INTO `l_prc` (`id_lprc`, `name_lprc`, `materia`, `prod`, `clasf`, `nivel`, `num_ejerc`, `puntuaje`, `frc_creacion`, `frc_mod`, `modulo`) VALUES
-(1, 'Ejercicios bÃ¡sicos con matrices', 'Algebra lineal', 'si', 'general', 'basica', 5, NULL, '2016-04-02 20:57:04', '0000-00-00 00:00:00', 'Matrices');
+(1, 'Ejercicios bÃ¡sicos con matrices', 'Algebra lineal', 'si', 'general', 'basica', 5, NULL, '2016-04-02 20:57:04', '0000-00-00 00:00:00', 'Matrices'),
+(2, 'sas', 'Algebra lineal', 'si', 'general', 'inter', 0, NULL, '2016-04-12 09:57:27', '0000-00-00 00:00:00', 'Matrices');
 
 -- --------------------------------------------------------
 
@@ -597,21 +655,36 @@ INSERT INTO `l_prc` (`id_lprc`, `name_lprc`, `materia`, `prod`, `clasf`, `nivel`
 CREATE TABLE IF NOT EXISTS `modulos_url` (
   `id_modurl` int(11) NOT NULL,
   `url_limpia` varchar(140) NOT NULL,
-  `rel_modulo` varchar(140) NOT NULL
+  `rel_modulo` varchar(140) NOT NULL,
+  `materia` varchar(25) NOT NULL
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `modulos_url`
 --
 
-INSERT INTO `modulos_url` (`id_modurl`, `url_limpia`, `rel_modulo`) VALUES
-(1, 'matrices', 'Matrices'),
-(2, 'determinantes', 'Determinantes'),
-(3, 'espacios-vectoriales', 'Espacios vectoriales'),
-(4, 'transformaciones-lineales', 'Transformaciones lineales'),
-(5, 'valores-y-vectores-caracteristicos', 'Valores y vectores característicos '),
-(6, 'otras-unidades', 'Otras unidades'),
-(7, 'listas-combinadas', 'Listas combinadas');
+INSERT INTO `modulos_url` (`id_modurl`, `url_limpia`, `rel_modulo`, `materia`) VALUES
+(1, 'matrices', 'Matrices', 'Algebra lineal'),
+(2, 'determinantes', 'Determinantes', 'Algebra lineal '),
+(3, 'espacios-vectoriales', 'Espacios vectoriales', 'Algebra lineal '),
+(4, 'transformaciones-lineales', 'Transformaciones lineales', 'Algebra lineal '),
+(5, 'valores-y-vectores-caracteristicos', 'Valores y vectores característicos ', 'Algebra lineal '),
+(6, 'otras-unidades', 'Otras unidades', 'Algebra lineal '),
+(7, 'listas-combinadas', 'Listas combinadas', 'Algebra lineal');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `nivel_usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `nivel_usuario` (
+  `id_nivelrel` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `materia` varchar(25) NOT NULL,
+  `nivel` varchar(15) NOT NULL,
+  `puntos` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -836,14 +909,15 @@ CREATE TABLE IF NOT EXISTS `practicas_url` (
   `id_relurl` int(11) NOT NULL,
   `name_lprc` varchar(220) DEFAULT NULL,
   `name_limpio` varchar(220) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `practicas_url`
 --
 
 INSERT INTO `practicas_url` (`id_relurl`, `name_lprc`, `name_limpio`) VALUES
-(1, 'Ejercicios bÃ¡sicos con matrices', 'ejercicios-bsicos-con-matrices');
+(1, 'Ejercicios bÃ¡sicos con matrices', 'ejercicios-bsicos-con-matrices'),
+(2, 'sas', 'sas');
 
 -- --------------------------------------------------------
 
@@ -3842,7 +3916,7 @@ CREATE TABLE IF NOT EXISTS `usuarios_practicas` (
 --
 
 INSERT INTO `usuarios_practicas` (`id_usprc`, `id_usuario`, `id_practica`, `estado`, `ejercicio`, `correctos`, `materia`, `modulo`) VALUES
-(1, 1, 1, 'realizada', 13, 1, 'Algebra lineal', 'Matrices');
+(1, 1, 1, 'realizada', 17, 4, 'Algebra lineal', 'Matrices');
 
 -- --------------------------------------------------------
 
@@ -3900,7 +3974,7 @@ CREATE TABLE IF NOT EXISTS `votos_user` (
   `id_ficha` int(11) NOT NULL,
   `matter` varchar(30) NOT NULL,
   `fecha_voto` varchar(25) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `votos_user`
@@ -3928,7 +4002,8 @@ INSERT INTO `votos_user` (`id_voto`, `id_user`, `id_ficha`, `matter`, `fecha_vot
 (32, 2, 61, '', '06-11-2015 23:22'),
 (33, 2, 18, '', '16-02-2016 13:03'),
 (34, 2, 0, '', '16-02-2016 13:04'),
-(35, 1, 111, '', '05-04-2016 18:01');
+(35, 1, 111, '', '05-04-2016 18:01'),
+(36, 1, 62, '', '12-04-2016 09:58');
 
 --
 -- Índices para tablas volcadas
@@ -3941,10 +4016,22 @@ ALTER TABLE `comentarios_mat`
   ADD PRIMARY KEY (`id_comentmat`), ADD KEY `id_fichamat` (`id_fichamat`), ADD KEY `id_user` (`id_user`);
 
 --
+-- Indices de la tabla `coment_disc`
+--
+ALTER TABLE `coment_disc`
+  ADD PRIMARY KEY (`id_comentdisc`);
+
+--
 -- Indices de la tabla `coment_reco`
 --
 ALTER TABLE `coment_reco`
   ADD PRIMARY KEY (`id_comentreco`), ADD KEY `id_reco` (`id_reco`), ADD KEY `id_user` (`id_user`);
+
+--
+-- Indices de la tabla `discusiones`
+--
+ALTER TABLE `discusiones`
+  ADD PRIMARY KEY (`id_disc`);
 
 --
 -- Indices de la tabla `ejercicios`
@@ -3999,6 +4086,12 @@ ALTER TABLE `l_prc`
 --
 ALTER TABLE `modulos_url`
   ADD PRIMARY KEY (`id_modurl`);
+
+--
+-- Indices de la tabla `nivel_usuario`
+--
+ALTER TABLE `nivel_usuario`
+  ADD PRIMARY KEY (`id_nivelrel`);
 
 --
 -- Indices de la tabla `notification_users`
@@ -4118,10 +4211,20 @@ ALTER TABLE `votos_user`
 ALTER TABLE `comentarios_mat`
   MODIFY `id_comentmat` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
+-- AUTO_INCREMENT de la tabla `coment_disc`
+--
+ALTER TABLE `coment_disc`
+  MODIFY `id_comentdisc` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
 -- AUTO_INCREMENT de la tabla `coment_reco`
 --
 ALTER TABLE `coment_reco`
   MODIFY `id_comentreco` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=52;
+--
+-- AUTO_INCREMENT de la tabla `discusiones`
+--
+ALTER TABLE `discusiones`
+  MODIFY `id_disc` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `ejercicios`
 --
@@ -4161,12 +4264,17 @@ ALTER TABLE `list_content_rel`
 -- AUTO_INCREMENT de la tabla `l_prc`
 --
 ALTER TABLE `l_prc`
-  MODIFY `id_lprc` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_lprc` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `modulos_url`
 --
 ALTER TABLE `modulos_url`
   MODIFY `id_modurl` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT de la tabla `nivel_usuario`
+--
+ALTER TABLE `nivel_usuario`
+  MODIFY `id_nivelrel` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `notification_users`
 --
@@ -4181,7 +4289,7 @@ ALTER TABLE `opcion`
 -- AUTO_INCREMENT de la tabla `practicas_url`
 --
 ALTER TABLE `practicas_url`
-  MODIFY `id_relurl` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_relurl` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `preferent_user`
 --
@@ -4251,7 +4359,7 @@ ALTER TABLE `votos_reco`
 -- AUTO_INCREMENT de la tabla `votos_user`
 --
 ALTER TABLE `votos_user`
-  MODIFY `id_voto` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
+  MODIFY `id_voto` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
 --
 -- Restricciones para tablas volcadas
 --
